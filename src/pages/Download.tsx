@@ -348,7 +348,7 @@ const DownloadPage = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ x: 4 }}
-                      className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-lg sm:rounded-xl bg-muted/50 border border-border hover:border-primary/30 transition-all group"
+                      className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-lg sm:rounded-xl bg-muted/50 border border-border hover:border-primary/30 transition-all group h-full min-h-[120px] sm:min-h-[128px]"
                     >
                       <div className="shrink-0 w-[170px] flex justify-center">
                         {option.badge}
@@ -366,7 +366,7 @@ const DownloadPage = () => {
                   </StaggerItem>
                 ) : (
                   <StaggerItem key={index}>
-                    <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-lg sm:rounded-xl bg-muted/30 border border-border opacity-60">
+                    <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-lg sm:rounded-xl bg-muted/30 border border-border opacity-60 h-full min-h-[120px] sm:min-h-[128px]">
                       <div className="shrink-0 w-[170px] flex justify-center">
                         {option.badge}
                       </div>

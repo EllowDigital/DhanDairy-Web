@@ -165,7 +165,11 @@ const PartnersSection = () => {
               key={store.name}
               variants={itemVariants}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="group"
+              className={`group ${
+                store.internal
+                  ? "col-span-2 md:col-span-3 lg:col-span-4 flex justify-center"
+                  : ""
+              }`}
             >
               {store.url ? (
                 store.internal ? (
