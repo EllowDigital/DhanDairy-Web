@@ -123,22 +123,20 @@ const downloadOptions = [
     primary: false,
   },
   {
-    name: "Direct APK Download",
-    description: apkLinkValid
-      ? "Manual install (valid for 30 days)"
-      : "APK link expired — use app stores",
-    icon: <Download className="w-5 h-5 sm:w-6 sm:h-6" />,
+    name: "OPPO App Market",
+    description: 'Find DhanDiary on the app store by searching "DhanDiary"',
+    icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
-        <span className="text-[8px] sm:text-[9px] text-background uppercase tracking-wider font-medium">
-          Download
+      <div className="h-10 sm:h-12 w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
+        <span className="text-[8px] sm:text-[9px] text-muted-foreground uppercase tracking-wider font-medium">
+          Available on
         </span>
-        <span className="text-xs sm:text-sm text-background font-bold">
-          APK Direct
+        <span className="text-xs sm:text-sm text-muted-foreground font-bold">
+          OPPO App Market
         </span>
       </div>
     ),
-    url: apkLinkValid ? APP_CONFIG.downloads.apk : "",
+    url: "",
     primary: false,
   },
   {
@@ -161,20 +159,22 @@ const downloadOptions = [
     primary: false,
   },
   {
-    name: "OPPO App Market",
-    description: 'Find DhanDiary on the app store by searching "DhanDiary"',
-    icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
+    name: "Direct APK Download",
+    description: apkLinkValid
+      ? "Manual install (valid for 30 days)"
+      : "APK link expired — use app stores",
+    icon: <Download className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
-        <span className="text-[8px] sm:text-[9px] text-muted-foreground uppercase tracking-wider font-medium">
-          Available on
+      <div className="h-10 sm:h-12 w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
+        <span className="text-[8px] sm:text-[9px] text-background uppercase tracking-wider font-medium">
+          Download
         </span>
-        <span className="text-xs sm:text-sm text-muted-foreground font-bold">
-          OPPO App Market
+        <span className="text-xs sm:text-sm text-background font-bold">
+          APK Direct
         </span>
       </div>
     ),
-    url: "",
+    url: apkLinkValid ? APP_CONFIG.downloads.apk : "",
     primary: false,
   },
 ];
