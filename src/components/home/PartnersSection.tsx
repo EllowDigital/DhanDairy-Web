@@ -6,27 +6,6 @@ import { APP_CONFIG } from "@/lib/appConfig";
 const PartnersSection = () => {
   const appStores = [
     {
-      name: "Samsung Galaxy Store",
-      rating: "4.9",
-      url: "https://apps.samsung.com/appquery/appDetail.as?appId=com.ellowdigital.dhandiary&source=GBadge_01_8729522_tag&directOpen=true&ads=ddb0e6f9&nonOrgType=fce692ba",
-      badge: (
-        <div className="h-10 sm:h-11 w-[160px] flex items-center justify-center">
-          <img
-            src="/img/Appstores/GalaxyStore-light.png"
-            alt="Samsung Galaxy Store"
-            className="h-full w-full object-contain dark:hidden"
-            loading="lazy"
-          />
-          <img
-            src="/img/Appstores/GalaxyStore-dark.png"
-            alt="Samsung Galaxy Store"
-            className="h-full w-full object-contain hidden dark:block"
-            loading="lazy"
-          />
-        </div>
-      ),
-    },
-    {
       name: "Indus App Store",
       rating: "4.8",
       url: APP_CONFIG.downloads.indus || "https://indusapp.store/gfda9h89",
@@ -48,17 +27,23 @@ const PartnersSection = () => {
       ),
     },
     {
-      name: "Amazon Appstore",
+      name: "Samsung Galaxy Store",
       rating: "4.9",
-      url: APP_CONFIG.downloads.amazon,
+      url: "https://apps.samsung.com/appquery/appDetail.as?appId=com.ellowdigital.dhandiary&source=GBadge_01_8729522_tag&directOpen=true&ads=ddb0e6f9&nonOrgType=fce692ba",
       badge: (
-        <div className="h-10 sm:h-11 w-[160px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg text-center leading-tight">
-          <span className="text-[8px] sm:text-[9px] text-primary-foreground uppercase tracking-wider font-medium">
-            Available on
-          </span>
-          <span className="text-xs sm:text-sm text-primary-foreground font-bold">
-            Amazon Appstore
-          </span>
+        <div className="h-10 sm:h-11 w-[160px] flex items-center justify-center">
+          <img
+            src="/img/Appstores/GalaxyStore-light.png"
+            alt="Samsung Galaxy Store"
+            className="h-full w-full object-contain dark:hidden"
+            loading="lazy"
+          />
+          <img
+            src="/img/Appstores/GalaxyStore-dark.png"
+            alt="Samsung Galaxy Store"
+            className="h-full w-full object-contain hidden dark:block"
+            loading="lazy"
+          />
         </div>
       ),
     },
@@ -80,6 +65,21 @@ const PartnersSection = () => {
             className="h-full w-full object-contain hidden dark:block"
             loading="lazy"
           />
+        </div>
+      ),
+    },
+    {
+      name: "Amazon Appstore",
+      rating: "4.9",
+      url: APP_CONFIG.downloads.amazon,
+      badge: (
+        <div className="h-10 sm:h-11 w-[160px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg text-center leading-tight">
+          <span className="text-[8px] sm:text-[9px] text-primary-foreground uppercase tracking-wider font-medium">
+            Available on
+          </span>
+          <span className="text-xs sm:text-sm text-primary-foreground font-bold">
+            Amazon Appstore
+          </span>
         </div>
       ),
     },
