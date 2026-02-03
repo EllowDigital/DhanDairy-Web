@@ -30,22 +30,22 @@ const downloadOptions = [
     description: "For Samsung devices",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <>
+      <div className="h-10 sm:h-12 w-full max-w-[170px] flex items-center justify-center">
         <img
           src="/img/Appstores/GalaxyStore-light.png"
           alt="Samsung Galaxy Store"
-          className="h-10 sm:h-12 w-auto dark:hidden"
+          className="h-full w-full object-contain dark:hidden"
           loading="lazy"
         />
         <img
           src="/img/Appstores/GalaxyStore-dark.png"
           alt="Samsung Galaxy Store"
-          className="h-10 sm:h-12 w-auto hidden dark:block"
+          className="h-full w-full object-contain hidden dark:block"
           loading="lazy"
         />
-      </>
+      </div>
     ),
-    url: "https://apps.samsung.com/appquery/appDetail.as?appId=com.ellowdigital.dhandiary&source=GBadge_01_8729522_tag&directOpen=true&ads=ddb0e6f9&nonOrgType=fce692ba",
+    url: APP_CONFIG.downloads.samsung,
     primary: true,
   },
   {
@@ -53,12 +53,14 @@ const downloadOptions = [
     description: "Recommended for Indian users",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <img
-        alt="Get it on Indus Appstore"
-        src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-full-color-english.png"
-        className="h-10 sm:h-12 w-auto"
-        loading="lazy"
-      />
+      <div className="h-10 sm:h-12 w-full max-w-[170px] flex items-center justify-center">
+        <img
+          alt="Get it on Indus Appstore"
+          src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-full-color-english.png"
+          className="h-full w-full object-contain"
+          loading="lazy"
+        />
+      </div>
     ),
     url: APP_CONFIG.downloads.indus || "https://indusapp.store/gfda9h89",
     primary: true,
@@ -68,7 +70,7 @@ const downloadOptions = [
     description: "Available worldwide",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg">
+      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg">
         <span className="text-[8px] sm:text-[9px] text-primary-foreground uppercase tracking-wider font-medium">
           Available on
         </span>
@@ -85,20 +87,20 @@ const downloadOptions = [
     description: "For Huawei devices",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <>
+      <div className="h-10 sm:h-12 w-full max-w-[170px] flex items-center justify-center">
         <img
           src="/img/Appstores/Huawei-light.png"
           alt="Huawei AppGallery"
-          className="h-10 sm:h-12 w-auto dark:hidden"
+          className="h-full w-full object-contain dark:hidden"
           loading="lazy"
         />
         <img
           src="/img/Appstores/Huawei-dark.png"
           alt="Huawei AppGallery"
-          className="h-10 sm:h-12 w-auto hidden dark:block"
+          className="h-full w-full object-contain hidden dark:block"
           loading="lazy"
         />
-      </>
+      </div>
     ),
     url: APP_CONFIG.downloads.huawei,
     primary: true,
@@ -108,7 +110,7 @@ const downloadOptions = [
     description: "Currently unavailable",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
+      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
         <span className="text-[8px] sm:text-[9px] text-muted-foreground uppercase tracking-wider font-medium">
           Available on
         </span>
@@ -121,69 +123,13 @@ const downloadOptions = [
     primary: false,
   },
   {
-    name: "Huawei AppGallery",
-    description: "For Huawei devices",
-    icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
-    badge: (
-      <>
-        <img
-          src="/img/Appstores/Huawei-light.png"
-          alt="Huawei AppGallery"
-          className="h-10 sm:h-12 w-auto dark:hidden"
-          loading="lazy"
-        />
-        <img
-          src="/img/Appstores/Huawei-dark.png"
-          alt="Huawei AppGallery"
-          className="h-10 sm:h-12 w-auto hidden dark:block"
-          loading="lazy"
-        />
-      </>
-    ),
-    url: APP_CONFIG.downloads.huawei,
-    primary: true,
-  },
-  {
-    name: "Vivio Appstore",
-    description: "Currently unavailable",
-    icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
-    badge: (
-      <svg viewBox="0 0 135 40" className="h-10 sm:h-12 w-auto">
-        <rect width="135" height="40" rx="6" fill="hsl(var(--foreground))" />
-        <text
-          x="67.5"
-          y="14"
-          textAnchor="middle"
-          fill="hsl(var(--background))"
-          fontSize="7"
-          fontFamily="system-ui"
-        >
-          AVAILABLE ON
-        </text>
-        <text
-          x="67.5"
-          y="28"
-          textAnchor="middle"
-          fill="hsl(var(--background))"
-          fontSize="11"
-          fontWeight="bold"
-          fontFamily="system-ui"
-        >
-          Vivio Appstore
-        </text>
-      </svg>
-    ),
-    url: "",
-    primary: false,
-  },
-  {
     name: "Direct APK Download",
     description: apkLinkValid
       ? "Manual install (valid for 30 days)"
       : "APK link expired — use app stores",
     icon: <Download className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
+      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
         <span className="text-[8px] sm:text-[9px] text-background uppercase tracking-wider font-medium">
           Download
         </span>
@@ -202,7 +148,7 @@ const downloadOptions = [
       : "Link coming soon",
     icon: <Download className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
+      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
         <span className="text-[8px] sm:text-[9px] text-background uppercase tracking-wider font-medium">
           Download
         </span>
@@ -219,7 +165,7 @@ const downloadOptions = [
     description: "Coming soon",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
+      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
         <span className="text-[8px] sm:text-[9px] text-muted-foreground uppercase tracking-wider font-medium">
           Available on
         </span>
@@ -360,7 +306,7 @@ const DownloadPage = () => {
             </p>
           </AnimatedSection>
 
-          <StaggerContainer className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
             {downloadOptions
               .filter((opt) => opt.primary && opt.url)
               .map((option, index) => (
@@ -372,7 +318,7 @@ const DownloadPage = () => {
                     whileHover={{ y: -4 }}
                     className="flex flex-col items-center p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-card transition-all duration-300 group h-full"
                   >
-                    <div className="mb-3 sm:mb-4 transform group-hover:scale-105 transition-transform">
+                    <div className="mb-3 sm:mb-4 transform group-hover:scale-105 transition-transform flex justify-center w-full">
                       {option.badge}
                     </div>
                     <h3 className="font-semibold text-foreground text-sm sm:text-base mb-0.5 sm:mb-1 text-center">
@@ -391,7 +337,7 @@ const DownloadPage = () => {
           </StaggerContainer>
 
           {/* Secondary options */}
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-4xl mx-auto">
             {downloadOptions
               .filter((opt) => !opt.primary || !opt.url)
               .map((option, index) =>
@@ -404,7 +350,9 @@ const DownloadPage = () => {
                       whileHover={{ x: 4 }}
                       className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-lg sm:rounded-xl bg-muted/50 border border-border hover:border-primary/30 transition-all group"
                     >
-                      <div className="shrink-0">{option.badge}</div>
+                      <div className="shrink-0 w-full max-w-[170px] flex justify-center">
+                        {option.badge}
+                      </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="font-semibold text-foreground text-sm sm:text-base">
                           {option.name}
@@ -419,7 +367,9 @@ const DownloadPage = () => {
                 ) : (
                   <StaggerItem key={index}>
                     <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-lg sm:rounded-xl bg-muted/30 border border-border opacity-60">
-                      <div className="shrink-0">{option.badge}</div>
+                      <div className="shrink-0 w-full max-w-[170px] flex justify-center">
+                        {option.badge}
+                      </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="font-semibold text-foreground text-sm sm:text-base">
                           {option.name}

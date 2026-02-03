@@ -174,7 +174,7 @@ const PartnersSection = () => {
                     className="flex flex-col items-center p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl bg-background border border-border hover:border-primary/30 hover:shadow-card transition-all duration-300 h-full"
                     aria-label="See more download options"
                   >
-                    <div className="mb-3 sm:mb-4 transform group-hover:scale-105 transition-transform duration-300">
+                    <div className="mb-3 sm:mb-4 transform group-hover:scale-105 transition-transform duration-300 flex justify-center w-full">
                       {store.badge}
                     </div>
                     <h3 className="font-semibold text-foreground text-sm sm:text-base text-center">
@@ -193,7 +193,7 @@ const PartnersSection = () => {
                     className="flex flex-col items-center p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl bg-background border border-border hover:border-primary/30 hover:shadow-card transition-all duration-300 h-full"
                     aria-label={`Download from ${store.name}`}
                   >
-                    <div className="mb-3 sm:mb-4 transform group-hover:scale-105 transition-transform duration-300">
+                    <div className="mb-3 sm:mb-4 transform group-hover:scale-105 transition-transform duration-300 flex justify-center w-full">
                       {store.badge}
                     </div>
                     <h3 className="font-semibold text-foreground text-sm sm:text-base text-center">
