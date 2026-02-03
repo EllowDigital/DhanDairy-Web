@@ -34,8 +34,14 @@ const PartnersSection = () => {
         <div className="h-10 sm:h-11 w-[160px] flex items-center justify-center">
           <img
             alt="Get it on Indus Appstore"
+            src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-white-full-color-english.png"
+            className="h-full w-full object-contain dark:hidden"
+            loading="lazy"
+          />
+          <img
+            alt="Get it on Indus Appstore"
             src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-full-color-english.png"
-            className="h-full w-full object-contain"
+            className="h-full w-full object-contain hidden dark:block"
             loading="lazy"
           />
         </div>

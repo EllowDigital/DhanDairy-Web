@@ -9,6 +9,8 @@ import {
   Database,
   Eye,
   Zap,
+  Download,
+  Tag,
   ArrowRight,
   Sparkles,
 } from "lucide-react";
@@ -75,6 +77,20 @@ const features = [
     title: "Lightweight & Fast",
     description:
       "Optimized for performance. DhanDiary is lightweight, uses minimal resources, and runs smoothly on any device.",
+    highlight: false,
+  },
+  {
+    icon: <Download className="w-6 h-6 sm:w-7 sm:h-7" />,
+    title: "Export Data",
+    description:
+      "Export your transactions to PDF, CSV, or Excel. Choose ranges — Today, Weekly, Monthly, Yearly or Custom — and include notes or group by category for flexible reporting.",
+    highlight: true,
+  },
+  {
+    icon: <Tag className="w-6 h-6 sm:w-7 sm:h-7" />,
+    title: "Categories",
+    description:
+      "Create and manage categories to organize transactions. Group reports and exports by category for clearer insights.",
     highlight: false,
   },
 ];
