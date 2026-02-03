@@ -26,6 +26,29 @@ const apkLinkValid = isApkDownloadLinkValid();
 
 const downloadOptions = [
   {
+    name: "Samsung Galaxy Store",
+    description: "For Samsung devices",
+    icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
+    badge: (
+      <>
+        <img
+          src="/img/Appstores/GalaxyStore-light.png"
+          alt="Samsung Galaxy Store"
+          className="h-10 sm:h-12 w-auto dark:hidden"
+          loading="lazy"
+        />
+        <img
+          src="/img/Appstores/GalaxyStore-dark.png"
+          alt="Samsung Galaxy Store"
+          className="h-10 sm:h-12 w-auto hidden dark:block"
+          loading="lazy"
+        />
+      </>
+    ),
+    url: "https://apps.samsung.com/appquery/appDetail.as?appId=com.ellowdigital.dhandiary&source=GBadge_01_8729522_tag&directOpen=true&ads=ddb0e6f9&nonOrgType=fce692ba",
+    primary: true,
+  },
+  {
     name: "Indus App Store",
     description: "Recommended for Indian users",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
@@ -55,23 +78,6 @@ const downloadOptions = [
       </div>
     ),
     url: APP_CONFIG.downloads.amazon,
-    primary: true,
-  },
-  {
-    name: "Samsung Galaxy Store",
-    description: "For Samsung devices",
-    icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
-    badge: (
-      <div className="h-10 sm:h-12 px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
-        <span className="text-[8px] sm:text-[9px] text-background uppercase tracking-wider font-medium">
-          Available on
-        </span>
-        <span className="text-xs sm:text-sm text-background font-bold">
-          Galaxy Store
-        </span>
-      </div>
-    ),
-    url: APP_CONFIG.downloads.samsung,
     primary: true,
   },
   {

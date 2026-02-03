@@ -6,16 +6,39 @@ import { APP_CONFIG } from "@/lib/appConfig";
 const PartnersSection = () => {
   const appStores = [
     {
+      name: "Samsung Galaxy Store",
+      rating: "4.9",
+      url: "https://apps.samsung.com/appquery/appDetail.as?appId=com.ellowdigital.dhandiary&source=GBadge_01_8729522_tag&directOpen=true&ads=ddb0e6f9&nonOrgType=fce692ba",
+      badge: (
+        <div className="h-10 sm:h-11 w-full max-w-[160px] flex items-center justify-center">
+          <img
+            src="/img/Appstores/GalaxyStore-light.png"
+            alt="Samsung Galaxy Store"
+            className="h-full w-full object-contain dark:hidden"
+            loading="lazy"
+          />
+          <img
+            src="/img/Appstores/GalaxyStore-dark.png"
+            alt="Samsung Galaxy Store"
+            className="h-full w-full object-contain hidden dark:block"
+            loading="lazy"
+          />
+        </div>
+      ),
+    },
+    {
       name: "Indus App Store",
       rating: "4.8",
       url: APP_CONFIG.downloads.indus || "https://indusapp.store/gfda9h89",
       badge: (
-        <img
-          alt="Get it on Indus Appstore"
-          src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-full-color-english.png"
-          className="h-10 sm:h-11 w-auto object-contain"
-          loading="lazy"
-        />
+        <div className="h-10 sm:h-11 w-full max-w-[160px] flex items-center justify-center">
+          <img
+            alt="Get it on Indus Appstore"
+            src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-full-color-english.png"
+            className="h-full w-full object-contain"
+            loading="lazy"
+          />
+        </div>
       ),
     },
     {
@@ -23,7 +46,7 @@ const PartnersSection = () => {
       rating: "4.9",
       url: APP_CONFIG.downloads.amazon,
       badge: (
-        <div className="h-10 sm:h-11 px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg">
+        <div className="h-10 sm:h-11 w-full max-w-[160px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg">
           <span className="text-[8px] sm:text-[9px] text-primary-foreground uppercase tracking-wider font-medium">
             Available on
           </span>
@@ -38,20 +61,20 @@ const PartnersSection = () => {
       rating: "4.9",
       url: APP_CONFIG.downloads.huawei,
       badge: (
-        <>
+        <div className="h-10 sm:h-11 w-full max-w-[160px] flex items-center justify-center">
           <img
             src="/img/Appstores/Huawei-light.png"
             alt="Huawei AppGallery"
-            className="h-10 sm:h-11 w-auto object-contain dark:hidden"
+            className="h-full w-full object-contain dark:hidden"
             loading="lazy"
           />
           <img
             src="/img/Appstores/Huawei-dark.png"
             alt="Huawei AppGallery"
-            className="h-10 sm:h-11 w-auto object-contain hidden dark:block"
+            className="h-full w-full object-contain hidden dark:block"
             loading="lazy"
           />
-        </>
+        </div>
       ),
     },
     {
@@ -59,7 +82,7 @@ const PartnersSection = () => {
       url: "/download",
       internal: true,
       badge: (
-        <div className="h-10 sm:h-11 px-4 sm:px-5 flex flex-col items-center justify-center bg-primary rounded-lg">
+        <div className="h-10 sm:h-11 w-full max-w-[160px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary rounded-lg">
           <span className="text-[8px] sm:text-[9px] text-primary-foreground uppercase tracking-wider font-medium">
             See All
           </span>
@@ -135,7 +158,7 @@ const PartnersSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 max-w-4xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 max-w-5xl mx-auto"
         >
           {appStores.map((store) => (
             <motion.div
