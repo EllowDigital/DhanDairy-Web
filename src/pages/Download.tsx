@@ -30,7 +30,7 @@ const downloadOptions = [
     description: "For Samsung devices",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 w-full max-w-[170px] flex items-center justify-center">
+      <div className="h-10 sm:h-12 w-[170px] flex items-center justify-center">
         <img
           src="/img/Appstores/GalaxyStore-light.png"
           alt="Samsung Galaxy Store"
@@ -53,7 +53,7 @@ const downloadOptions = [
     description: "Recommended for Indian users",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 w-full max-w-[170px] flex items-center justify-center">
+      <div className="h-10 sm:h-12 w-[170px] flex items-center justify-center">
         <img
           alt="Get it on Indus Appstore"
           src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-full-color-english.png"
@@ -66,28 +66,11 @@ const downloadOptions = [
     primary: true,
   },
   {
-    name: "Amazon Appstore",
-    description: "Available worldwide",
-    icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
-    badge: (
-      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg">
-        <span className="text-[8px] sm:text-[9px] text-primary-foreground uppercase tracking-wider font-medium">
-          Available on
-        </span>
-        <span className="text-xs sm:text-sm text-primary-foreground font-bold">
-          Amazon Appstore
-        </span>
-      </div>
-    ),
-    url: APP_CONFIG.downloads.amazon,
-    primary: true,
-  },
-  {
     name: "Huawei AppGallery",
     description: "For Huawei devices",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 w-full max-w-[170px] flex items-center justify-center">
+      <div className="h-10 sm:h-12 w-[170px] flex items-center justify-center">
         <img
           src="/img/Appstores/Huawei-light.png"
           alt="Huawei AppGallery"
@@ -106,11 +89,28 @@ const downloadOptions = [
     primary: true,
   },
   {
-    name: "Vivio Appstore",
-    description: "Currently unavailable",
+    name: "Amazon Appstore",
+    description: "Available worldwide",
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
+      <div className="h-10 sm:h-12 w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg">
+        <span className="text-[8px] sm:text-[9px] text-primary-foreground uppercase tracking-wider font-medium">
+          Available on
+        </span>
+        <span className="text-xs sm:text-sm text-primary-foreground font-bold">
+          Amazon Appstore
+        </span>
+      </div>
+    ),
+    url: APP_CONFIG.downloads.amazon,
+    primary: true,
+  },
+  {
+    name: "Vivio Appstore",
+    description: 'Find DhanDiary on the app store by searching "DhanDiary"',
+    icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
+    badge: (
+      <div className="h-10 sm:h-12 w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
         <span className="text-[8px] sm:text-[9px] text-muted-foreground uppercase tracking-wider font-medium">
           Available on
         </span>
@@ -129,7 +129,7 @@ const downloadOptions = [
       : "APK link expired — use app stores",
     icon: <Download className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
+      <div className="h-10 sm:h-12 w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
         <span className="text-[8px] sm:text-[9px] text-background uppercase tracking-wider font-medium">
           Download
         </span>
@@ -148,7 +148,7 @@ const downloadOptions = [
       : "Link coming soon",
     icon: <Download className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
+      <div className="h-10 sm:h-12 w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-foreground rounded-lg">
         <span className="text-[8px] sm:text-[9px] text-background uppercase tracking-wider font-medium">
           Download
         </span>
@@ -162,10 +162,10 @@ const downloadOptions = [
   },
   {
     name: "OPPO App Market",
-    description: "Coming soon",
+    description: 'Find DhanDiary on the app store by searching "DhanDiary"',
     icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />,
     badge: (
-      <div className="h-10 sm:h-12 w-full max-w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
+      <div className="h-10 sm:h-12 w-[170px] px-4 sm:px-5 flex flex-col items-center justify-center bg-muted border border-border rounded-lg">
         <span className="text-[8px] sm:text-[9px] text-muted-foreground uppercase tracking-wider font-medium">
           Available on
         </span>
@@ -350,7 +350,7 @@ const DownloadPage = () => {
                       whileHover={{ x: 4 }}
                       className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-lg sm:rounded-xl bg-muted/50 border border-border hover:border-primary/30 transition-all group"
                     >
-                      <div className="shrink-0 w-full max-w-[170px] flex justify-center">
+                      <div className="shrink-0 w-[170px] flex justify-center">
                         {option.badge}
                       </div>
                       <div className="flex-1 min-w-0">
@@ -367,7 +367,7 @@ const DownloadPage = () => {
                 ) : (
                   <StaggerItem key={index}>
                     <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-lg sm:rounded-xl bg-muted/30 border border-border opacity-60">
-                      <div className="shrink-0 w-full max-w-[170px] flex justify-center">
+                      <div className="shrink-0 w-[170px] flex justify-center">
                         {option.badge}
                       </div>
                       <div className="flex-1 min-w-0">
