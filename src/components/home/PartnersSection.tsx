@@ -10,7 +10,7 @@ const PartnersSection = () => {
       rating: "4.9",
       url: "https://apps.samsung.com/appquery/appDetail.as?appId=com.ellowdigital.dhandiary&source=GBadge_01_8729522_tag&directOpen=true&ads=ddb0e6f9&nonOrgType=fce692ba",
       badge: (
-        <div className="h-10 sm:h-11 w-full max-w-[160px] flex items-center justify-center">
+        <div className="h-10 sm:h-11 w-[160px] flex items-center justify-center">
           <img
             src="/img/Appstores/GalaxyStore-light.png"
             alt="Samsung Galaxy Store"
@@ -31,7 +31,7 @@ const PartnersSection = () => {
       rating: "4.8",
       url: APP_CONFIG.downloads.indus || "https://indusapp.store/gfda9h89",
       badge: (
-        <div className="h-10 sm:h-11 w-full max-w-[160px] flex items-center justify-center">
+        <div className="h-10 sm:h-11 w-[160px] flex items-center justify-center">
           <img
             alt="Get it on Indus Appstore"
             src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-full-color-english.png"
@@ -46,7 +46,7 @@ const PartnersSection = () => {
       rating: "4.9",
       url: APP_CONFIG.downloads.amazon,
       badge: (
-        <div className="h-10 sm:h-11 w-full max-w-[160px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg">
+        <div className="h-10 sm:h-11 w-[160px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary border-2 border-primary rounded-lg text-center leading-tight">
           <span className="text-[8px] sm:text-[9px] text-primary-foreground uppercase tracking-wider font-medium">
             Available on
           </span>
@@ -61,7 +61,7 @@ const PartnersSection = () => {
       rating: "4.9",
       url: APP_CONFIG.downloads.huawei,
       badge: (
-        <div className="h-10 sm:h-11 w-full max-w-[160px] flex items-center justify-center">
+        <div className="h-10 sm:h-11 w-[160px] flex items-center justify-center">
           <img
             src="/img/Appstores/Huawei-light.png"
             alt="Huawei AppGallery"
@@ -82,7 +82,7 @@ const PartnersSection = () => {
       url: "/download",
       internal: true,
       badge: (
-        <div className="h-10 sm:h-11 w-full max-w-[160px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary rounded-lg">
+        <div className="h-10 sm:h-11 w-[160px] px-4 sm:px-5 flex flex-col items-center justify-center bg-primary rounded-lg text-center leading-tight">
           <span className="text-[8px] sm:text-[9px] text-primary-foreground uppercase tracking-wider font-medium">
             See All
           </span>
