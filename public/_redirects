@@ -1,0 +1,15 @@
+# ================================================
+
+# DhanDiary — Netlify Redirects (Enterprise SEO)
+
+# Canonical domain: <https://dhandiary.com>
+
+# ================================================
+
+# 301 redirect: Netlify subdomain → canonical domain (prevents duplicate indexing)
+
+# <https://dhandiary.netlify.app/>*  <https://dhandiary.com/:splat>  301
+
+# SPA fallback: serve index.html for all routes (must be last)
+
+/*    /index.html   200

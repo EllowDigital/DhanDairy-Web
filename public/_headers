@@ -1,0 +1,50 @@
+# ================================================
+# DhanDiary — Netlify HTTP Headers (Enterprise SEO)
+# Canonical domain: https://dhandiary.netlify.app
+# ================================================
+
+# Global security & performance headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  X-XSS-Protection: 1; mode=block
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Cache static assets aggressively (1 year)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images (30 days)
+/img/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# Cache favicons (30 days)
+/favicon/*
+  Cache-Control: public, max-age=2592000
+
+# Font caching (1 year)
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# HTML pages - no cache (always fresh for SEO)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Sitemap & robots - short cache
+/sitemap*.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain

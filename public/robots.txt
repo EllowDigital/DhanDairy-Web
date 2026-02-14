@@ -1,0 +1,36 @@
+# ================================================
+# DhanDiary — robots.txt (Enterprise SEO)
+# Canonical domain: https://dhandiary.netlify.app
+# ================================================
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Block Netlify preview/deploy URLs from indexing
+User-agent: *
+Disallow: /_next/
+Disallow: /api/
+
+# Sitemap references (canonical domain only)
+Sitemap: https://dhandiary.netlify.app/sitemap-index.xml
+Sitemap: https://dhandiary.netlify.app/sitemap.xml
+
+# Host directive
+Host: https://dhandiary.netlify.app

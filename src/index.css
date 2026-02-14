@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Finance-friendly teal/green palette */
+    --background: 150 20% 99%;
+    --foreground: 160 25% 12%;
+
+    --card: 150 15% 98%;
+    --card-foreground: 160 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 25% 12%;
+
+    /* Primary: Teal/Emerald green - trust, money, growth */
+    --primary: 162 63% 41%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft sage */
+    --secondary: 150 25% 95%;
+    --secondary-foreground: 160 25% 20%;
+
+    --muted: 150 15% 94%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 162 63% 95%;
+    --accent-foreground: 162 63% 30%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 20% 90%;
+    --input: 150 20% 90%;
+    --ring: 162 63% 41%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradient tokens */
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(162 63% 41%),
+      hsl(170 60% 50%)
+    );
+    --gradient-hero-dark: linear-gradient(
+      135deg,
+      hsl(162 55% 45%),
+      hsl(175 55% 55%)
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(150 20% 99%),
+      hsl(150 15% 96%)
+    );
+    --gradient-glass: linear-gradient(
+      135deg,
+      hsl(0 0% 100% / 0.9),
+      hsl(0 0% 100% / 0.7)
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(150 15% 99%),
+      hsl(150 15% 97%)
+    );
+    --gradient-mesh:
+      radial-gradient(at 40% 20%, hsl(162 63% 95%) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(170 60% 95%) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(162 50% 96%) 0px, transparent 50%);
+
+    /* Enhanced shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(160 25% 12% / 0.08);
+    --shadow-card: 0 4px 24px -4px hsl(160 25% 12% / 0.1);
+    --shadow-elevated: 0 12px 40px -8px hsl(160 25% 12% / 0.15);
+    --shadow-glow: 0 0 40px -10px hsl(162 63% 41% / 0.3);
+    --shadow-glass:
+      0 8px 32px -8px hsl(160 25% 12% / 0.1),
+      inset 0 0 0 1px hsl(0 0% 100% / 0.1);
+
+    /* Sidebar (keeping for shadcn compatibility) */
+    --sidebar-background: 150 20% 98%;
+    --sidebar-foreground: 160 25% 20%;
+    --sidebar-primary: 162 63% 41%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 25% 95%;
+    --sidebar-accent-foreground: 160 25% 20%;
+    --sidebar-border: 150 20% 90%;
+    --sidebar-ring: 162 63% 41%;
+  }
+
+  .dark {
+    --background: 160 20% 8%;
+    --foreground: 150 15% 95%;
+
+    --card: 160 18% 12%;
+    --card-foreground: 150 15% 95%;
+
+    --popover: 160 18% 10%;
+    --popover-foreground: 150 15% 95%;
+
+    --primary: 162 55% 50%;
+    --primary-foreground: 160 20% 8%;
+
+    --secondary: 160 15% 18%;
+    --secondary-foreground: 150 15% 90%;
+
+    --muted: 160 15% 18%;
+    --muted-foreground: 150 10% 60%;
+
+    --accent: 162 40% 20%;
+    --accent-foreground: 162 55% 70%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 15% 20%;
+    --input: 160 15% 20%;
+    --ring: 162 55% 50%;
+
+    --gradient-glass: linear-gradient(
+      135deg,
+      hsl(160 18% 14% / 0.9),
+      hsl(160 18% 12% / 0.7)
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(160 18% 14%),
+      hsl(160 18% 11%)
+    );
+    --gradient-mesh:
+      radial-gradient(at 40% 20%, hsl(162 40% 15%) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(170 35% 12%) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(162 30% 10%) 0px, transparent 50%);
+
+    --sidebar-background: 160 18% 10%;
+    --sidebar-foreground: 150 15% 90%;
+    --sidebar-primary: 162 55% 50%;
+    --sidebar-primary-foreground: 160 20% 8%;
+    --sidebar-accent: 160 15% 18%;
+    --sidebar-accent-foreground: 150 15% 90%;
+    --sidebar-border: 160 15% 20%;
+    --sidebar-ring: 162 55% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-subtle-gradient {
+    background: var(--gradient-subtle);
+  }
+
+  .bg-mesh-gradient {
+    background: var(--gradient-mesh);
+  }
+
+  .bg-glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .bg-card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-glass {
+    box-shadow: var(--shadow-glass);
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto;
+  }
+
+  /* Modern card styles */
+  .glass-card {
+    @apply bg-glass shadow-glass rounded-2xl border border-white/10;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1 shadow-elevated;
+  }
+
+  /* Improved focus states */
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  /* Better touch targets for mobile */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Text balance for better readability */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Responsive text sizes */
+  .heading-1 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1];
+  }
+
+  .heading-2 {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-xl sm:text-2xl font-semibold leading-tight;
+  }
+
+  .body-large {
+    @apply text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed;
+  }
+
+  .body-default {
+    @apply text-sm sm:text-base text-muted-foreground leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulseSlow 4s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes bounce-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes pulseSlow {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Safe area for mobile devices */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
+}

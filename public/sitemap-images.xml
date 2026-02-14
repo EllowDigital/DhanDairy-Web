@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://dhandiary.netlify.app/</loc>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/logo.png</image:loc>
+      <image:title>DhanDiary App Logo</image:title>
+      <image:caption>DhanDiary - Personal Finance Tracker for Android</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Screenshot/1s.jpg</image:loc>
+      <image:title>DhanDiary Dashboard Screenshot</image:title>
+      <image:caption>DhanDiary app dashboard showing income and expense tracking</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Screenshot/2s.jpg</image:loc>
+      <image:title>DhanDiary Transaction History</image:title>
+      <image:caption>View and manage your financial transactions in DhanDiary</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Screenshot/3s.jpg</image:loc>
+      <image:title>DhanDiary Charts and Insights</image:title>
+      <image:caption>Beautiful charts showing spending patterns and financial insights</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Screenshot/4s.jpg</image:loc>
+      <image:title>DhanDiary Categories</image:title>
+      <image:caption>Organize transactions with custom categories in DhanDiary</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Screenshot/5s.jpg</image:loc>
+      <image:title>DhanDiary Export Feature</image:title>
+      <image:caption>Export financial data to PDF, CSV, or Excel</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dhandiary.netlify.app/download</loc>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Appstores/GalaxyStore-light.png</image:loc>
+      <image:title>Download DhanDiary from Samsung Galaxy Store</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Appstores/Huawei-light.png</image:loc>
+      <image:title>Download DhanDiary from Huawei AppGallery</image:title>
+    </image:image>
+  </url>
+</urlset>
