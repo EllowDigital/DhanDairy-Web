@@ -18,7 +18,13 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/shared/SEOHead";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function StatsTransactions() {
@@ -56,7 +62,7 @@ export default function StatsTransactions() {
             <Button asChild variant="ghost" size="sm" className="mb-4">
               <Link to="/stats">← Back to Dashboard</Link>
             </Button>
-            
+
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="space-y-1">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
@@ -73,22 +79,24 @@ export default function StatsTransactions() {
                 disabled={isRefetching}
                 className="w-full sm:w-auto"
               >
-                <RefreshCw className={`h-4 w-4 mr-2 ${isRefetching ? 'animate-spin' : ''}`} />
-                {isRefetching ? 'Refreshing...' : 'Refresh'}
+                <RefreshCw
+                  className={`h-4 w-4 mr-2 ${isRefetching ? "animate-spin" : ""}`}
+                />
+                {isRefetching ? "Refreshing..." : "Refresh"}
               </Button>
             </div>
           </div>
 
-        {/* Error Alert */}
-        {error && (
-          <Alert variant="destructive" className="mb-6">
-            <AlertCircle className="h-4 w-4" />
-            <AlertDescription>
-              Failed to load transaction stats:{" "}
-              {error instanceof Error ? error.message : "Unknown error"}
-            </AlertDescription>
-          </Alert>
-        )}
+          {/* Error Alert */}
+          {error && (
+            <Alert variant="destructive" className="mb-6">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>
+                Failed to load transaction stats:{" "}
+                {error instanceof Error ? error.message : "Unknown error"}
+              </AlertDescription>
+            </Alert>
+          )}
 
           {/* Transaction Volume */}
           <section className="mb-6 sm:mb-8">
@@ -98,14 +106,19 @@ export default function StatsTransactions() {
                   <Activity className="h-5 w-5 text-primary" />
                   Transaction Volume
                 </CardTitle>
-                <CardDescription>Total transactions and growth metrics</CardDescription>
+                <CardDescription>
+                  Total transactions and growth metrics
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {isLoading ? (
                     <>
                       {[...Array(4)].map((_, i) => (
-                        <div key={i} className="space-y-3 p-4 border rounded-lg">
+                        <div
+                          key={i}
+                          className="space-y-3 p-4 border rounded-lg"
+                        >
                           <Skeleton className="h-4 w-20" />
                           <Skeleton className="h-8 w-full" />
                           <Skeleton className="h-3 w-24" />
@@ -166,7 +179,10 @@ export default function StatsTransactions() {
                   {isLoading ? (
                     <>
                       {[...Array(3)].map((_, i) => (
-                        <div key={i} className="space-y-3 p-4 border rounded-lg">
+                        <div
+                          key={i}
+                          className="space-y-3 p-4 border rounded-lg"
+                        >
                           <Skeleton className="h-4 w-20" />
                           <Skeleton className="h-8 w-full" />
                           <Skeleton className="h-3 w-24" />
@@ -188,7 +204,9 @@ export default function StatsTransactions() {
                       />
                       <MetricCard
                         title="Expense"
-                        value={formatNumber(stats?.expenseTransactionCount ?? 0)}
+                        value={formatNumber(
+                          stats?.expenseTransactionCount ?? 0,
+                        )}
                         icon={<TrendingDown className="h-4 w-4 text-red-500" />}
                         subtitle={
                           stats
@@ -199,7 +217,9 @@ export default function StatsTransactions() {
                       />
                       <MetricCard
                         title="Deleted"
-                        value={formatNumber(stats?.deletedTransactionCount ?? 0)}
+                        value={formatNumber(
+                          stats?.deletedTransactionCount ?? 0,
+                        )}
                         icon={<Trash2 className="h-4 w-4" />}
                         subtitle="Soft deleted"
                         loading={false}
@@ -226,7 +246,10 @@ export default function StatsTransactions() {
                   {isLoading ? (
                     <>
                       {[...Array(2)].map((_, i) => (
-                        <div key={i} className="space-y-3 p-4 border rounded-lg">
+                        <div
+                          key={i}
+                          className="space-y-3 p-4 border rounded-lg"
+                        >
                           <Skeleton className="h-4 w-20" />
                           <Skeleton className="h-8 w-full" />
                           <Skeleton className="h-3 w-24" />
@@ -238,7 +261,11 @@ export default function StatsTransactions() {
                       <MetricCard
                         title="Sync Backlog"
                         value={formatNumber(stats?.syncBacklogCount ?? 0)}
-                        icon={<RefreshCw className={`h-4 w-4 ${(stats?.syncBacklogCount ?? 0) > 100 ? 'text-destructive' : ''}`} />}
+                        icon={
+                          <RefreshCw
+                            className={`h-4 w-4 ${(stats?.syncBacklogCount ?? 0) > 100 ? "text-destructive" : ""}`}
+                          />
+                        }
                         subtitle="Pending sync"
                         loading={false}
                       />
@@ -268,7 +295,9 @@ export default function StatsTransactions() {
                   <Activity className="h-5 w-5 text-primary" />
                   Key Insights
                 </CardTitle>
-                <CardDescription>Important metrics and observations</CardDescription>
+                <CardDescription>
+                  Important metrics and observations
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -285,43 +314,57 @@ export default function StatsTransactions() {
                         <AlertTitle>Transaction Mix</AlertTitle>
                         <AlertDescription>
                           Users create{" "}
-                          {stats.incomeTransactionCount > stats.expenseTransactionCount
+                          {stats.incomeTransactionCount >
+                          stats.expenseTransactionCount
                             ? "more income"
                             : "more expense"}{" "}
                           transactions. The{" "}
-                          {stats.incomeTransactionCount > stats.expenseTransactionCount
+                          {stats.incomeTransactionCount >
+                          stats.expenseTransactionCount
                             ? "income"
                             : "expense"}{" "}
                           type represents{" "}
                           <span className="text-lg font-semibold">
-                            {
-                              ((
-                                Math.max(
-                                  stats.incomeTransactionCount,
-                                  stats.expenseTransactionCount,
-                                ) / Math.max(stats.totalTransactions, 1)
-                              ) * 100
-                            ).toFixed(1)}%
+                            {(
+                              (Math.max(
+                                stats.incomeTransactionCount,
+                                stats.expenseTransactionCount,
+                              ) /
+                                Math.max(stats.totalTransactions, 1)) *
+                              100
+                            ).toFixed(1)}
+                            %
                           </span>{" "}
                           of all transactions.
                         </AlertDescription>
                       </Alert>
-                      
+
                       <Alert>
                         <TrendingUp className="h-4 w-4" />
                         <AlertTitle>Growth Trend</AlertTitle>
                         <AlertDescription>
                           Transaction volume is{" "}
-                          {stats.transactionGrowthRate >= 0 ? "growing" : "declining"} at{" "}
+                          {stats.transactionGrowthRate >= 0
+                            ? "growing"
+                            : "declining"}{" "}
+                          at{" "}
                           <span className="text-lg font-semibold">
                             {Math.abs(stats.transactionGrowthRate).toFixed(1)}%
                           </span>{" "}
-                          this month with {formatNumber(stats.transactionsThisMonth)} transactions recorded.
+                          this month with{" "}
+                          {formatNumber(stats.transactionsThisMonth)}{" "}
+                          transactions recorded.
                         </AlertDescription>
                       </Alert>
-                      
+
                       {stats.syncBacklogCount > 0 && (
-                        <Alert variant={stats.syncBacklogCount > 100 ? "destructive" : "default"}>
+                        <Alert
+                          variant={
+                            stats.syncBacklogCount > 100
+                              ? "destructive"
+                              : "default"
+                          }
+                        >
                           <RefreshCw className="h-4 w-4" />
                           <AlertTitle>Sync Status</AlertTitle>
                           <AlertDescription>
@@ -330,7 +373,9 @@ export default function StatsTransactions() {
                               {formatNumber(stats.syncBacklogCount)}
                             </span>{" "}
                             transactions pending sync
-                            {stats.syncBacklogCount > 100 && " that need immediate attention"}.
+                            {stats.syncBacklogCount > 100 &&
+                              " that need immediate attention"}
+                            .
                           </AlertDescription>
                         </Alert>
                       )}

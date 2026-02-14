@@ -45,9 +45,13 @@ export function MetricCard({
     if (!trend) return "";
     if (trend.value === 0) return "text-muted-foreground";
     if (trend.isPositive === undefined) {
-      return trend.value > 0 ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400";
+      return trend.value > 0
+        ? "text-green-600 dark:text-green-400"
+        : "text-red-600 dark:text-red-400";
     }
-    return trend.isPositive ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400";
+    return trend.isPositive
+      ? "text-green-600 dark:text-green-400"
+      : "text-red-600 dark:text-red-400";
   };
 
   if (loading) {
@@ -66,16 +70,14 @@ export function MetricCard({
   }
 
   return (
-    <Card className={cn("hover:shadow-md transition-all duration-200", className)}>
+    <Card
+      className={cn("hover:shadow-md transition-all duration-200", className)}
+    >
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-xs sm:text-sm font-medium text-muted-foreground">
           {title}
         </CardTitle>
-        {icon && (
-          <div className="text-muted-foreground opacity-70">
-            {icon}
-          </div>
-        )}
+        {icon && <div className="text-muted-foreground opacity-70">{icon}</div>}
       </CardHeader>
       <CardContent>
         <div className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight">
@@ -84,15 +86,18 @@ export function MetricCard({
         {(subtitle || trend) && (
           <div className="mt-1 sm:mt-2 flex flex-wrap items-center gap-1 sm:gap-2 text-xs sm:text-sm">
             {trend && (
-              <span className={cn("flex items-center gap-0.5 sm:gap-1 font-medium", getTrendColor())}>
+              <span
+                className={cn(
+                  "flex items-center gap-0.5 sm:gap-1 font-medium",
+                  getTrendColor(),
+                )}
+              >
                 {getTrendIcon()}
                 {Math.abs(trend.value).toFixed(1)}%
               </span>
             )}
             {subtitle && (
-              <span className="text-muted-foreground truncate">
-                {subtitle}
-              </span>
+              <span className="text-muted-foreground truncate">{subtitle}</span>
             )}
           </div>
         )}

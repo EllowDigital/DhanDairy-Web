@@ -21,7 +21,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface TrendChartProps {
   title: string;
-  data: any[];
+  data: Record<string, unknown>[];
   type?: "line" | "area" | "bar";
   dataKeys: {
     key: string;

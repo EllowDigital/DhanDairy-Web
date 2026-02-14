@@ -20,7 +20,13 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/shared/SEOHead";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -59,7 +65,7 @@ export default function StatsUsers() {
             <Button asChild variant="ghost" size="sm" className="mb-4">
               <Link to="/stats">← Back to Dashboard</Link>
             </Button>
-            
+
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="space-y-1">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
@@ -76,8 +82,10 @@ export default function StatsUsers() {
                 disabled={isRefetching}
                 className="w-full sm:w-auto"
               >
-                <RefreshCw className={`h-4 w-4 mr-2 ${isRefetching ? 'animate-spin' : ''}`} />
-                {isRefetching ? 'Refreshing...' : 'Refresh'}
+                <RefreshCw
+                  className={`h-4 w-4 mr-2 ${isRefetching ? "animate-spin" : ""}`}
+                />
+                {isRefetching ? "Refreshing..." : "Refresh"}
               </Button>
             </div>
           </div>
@@ -101,14 +109,19 @@ export default function StatsUsers() {
                   <Users className="h-5 w-5 text-primary" />
                   User Base Overview
                 </CardTitle>
-                <CardDescription>Total users and activity metrics</CardDescription>
+                <CardDescription>
+                  Total users and activity metrics
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {isLoading ? (
                     <>
                       {[...Array(3)].map((_, i) => (
-                        <div key={i} className="space-y-3 p-4 border rounded-lg">
+                        <div
+                          key={i}
+                          className="space-y-3 p-4 border rounded-lg"
+                        >
                           <Skeleton className="h-4 w-20" />
                           <Skeleton className="h-8 w-full" />
                           <Skeleton className="h-3 w-24" />
@@ -160,14 +173,19 @@ export default function StatsUsers() {
                   <TrendingUp className="h-5 w-5 text-primary" />
                   User Growth
                 </CardTitle>
-                <CardDescription>New user acquisition and growth trends</CardDescription>
+                <CardDescription>
+                  New user acquisition and growth trends
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {isLoading ? (
                     <>
                       {[...Array(4)].map((_, i) => (
-                        <div key={i} className="space-y-3 p-4 border rounded-lg">
+                        <div
+                          key={i}
+                          className="space-y-3 p-4 border rounded-lg"
+                        >
                           <Skeleton className="h-4 w-20" />
                           <Skeleton className="h-8 w-full" />
                           <Skeleton className="h-3 w-24" />
@@ -190,7 +208,9 @@ export default function StatsUsers() {
                       />
                       <MetricCard
                         title="Growth Rate"
-                        value={stats ? `${stats.userGrowthRate.toFixed(2)}%` : "0%"}
+                        value={
+                          stats ? `${stats.userGrowthRate.toFixed(2)}%` : "0%"
+                        }
                         icon={<TrendingUp className="h-4 w-4" />}
                         trend={{
                           value: stats?.userGrowthRate ?? 0,
@@ -221,14 +241,19 @@ export default function StatsUsers() {
                   <UserCheck className="h-5 w-5 text-primary" />
                   User Engagement
                 </CardTitle>
-                <CardDescription>Transaction activity and user involvement</CardDescription>
+                <CardDescription>
+                  Transaction activity and user involvement
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {isLoading ? (
                     <>
                       {[...Array(3)].map((_, i) => (
-                        <div key={i} className="space-y-3 p-4 border rounded-lg">
+                        <div
+                          key={i}
+                          className="space-y-3 p-4 border rounded-lg"
+                        >
                           <Skeleton className="h-4 w-20" />
                           <Skeleton className="h-8 w-full" />
                           <Skeleton className="h-3 w-24" />
@@ -259,7 +284,9 @@ export default function StatsUsers() {
                         title="Inactive Users"
                         value={
                           stats
-                            ? formatNumber(stats.totalUsers - stats.usersWithTransactions)
+                            ? formatNumber(
+                                stats.totalUsers - stats.usersWithTransactions,
+                              )
                             : "0"
                         }
                         icon={<UserX className="h-4 w-4" />}
@@ -281,7 +308,9 @@ export default function StatsUsers() {
                   <Activity className="h-5 w-5 text-primary" />
                   Key Insights
                 </CardTitle>
-                <CardDescription>Important metrics and observations</CardDescription>
+                <CardDescription>
+                  Important metrics and observations
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -300,18 +329,25 @@ export default function StatsUsers() {
                           <span className="text-lg font-semibold">
                             {stats.usersWithTransactionsPercent.toFixed(1)}%
                           </span>{" "}
-                          of users have at least one transaction ({formatNumber(stats.usersWithTransactions)} users)
+                          of users have at least one transaction (
+                          {formatNumber(stats.usersWithTransactions)} users)
                         </AlertDescription>
                       </Alert>
-                      
+
                       <Alert>
                         <Activity className="h-4 w-4" />
                         <AlertTitle>30-Day Retention</AlertTitle>
                         <AlertDescription>
                           <span className="text-lg font-semibold">
-                            {((stats.activeUsers30d / Math.max(stats.totalUsers, 1)) * 100).toFixed(1)}%
+                            {(
+                              (stats.activeUsers30d /
+                                Math.max(stats.totalUsers, 1)) *
+                              100
+                            ).toFixed(1)}
+                            %
                           </span>{" "}
-                          of users were active in the last 30 days ({formatNumber(stats.activeUsers30d)} users)
+                          of users were active in the last 30 days (
+                          {formatNumber(stats.activeUsers30d)} users)
                         </AlertDescription>
                       </Alert>
 
@@ -323,7 +359,8 @@ export default function StatsUsers() {
                             <span className="text-lg font-semibold">
                               {formatNumber(stats.churnedUsers)}
                             </span>{" "}
-                            users haven't been active in over 60 days. Consider running a re-engagement campaign.
+                            users haven't been active in over 60 days. Consider
+                            running a re-engagement campaign.
                           </AlertDescription>
                         </Alert>
                       )}
@@ -337,7 +374,9 @@ export default function StatsUsers() {
                             <span className="text-lg font-semibold">
                               {stats.userGrowthRate.toFixed(2)}%
                             </span>{" "}
-                            per month with {formatNumber(stats.newUsersThisMonth)} new users this month.
+                            per month with{" "}
+                            {formatNumber(stats.newUsersThisMonth)} new users
+                            this month.
                           </AlertDescription>
                         </Alert>
                       )}

@@ -17,13 +17,13 @@ interface Column {
   key: string;
   label: string;
   align?: "left" | "center" | "right";
-  format?: (value: any) => string;
+  format?: (value: unknown) => string;
 }
 
 interface StatsTableProps {
   title: string;
   columns: Column[];
-  data: any[];
+  data: Record<string, unknown>[];
   loading?: boolean;
   emptyMessage?: string;
 }

@@ -60,7 +60,10 @@ function getPool(): Pool {
   return pool;
 }
 
-async function query<T = any>(sql: string, params: any[] = []): Promise<T[]> {
+async function query<T = Record<string, unknown>>(
+  sql: string,
+  params: unknown[] = [],
+): Promise<T[]> {
   const client: PoolClient = await getPool().connect();
   try {
     const result = await client.query(sql, params);

@@ -299,7 +299,7 @@ export interface MiddlewareContext {
 
 export type MiddlewareFunction = (ctx: MiddlewareContext) => Promise<{
   continue: boolean;
-  response?: any;
+  response?: Response;
 }>;
 
 /**
@@ -309,7 +309,7 @@ export async function runMiddleware(
   event: HandlerEvent,
   context: HandlerContext,
   middlewares: MiddlewareFunction[],
-): Promise<{ success: boolean; ctx?: MiddlewareContext; response?: any }> {
+): Promise<{ success: boolean; ctx?: MiddlewareContext; response?: Response }> {
   const ctx: MiddlewareContext = { event, context };
 
   for (const middleware of middlewares) {
