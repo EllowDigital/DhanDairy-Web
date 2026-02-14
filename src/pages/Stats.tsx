@@ -60,7 +60,7 @@ export default function Stats() {
       <SEOHead
         title="Stats Dashboard - DhanDiary Admin"
         description="Modern analytics dashboard for DhanDiary with real-time insights"
-        index={false}
+        noIndex
       />
 
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
@@ -136,7 +136,7 @@ export default function Stats() {
 
           {/* User Metrics */}
           <section className="mb-6 sm:mb-8">
-            <Card>
+            <Card className="border-2 hover:border-primary/50 transition-colors">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
                   <Users className="h-5 w-5 text-primary" />
@@ -149,10 +149,10 @@ export default function Stats() {
                   {isLoading ? (
                     <>
                       {[...Array(4)].map((_, i) => (
-                        <div key={i} className="space-y-3">
+                        <div key={i} className="space-y-3 p-4 border rounded-lg">
                           <Skeleton className="h-4 w-20" />
                           <Skeleton className="h-8 w-full" />
-                          <Skeleton className="h-3 w-16" />
+                          <Skeleton className="h-3 w-24" />
                         </div>
                       ))}
                     </>
@@ -160,31 +160,33 @@ export default function Stats() {
                     <>
                       <MetricCard
                         title="Total Users"
-                        value={stats?.user.totalUsers.toLocaleString() ?? "-"}
+                        value={formatNumber(stats?.user.totalUsers ?? 0)}
                         icon={<Users className="h-4 w-4" />}
                         trend={{
                           value: stats?.user.userGrowthRate ?? 0,
-                          isPositive: true,
+                          isPositive: (stats?.user.userGrowthRate ?? 0) >= 0,
                         }}
                         subtitle="Growth rate"
                         loading={false}
                       />
                       <MetricCard
                         title="Active (30d)"
-                        value={stats?.user.activeUsers30d.toLocaleString() ?? "-"}
-                        subtitle={`${stats ? ((stats.user.activeUsers30d / stats.user.totalUsers) * 100).toFixed(1) : 0}% of total`}
+                        value={formatNumber(stats?.user.activeUsers30d ?? 0)}
+                        icon={<Activity className="h-4 w-4" />}
+                        subtitle={`${stats ? ((stats.user.activeUsers30d / Math.max(stats.user.totalUsers, 1)) * 100).toFixed(1) : 0}% of total`}
                         loading={false}
                       />
                       <MetricCard
                         title="New Today"
-                        value={stats?.user.newUsersToday.toLocaleString() ?? "-"}
-                        subtitle="New registrations"
+                        value={stats?.user.newUsersToday.toLocaleString() ?? "0"}
+                        icon={<ArrowUpRight className="h-4 w-4" />}
+                        subtitle={`${stats?.user.newUsersThisMonth ?? 0} this month`}
                         loading={false}
                       />
                       <MetricCard
                         title="Engaged Users"
                         value={`${stats?.user.usersWithTransactionsPercent.toFixed(1) ?? 0}%`}
-                        subtitle={`${stats?.user.usersWithTransactions.toLocaleString() ?? 0} users`}
+                        subtitle={`${formatNumber(stats?.user.usersWithTransactions ?? 0)} users`}
                         loading={false}
                       />
                     </>
@@ -193,147 +195,179 @@ export default function Stats() {
               </CardContent>
             </Card>
           </section>
-              value={stats?.user.totalUsers.toLocaleString() ?? "-"}
-              icon={<Users className="h-4 w-4" />}
-              trend={{
-                value: stats?.user.userGrowthRate ?? 0,
-                isPositive: true,
-              }}
-              subtitle="Growth rate"
-              loading={isLoading}
-            />
-            <MetricCard
-              title="Active Users (30d)"
-              value={stats?.user.activeUsers30d.toLocaleString() ?? "-"}
-              icon={<Activity className="h-4 w-4" />}
-              subtitle={`${stats?.user.usersWithTransactionsPercent ?? 0}% with transactions`}
-              loading={isLoading}
-            />
-            <MetricCard
-              title="New Users Today"
-              value={stats?.user.newUsersToday.toLocaleString() ?? "-"}
-              icon={<ArrowUpRight className="h-4 w-4" />}
-              subtitle={`${stats?.user.newUsersThisMonth ?? 0} this month`}
-              loading={isLoading}
-            />
-            <MetricCard
-              title="Churned Users"
-              value={stats?.user.churnedUsers.toLocaleString() ?? "-"}
-              icon={<AlertCircle className="h-4 w-4" />}
-              subtitle="No activity in 60+ days"
-              loading={isLoading}
-            />
-          </div>
-        </section>
 
-        {/* Transaction Metrics */}
-        <section className="mb-8">
-          <h2 className="mb-4 text-xl font-semibold">Transaction Metrics</h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <MetricCard
-              title="Total Transactions"
-              value={
-                stats?.transaction.totalTransactions.toLocaleString() ?? "-"
-              }
-              icon={<TrendingUp className="h-4 w-4" />}
-              trend={{
-                value: stats?.transaction.transactionGrowthRate ?? 0,
-                isPositive: true,
-              }}
-              subtitle="Growth rate"
-              loading={isLoading}
-            />
-            <MetricCard
-              title="Transactions Today"
-              value={
-                stats?.transaction.transactionsToday.toLocaleString() ?? "-"
-              }
-              subtitle={`${stats?.transaction.transactionsThisMonth ?? 0} this month`}
-              loading={isLoading}
-            />
-            <MetricCard
-              title="Avg per User"
-              value={
-                stats?.transaction.avgTransactionsPerUser.toFixed(1) ?? "-"
-              }
-              subtitle="Transactions per user"
-              loading={isLoading}
-            />
-            <MetricCard
-              title="Sync Backlog"
-              value={
-                stats?.transaction.syncBacklogCount.toLocaleString() ?? "-"
-              }
-              icon={<AlertCircle className="h-4 w-4" />}
-              subtitle="Pending sync"
-              loading={isLoading}
-            />
-          </div>
-        </section>
+          {/* Transaction Metrics */}
+          <section className="mb-6 sm:mb-8">
+            <Card className="border-2 hover:border-primary/50 transition-colors">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
+                  <TrendingUp className="h-5 w-5 text-primary" />
+                  Transaction Metrics
+                </CardTitle>
+                <CardDescription>Transaction volume and activity</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {isLoading ? (
+                    <>
+                      {[...Array(4)].map((_, i) => (
+                        <div key={i} className="space-y-3 p-4 border rounded-lg">
+                          <Skeleton className="h-4 w-20" />
+                          <Skeleton className="h-8 w-full" />
+                          <Skeleton className="h-3 w-24" />
+                        </div>
+                      ))}
+                    </>
+                  ) : (
+                    <>
+                      <MetricCard
+                        title="Total Transactions"
+                        value={formatNumber(stats?.transaction.totalTransactions ?? 0)}
+                        icon={<TrendingUp className="h-4 w-4" />}
+                        trend={{
+                          value: stats?.transaction.transactionGrowthRate ?? 0,
+                          isPositive: (stats?.transaction.transactionGrowthRate ?? 0) >= 0,
+                        }}
+                        subtitle="Growth rate"
+                        loading={false}
+                      />
+                      <MetricCard
+                        title="Today"
+                        value={stats?.transaction.transactionsToday.toLocaleString() ?? "0"}
+                        subtitle={`${stats?.transaction.transactionsThisMonth.toLocaleString() ?? 0} this month`}
+                        loading={false}
+                      />
+                      <MetricCard
+                        title="Avg per User"
+                        value={stats?.transaction.avgTransactionsPerUser.toFixed(1) ?? "0"}
+                        subtitle="Transactions per user"
+                        loading={false}
+                      />
+                      <MetricCard
+                        title="Sync Backlog"
+                        value={stats?.transaction.syncBacklogCount.toLocaleString() ?? "0"}
+                        icon={<AlertCircle className={`h-4 w-4 ${(stats?.transaction.syncBacklogCount ?? 0) > 100 ? 'text-destructive' : ''}`} />}
+                        subtitle="Pending sync"
+                        loading={false}
+                      />
+                    </>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </section>
 
-        {/* Financial Metrics */}
-        <section className="mb-8">
-          <h2 className="mb-4 text-xl font-semibold">Financial Overview</h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            <MetricCard
-              title="Total Income"
-              value={stats ? formatCurrency(stats.financial.totalIncome) : "-"}
-              icon={<DollarSign className="h-4 w-4" />}
-              loading={isLoading}
-            />
-            <MetricCard
-              title="Total Expense"
-              value={stats ? formatCurrency(stats.financial.totalExpense) : "-"}
-              icon={<DollarSign className="h-4 w-4" />}
-              loading={isLoading}
-            />
-            <MetricCard
-              title="Net Balance"
-              value={stats ? formatCurrency(stats.financial.netBalance) : "-"}
-              icon={<DollarSign className="h-4 w-4" />}
-              trend={
-                stats
-                  ? {
-                      value:
-                        (stats.financial.netBalance /
-                          Math.max(stats.financial.totalIncome, 1)) *
-                        100,
-                      isPositive: stats.financial.netBalance > 0,
-                    }
-                  : undefined
-              }
-              loading={isLoading}
-            />
-          </div>
-        </section>
+          {/* Financial Metrics */}
+          <section className="mb-6 sm:mb-8">
+            <Card className="border-2 hover:border-primary/50 transition-colors">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
+                  <DollarSign className="h-5 w-5 text-primary" />
+                  Financial Overview
+                </CardTitle>
+                <CardDescription>Income, expenses, and net balance</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {isLoading ? (
+                    <>
+                      {[...Array(3)].map((_, i) => (
+                        <div key={i} className="space-y-3 p-4 border rounded-lg">
+                          <Skeleton className="h-4 w-20" />
+                          <Skeleton className="h-8 w-full" />
+                          <Skeleton className="h-3 w-24" />
+                        </div>
+                      ))}
+                    </>
+                  ) : (
+                    <>
+                      <MetricCard
+                        title="Total Income"
+                        value={stats ? formatCurrency(stats.financial.totalIncome) : "₹0"}
+                        icon={<DollarSign className="h-4 w-4 text-green-500" />}
+                        subtitle="All-time earnings"
+                        loading={false}
+                      />
+                      <MetricCard
+                        title="Total Expense"
+                        value={stats ? formatCurrency(stats.financial.totalExpense) : "₹0"}
+                        icon={<DollarSign className="h-4 w-4 text-red-500" />}
+                        subtitle="All-time spending"
+                        loading={false}
+                      />
+                      <MetricCard
+                        title="Net Balance"
+                        value={stats ? formatCurrency(stats.financial.netBalance) : "₹0"}
+                        icon={<DollarSign className="h-4 w-4" />}
+                        trend={
+                          stats && stats.financial.totalIncome > 0
+                            ? {
+                                value: (stats.financial.netBalance / stats.financial.totalIncome) * 100,
+                                isPositive: stats.financial.netBalance > 0,
+                              }
+                            : undefined
+                        }
+                        subtitle="Profit margin"
+                        loading={false}
+                      />
+                    </>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </section>
 
-        {/* System Health */}
-        <section>
-          <h2 className="mb-4 text-xl font-semibold">System Health</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            <MetricCard
-              title="Last Transaction"
-              value={
-                stats?.health.lastTransactionTime
-                  ? formatDistanceToNow(
-                      new Date(stats.health.lastTransactionTime),
-                      {
-                        addSuffix: true,
-                      },
-                    )
-                  : "N/A"
-              }
-              icon={<Activity className="h-4 w-4" />}
-              loading={isLoading}
-            />
-            <MetricCard
-              title="Users with Sync Issues"
-              value={stats?.health.usersWithSyncIssues.toLocaleString() ?? "-"}
-              icon={<AlertCircle className="h-4 w-4" />}
-              loading={isLoading}
-            />
-          </div>
-        </section>
+          {/* System Health */}
+          <section className="mb-6 sm:mb-8">
+            <Card className="border-2 hover:border-primary/50 transition-colors">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
+                  <Activity className="h-5 w-5 text-primary" />
+                  System Health
+                </CardTitle>
+                <CardDescription>System status and sync monitoring</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {isLoading ? (
+                    <>
+                      {[...Array(2)].map((_, i) => (
+                        <div key={i} className="space-y-3 p-4 border rounded-lg">
+                          <Skeleton className="h-4 w-20" />
+                          <Skeleton className="h-8 w-full" />
+                          <Skeleton className="h-3 w-24" />
+                        </div>
+                      ))}
+                    </>
+                  ) : (
+                    <>
+                      <MetricCard
+                        title="Last Transaction"
+                        value={
+                          stats?.health.lastTransactionTime
+                            ? formatDistanceToNow(new Date(stats.health.lastTransactionTime), {
+                                addSuffix: true,
+                              })
+                            : "N/A"
+                        }
+                        icon={<Activity className="h-4 w-4" />}
+                        subtitle="Most recent activity"
+                        loading={false}
+                      />
+                      <MetricCard
+                        title="Sync Issues"
+                        value={stats?.health.usersWithSyncIssues.toLocaleString() ?? "0"}
+                        icon={<AlertCircle className={`h-4 w-4 ${(stats?.health.usersWithSyncIssues ?? 0) > 0 ? 'text-destructive' : 'text-green-500'}`} />}
+                        subtitle="Users with problems"
+                        loading={false}
+                      />
+                    </>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+        </div>
       </div>
     </>
   );
