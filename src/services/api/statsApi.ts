@@ -12,7 +12,7 @@ import type {
   TimeSeriesStats,
   SystemHealthMetrics,
   StatsQueryParams,
-} from "../types/stats";
+} from "@/types/stats";
 
 // =====================================================
 // CONFIGURATION
@@ -37,7 +37,7 @@ async function fetchStats<T>(
 
   if (params) {
     Object.entries(params).forEach(([key, value]) => {
-      if (value) url.searchParams.append(key, value);
+      if (value != null) url.searchParams.append(key, String(value));
     });
   }
 
