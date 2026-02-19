@@ -16,25 +16,26 @@ const navLinks = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    const stored = localStorage.getItem("theme");
+    if (stored) {
+      return stored === "dark";
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
 
-  // Initialize theme from system preference or localStorage
+  // Apply theme class
   useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    if (stored) {
-      setIsDark(stored === "dark");
-      document.documentElement.classList.toggle("dark", stored === "dark");
-    } else {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-      setIsDark(prefersDark);
-      document.documentElement.classList.toggle("dark", prefersDark);
-    }
-  }, []);
+    document.documentElement.classList.toggle("dark", isDark);
+  }, [isDark]);
 
   // Listen for system preference changes
   useEffect(() => {
@@ -67,7 +68,13 @@ const Header = () => {
 
   // Close menu on route change
   useEffect(() => {
-    setIsMenuOpen(false);
+    const closeTimer = setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 0);
+
+    return () => {
+      clearTimeout(closeTimer);
+    };
   }, [location.pathname]);
 
   // Prevent body scroll when menu is open
