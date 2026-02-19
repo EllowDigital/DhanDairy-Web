@@ -352,7 +352,12 @@ export default function StatsFinance() {
                 <CardContent>
                   <TrendChart
                     title=""
-                    data={[...stats.monthlyTrend].reverse() as unknown as Record<string, unknown>[]}
+                    data={
+                      [...stats.monthlyTrend].reverse() as unknown as Record<
+                        string,
+                        unknown
+                      >[]
+                    }
                     type="area"
                     xAxisKey="monthLabel"
                     dataKeys={[
@@ -415,7 +420,12 @@ export default function StatsFinance() {
                           formatNumber(value as number),
                       },
                     ]}
-                    data={stats.currencyBreakdown as unknown as Record<string, unknown>[]}
+                    data={
+                      stats.currencyBreakdown as unknown as Record<
+                        string,
+                        unknown
+                      >[]
+                    }
                     loading={isLoading}
                   />
                 </CardContent>

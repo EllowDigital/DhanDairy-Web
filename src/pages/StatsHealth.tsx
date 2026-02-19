@@ -259,15 +259,19 @@ export default function StatsHealth() {
                       />
                       <MetricCard
                         title="Total Rows"
-                         value={
-                           stats
-                             ? formatNumber(
-                                 (Object.values(stats.tableRowCounts) as number[]).reduce(
-                                   (sum: number, count: number) => sum + count,
-                                   0,
-                                 ),
-                               )
-                             : "0"
+                        value={
+                          stats
+                            ? formatNumber(
+                                (
+                                  Object.values(
+                                    stats.tableRowCounts,
+                                  ) as number[]
+                                ).reduce(
+                                  (sum: number, count: number) => sum + count,
+                                  0,
+                                ),
+                              )
+                            : "0"
                         }
                         icon={<Database className="h-4 w-4" />}
                         subtitle="Across all tables"
