@@ -8,17 +8,24 @@ interface Particle {
   size: number;
   duration: number;
   delay: number;
+  driftX: number;
 }
+
+const seededRandom = (seed: number) => {
+  const value = Math.sin(seed * 9999.91) * 10000;
+  return value - Math.floor(value);
+};
 
 const FloatingParticles = () => {
   const particles = useMemo<Particle[]>(() => {
     return Array.from({ length: 30 }, (_, i) => ({
       id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 8 + 4, // Larger: 4-12px instead of 2-6px
-      duration: Math.random() * 8 + 10,
-      delay: Math.random() * 5,
+      x: seededRandom(i + 1) * 100,
+      y: seededRandom(i + 101) * 100,
+      size: seededRandom(i + 201) * 8 + 4,
+      duration: seededRandom(i + 301) * 8 + 10,
+      delay: seededRandom(i + 401) * 5,
+      driftX: seededRandom(i + 501) * 30 - 15,
     }));
   }, []);
 
@@ -37,7 +44,7 @@ const FloatingParticles = () => {
           }}
           animate={{
             y: [0, -50, 0], // More movement
-            x: [0, Math.random() * 30 - 15, 0],
+            x: [0, particle.driftX, 0],
             opacity: [0.4, 0.9, 0.4], // Brighter opacity range
             scale: [1, 1.4, 1],
           }}
@@ -94,7 +101,7 @@ const FloatingParticles = () => {
             scale: [0.5, 1.5, 0.5],
           }}
           transition={{
-            duration: 2 + Math.random() * 2,
+            duration: 2 + seededRandom(i + 601) * 2,
             delay: i * 0.4,
             repeat: Infinity,
             ease: "easeInOut",
