@@ -23,7 +23,8 @@ interface Column {
 interface StatsTableProps {
   title: string;
   columns: Column[];
-  data: Record<string, unknown>[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any[];
   loading?: boolean;
   emptyMessage?: string;
 }
@@ -94,7 +95,7 @@ export function StatsTable({
                   >
                     {column.format
                       ? column.format(row[column.key])
-                      : row[column.key]}
+                      : String(row[column.key] ?? "")}
                   </TableCell>
                 ))}
               </TableRow>
