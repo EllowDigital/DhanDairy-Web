@@ -16,7 +16,9 @@ const TopProgressBar = () => {
 
   useEffect(() => {
     // Start loading
-    setIsLoading(true);
+    const startTimer = setTimeout(() => {
+      setIsLoading(true);
+    }, 0);
     progress.set(0);
 
     // Animate to 30% quickly
@@ -44,6 +46,7 @@ const TopProgressBar = () => {
     }, 400);
 
     return () => {
+      clearTimeout(startTimer);
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);

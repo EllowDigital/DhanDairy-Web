@@ -67,20 +67,21 @@ const PageTransition = ({ children }: PageTransitionProps) => {
   }, [children]);
 
   useEffect(() => {
-    setIsLoading(true);
+    const startTimer = setTimeout(() => {
+      setIsLoading(true);
+    }, 0);
     const timer = setTimeout(() => {
       setDisplayChildren(latestChildrenRef.current);
       setIsLoading(false);
     }, 150);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(startTimer);
+      clearTimeout(timer);
+    };
   }, [location.pathname]);
 
-  useEffect(() => {
-    if (!isLoading) {
-      setDisplayChildren(children);
-    }
-  }, [children, isLoading]);
+  const renderedChildren = isLoading ? displayChildren : children;
 
   return (
     <>
@@ -95,7 +96,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
           animate="animate"
           exit="exit"
         >
-          {displayChildren}
+          {renderedChildren}
         </motion.div>
       </AnimatePresence>
     </>
