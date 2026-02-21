@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://dhandiary.netlify.app/sitemap-pages.xml</loc>
+    <loc>https://dhandiary.com/sitemap-pages.xml</loc>
+    <lastmod>2026-02-20</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://dhandiary.com/sitemap-downloads.xml</loc>
     <lastmod>2026-02-13</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://dhandiary.netlify.app/sitemap-downloads.xml</loc>
-    <lastmod>2026-02-13</lastmod>
+    <loc>https://dhandiary.com/sitemap-blog.xml</loc>
+    <lastmod>2026-02-20</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://dhandiary.netlify.app/sitemap-images.xml</loc>
+    <loc>https://dhandiary.com/sitemap-images.xml</loc>
     <lastmod>2026-02-13</lastmod>
   </sitemap>
 </sitemapindex>
