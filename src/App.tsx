@@ -49,9 +49,18 @@ const App = () => (
           <Route path="/about" element={<About />} />
           {/* Blog Routes */}
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/how-to-track-daily-expenses-india" element={<TrackDailyExpenses />} />
-          <Route path="/blog/best-free-finance-apps-android-2025" element={<BestFinanceApps />} />
-          <Route path="/blog/dhandiary-vs-other-expense-trackers" element={<DhanDiaryVsOthers />} />
+          <Route
+            path="/blog/how-to-track-daily-expenses-india"
+            element={<TrackDailyExpenses />}
+          />
+          <Route
+            path="/blog/best-free-finance-apps-android-2025"
+            element={<BestFinanceApps />}
+          />
+          <Route
+            path="/blog/dhandiary-vs-other-expense-trackers"
+            element={<DhanDiaryVsOthers />}
+          />
           {/* Stats Routes (Admin Only) */}
           <Route path="/stats" element={<Stats />} />
           <Route path="/stats/users" element={<StatsUsers />} />

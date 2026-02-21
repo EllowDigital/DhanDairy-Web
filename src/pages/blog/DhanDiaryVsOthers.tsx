@@ -18,9 +18,13 @@ const DhanDiaryVsOthers = () => {
     publisher: {
       "@type": "Organization",
       name: "EllowDigital",
-      logo: { "@type": "ImageObject", url: "https://dhandiary.com/img/logo.png" },
+      logo: {
+        "@type": "ImageObject",
+        url: "https://dhandiary.com/img/logo.png",
+      },
     },
-    mainEntityOfPage: "https://dhandiary.com/blog/dhandiary-vs-other-expense-trackers",
+    mainEntityOfPage:
+      "https://dhandiary.com/blog/dhandiary-vs-other-expense-trackers",
   };
 
   return (
@@ -50,9 +54,15 @@ const DhanDiaryVsOthers = () => {
               DhanDiary vs Other Expense Trackers — Honest Comparison
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-1.5"><User className="w-3.5 h-3.5" /> Sarwan Yadav</span>
-              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /> 15 Feb 2026</span>
-              <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> 7 min read</span>
+              <span className="flex items-center gap-1.5">
+                <User className="w-3.5 h-3.5" /> Sarwan Yadav
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5" /> 15 Feb 2026
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5" /> 7 min read
+              </span>
             </div>
           </header>
 
@@ -65,46 +75,89 @@ const DhanDiaryVsOthers = () => {
 
           <div className="prose prose-lg max-w-none space-y-6 text-foreground [&_h2]:heading-3 [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_li]:text-muted-foreground [&_strong]:text-foreground">
             <p>
-              Choosing an expense tracker is a personal decision. Your financial data is sensitive, and the app you choose becomes a daily habit. Let's honestly compare DhanDiary with some popular alternatives to help you decide.
+              Choosing an expense tracker is a personal decision. Your financial
+              data is sensitive, and the app you choose becomes a daily habit.
+              Let's honestly compare DhanDiary with some popular alternatives to
+              help you decide.
             </p>
 
             <h2>DhanDiary vs Walnut</h2>
             <p>
-              <strong>Walnut</strong> was one of India's most popular expense trackers, known for auto-reading SMS to categorize transactions. However, it was acquired by Paytm and has since faced privacy concerns. Walnut requires constant internet and reads your SMS — a significant privacy trade-off.
+              <strong>Walnut</strong> was one of India's most popular expense
+              trackers, known for auto-reading SMS to categorize transactions.
+              However, it was acquired by Paytm and has since faced privacy
+              concerns. Walnut requires constant internet and reads your SMS — a
+              significant privacy trade-off.
             </p>
             <p>
-              <strong>DhanDiary</strong> takes the opposite approach: all data stays on your device, no SMS reading, no internet required. You manually log transactions, which takes 5 seconds and gives you full control over what's recorded.
+              <strong>DhanDiary</strong> takes the opposite approach: all data
+              stays on your device, no SMS reading, no internet required. You
+              manually log transactions, which takes 5 seconds and gives you
+              full control over what's recorded.
             </p>
 
             <h2>DhanDiary vs Money Manager</h2>
             <p>
-              <strong>Money Manager</strong> is a capable app with budgeting features. However, the free version is ad-supported, and the premium version costs ₹299/year. Some users report cluttered UI and difficulty navigating advanced features.
+              <strong>Money Manager</strong> is a capable app with budgeting
+              features. However, the free version is ad-supported, and the
+              premium version costs ₹299/year. Some users report cluttered UI
+              and difficulty navigating advanced features.
             </p>
             <p>
-              <strong>DhanDiary</strong> offers similar core features — transaction logging, charts, category management — completely free with no ads. The interface is designed to be minimal and fast, getting out of your way so you can log transactions quickly.
+              <strong>DhanDiary</strong> offers similar core features —
+              transaction logging, charts, category management — completely free
+              with no ads. The interface is designed to be minimal and fast,
+              getting out of your way so you can log transactions quickly.
             </p>
 
             <h2>DhanDiary vs Expense Manager</h2>
             <p>
-              <strong>Expense Manager</strong> apps on the Play Store vary in quality. Many are loaded with ads, request unnecessary permissions, or have confusing interfaces. Finding a trustworthy one is hit-or-miss.
+              <strong>Expense Manager</strong> apps on the Play Store vary in
+              quality. Many are loaded with ads, request unnecessary
+              permissions, or have confusing interfaces. Finding a trustworthy
+              one is hit-or-miss.
             </p>
             <p>
-              <strong>DhanDiary</strong> is open about its approach: no ads, no unnecessary permissions, no data collection. It's built by an indie developer who uses the app himself — that's the best quality guarantee.
+              <strong>DhanDiary</strong> is open about its approach: no ads, no
+              unnecessary permissions, no data collection. It's built by an
+              indie developer who uses the app himself — that's the best quality
+              guarantee.
             </p>
 
             <h2>Key Differentiators</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Privacy-first:</strong> Zero ads, zero trackers, zero data collection</li>
-              <li><strong>Offline-first:</strong> Works without internet, auto-syncs when connected</li>
-              <li><strong>Truly free:</strong> No premium tier, no paywalls, no subscriptions</li>
-              <li><strong>Made in India:</strong> Designed for Indian spending patterns and categories</li>
-              <li><strong>Multi-store availability:</strong> Samsung Galaxy Store, Amazon, Huawei, Indus, and more</li>
-              <li><strong>Export support:</strong> PDF, CSV, and Excel for tax records</li>
+              <li>
+                <strong>Privacy-first:</strong> Zero ads, zero trackers, zero
+                data collection
+              </li>
+              <li>
+                <strong>Offline-first:</strong> Works without internet,
+                auto-syncs when connected
+              </li>
+              <li>
+                <strong>Truly free:</strong> No premium tier, no paywalls, no
+                subscriptions
+              </li>
+              <li>
+                <strong>Made in India:</strong> Designed for Indian spending
+                patterns and categories
+              </li>
+              <li>
+                <strong>Multi-store availability:</strong> Samsung Galaxy Store,
+                Amazon, Huawei, Indus, and more
+              </li>
+              <li>
+                <strong>Export support:</strong> PDF, CSV, and Excel for tax
+                records
+              </li>
             </ul>
 
             <h2>The Bottom Line</h2>
             <p>
-              If privacy, simplicity, and cost matter to you, DhanDiary is the best expense tracker for Indian Android users. It doesn't try to do everything — it does one thing exceptionally well: helping you track your money without compromises.
+              If privacy, simplicity, and cost matter to you, DhanDiary is the
+              best expense tracker for Indian Android users. It doesn't try to
+              do everything — it does one thing exceptionally well: helping you
+              track your money without compromises.
             </p>
           </div>
 
@@ -113,7 +166,8 @@ const DhanDiaryVsOthers = () => {
               See the difference yourself
             </h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Download DhanDiary and experience the privacy-first approach to expense tracking.
+              Download DhanDiary and experience the privacy-first approach to
+              expense tracking.
             </p>
             <Button asChild variant="hero" size="lg" className="shadow-glow">
               <Link to="/download">Download DhanDiary Free</Link>

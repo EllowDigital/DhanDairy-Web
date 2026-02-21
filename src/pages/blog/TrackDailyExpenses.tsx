@@ -18,9 +18,13 @@ const TrackDailyExpenses = () => {
     publisher: {
       "@type": "Organization",
       name: "EllowDigital",
-      logo: { "@type": "ImageObject", url: "https://dhandiary.com/img/logo.png" },
+      logo: {
+        "@type": "ImageObject",
+        url: "https://dhandiary.com/img/logo.png",
+      },
     },
-    mainEntityOfPage: "https://dhandiary.com/blog/how-to-track-daily-expenses-india",
+    mainEntityOfPage:
+      "https://dhandiary.com/blog/how-to-track-daily-expenses-india",
   };
 
   return (
@@ -76,12 +80,19 @@ const TrackDailyExpenses = () => {
           {/* Content */}
           <div className="prose prose-lg max-w-none space-y-6 text-foreground [&_h2]:heading-3 [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_li]:text-muted-foreground [&_strong]:text-foreground">
             <p>
-              Managing daily expenses is the cornerstone of good personal finance. In India, where cash transactions are still common and UPI payments happen dozens of times a day, keeping track of where your money goes can feel overwhelming. But it doesn't have to be.
+              Managing daily expenses is the cornerstone of good personal
+              finance. In India, where cash transactions are still common and
+              UPI payments happen dozens of times a day, keeping track of where
+              your money goes can feel overwhelming. But it doesn't have to be.
             </p>
 
             <h2>Why Tracking Daily Expenses Matters</h2>
             <p>
-              Most Indians don't realize where 30–40% of their monthly income goes. Small purchases — chai, auto rides, snacks, recharges — add up fast. By tracking every transaction, you gain clarity on spending patterns and can redirect money towards savings and investments.
+              Most Indians don't realize where 30–40% of their monthly income
+              goes. Small purchases — chai, auto rides, snacks, recharges — add
+              up fast. By tracking every transaction, you gain clarity on
+              spending patterns and can redirect money towards savings and
+              investments.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Identify unnecessary spending habits</li>
@@ -92,27 +103,54 @@ const TrackDailyExpenses = () => {
 
             <h2>Traditional Methods vs Digital Tools</h2>
             <p>
-              <strong>The Register Method:</strong> Many Indian households still use a "khata" (register) for daily expenses. While simple, it's hard to analyze trends, calculate totals, or export data. Plus, you might forget to write entries.
+              <strong>The Register Method:</strong> Many Indian households still
+              use a "khata" (register) for daily expenses. While simple, it's
+              hard to analyze trends, calculate totals, or export data. Plus,
+              you might forget to write entries.
             </p>
             <p>
-              <strong>Spreadsheets:</strong> Google Sheets or Excel offer flexibility but require manual entry and aren't mobile-friendly for on-the-go tracking.
+              <strong>Spreadsheets:</strong> Google Sheets or Excel offer
+              flexibility but require manual entry and aren't mobile-friendly
+              for on-the-go tracking.
             </p>
             <p>
-              <strong>Finance Apps:</strong> Apps like DhanDiary combine the simplicity of a register with powerful features — automatic categorization, charts, export options, and offline support.
+              <strong>Finance Apps:</strong> Apps like DhanDiary combine the
+              simplicity of a register with powerful features — automatic
+              categorization, charts, export options, and offline support.
             </p>
 
             <h2>Best Practices for Daily Expense Tracking</h2>
             <ol className="list-decimal pl-6 space-y-2">
-              <li><strong>Log immediately:</strong> Don't wait until evening. Record each expense as it happens.</li>
-              <li><strong>Categorize everything:</strong> Use categories like Food, Transport, Bills, Entertainment, Health.</li>
-              <li><strong>Review weekly:</strong> Spend 10 minutes every Sunday reviewing your weekly spending.</li>
-              <li><strong>Set spending limits:</strong> Assign monthly limits per category and track against them.</li>
-              <li><strong>Use an offline-first app:</strong> In India, internet connectivity isn't always reliable. Choose an app that works offline.</li>
+              <li>
+                <strong>Log immediately:</strong> Don't wait until evening.
+                Record each expense as it happens.
+              </li>
+              <li>
+                <strong>Categorize everything:</strong> Use categories like
+                Food, Transport, Bills, Entertainment, Health.
+              </li>
+              <li>
+                <strong>Review weekly:</strong> Spend 10 minutes every Sunday
+                reviewing your weekly spending.
+              </li>
+              <li>
+                <strong>Set spending limits:</strong> Assign monthly limits per
+                category and track against them.
+              </li>
+              <li>
+                <strong>Use an offline-first app:</strong> In India, internet
+                connectivity isn't always reliable. Choose an app that works
+                offline.
+              </li>
             </ol>
 
             <h2>How DhanDiary Makes It Easy</h2>
             <p>
-              DhanDiary is specifically designed for Indian users. It supports offline tracking, provides beautiful charts for spending insights, and lets you export data to PDF, CSV, or Excel. With secure authentication and zero ads, it's the privacy-first choice for personal finance.
+              DhanDiary is specifically designed for Indian users. It supports
+              offline tracking, provides beautiful charts for spending insights,
+              and lets you export data to PDF, CSV, or Excel. With secure
+              authentication and zero ads, it's the privacy-first choice for
+              personal finance.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Add transactions in under 5 seconds</li>
@@ -124,7 +162,9 @@ const TrackDailyExpenses = () => {
 
             <h2>Start Today</h2>
             <p>
-              The best time to start tracking your expenses was yesterday. The second best time is now. Download DhanDiary and take control of your finances in just 5 minutes.
+              The best time to start tracking your expenses was yesterday. The
+              second best time is now. Download DhanDiary and take control of
+              your finances in just 5 minutes.
             </p>
           </div>
 
@@ -134,7 +174,8 @@ const TrackDailyExpenses = () => {
               Ready to track your expenses?
             </h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Download DhanDiary free — no ads, no subscriptions, no data collection.
+              Download DhanDiary free — no ads, no subscriptions, no data
+              collection.
             </p>
             <Button asChild variant="hero" size="lg" className="shadow-glow">
               <Link to="/download">Download DhanDiary Free</Link>

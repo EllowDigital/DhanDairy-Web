@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://dhandiary.com/blog</loc>
+    <loc>https://dhandiary.netlify.app/blog</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dhandiary.com/blog/how-to-track-daily-expenses-india</loc>
+    <loc>https://dhandiary.netlify.app/blog/how-to-track-daily-expenses-india</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dhandiary.com/blog/best-free-finance-apps-android-2025</loc>
+    <loc>https://dhandiary.netlify.app/blog/best-free-finance-apps-android-2025</loc>
     <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dhandiary.com/blog/dhandiary-vs-other-expense-trackers</loc>
+    <loc>https://dhandiary.netlify.app/blog/dhandiary-vs-other-expense-trackers</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
