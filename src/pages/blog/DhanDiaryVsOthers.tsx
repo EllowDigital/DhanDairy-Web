@@ -11,7 +11,7 @@ const DhanDiaryVsOthers = () => {
     headline: "DhanDiary vs Other Expense Trackers — Honest Comparison",
     description:
       "How does DhanDiary compare to popular expense trackers? We break down features, privacy, cost, and offline support.",
-    image: "https://dhandiary.com/img/Screenshot/6s.jpg",
+    image: "https://dhandiary.netlify.app/img/Screenshot/6s.jpg",
     datePublished: "2026-02-15",
     dateModified: "2026-02-15",
     author: { "@type": "Person", name: "Sarwan Yadav" },
@@ -20,11 +20,11 @@ const DhanDiaryVsOthers = () => {
       name: "EllowDigital",
       logo: {
         "@type": "ImageObject",
-        url: "https://dhandiary.com/img/logo.png",
+        url: "https://dhandiary.netlify.app/img/logo.png",
       },
     },
     mainEntityOfPage:
-      "https://dhandiary.com/blog/dhandiary-vs-other-expense-trackers",
+      "https://dhandiary.netlify.app/blog/dhandiary-vs-other-expense-trackers",
   };
 
   return (

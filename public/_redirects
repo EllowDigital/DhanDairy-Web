@@ -10,6 +10,12 @@
 
 # Note: No redirect needed as we're using the Netlify domain as canonical
 
+# 301 redirect: old custom domains -> canonical Netlify domain
+https://www.dhandiary.com/*   https://dhandiary.netlify.app/:splat   301!
+https://dhandiary.com/*       https://dhandiary.netlify.app/:splat   301!
+http://www.dhandiary.com/*    https://dhandiary.netlify.app/:splat   301!
+http://dhandiary.com/*        https://dhandiary.netlify.app/:splat   301!
+
 # SPA fallback: serve index.html for all routes (must be last)
 
 /*    /index.html   200

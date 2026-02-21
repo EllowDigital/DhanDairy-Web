@@ -11,7 +11,7 @@ const TrackDailyExpenses = () => {
     headline: "How to Track Daily Expenses in India — A Complete Guide",
     description:
       "Learn the best methods to track your daily expenses in India. From manual registers to apps like DhanDiary, discover what works best.",
-    image: "https://dhandiary.com/img/Screenshot/2s.jpg",
+    image: "https://dhandiary.netlify.app/img/Screenshot/2s.jpg",
     datePublished: "2026-02-20",
     dateModified: "2026-02-20",
     author: { "@type": "Person", name: "Sarwan Yadav" },
@@ -20,11 +20,11 @@ const TrackDailyExpenses = () => {
       name: "EllowDigital",
       logo: {
         "@type": "ImageObject",
-        url: "https://dhandiary.com/img/logo.png",
+        url: "https://dhandiary.netlify.app/img/logo.png",
       },
     },
     mainEntityOfPage:
-      "https://dhandiary.com/blog/how-to-track-daily-expenses-india",
+      "https://dhandiary.netlify.app/blog/how-to-track-daily-expenses-india",
   };
 
   return (

@@ -43,7 +43,7 @@ const Blog = () => {
     "@context": "https://schema.org",
     "@type": "Blog",
     name: "DhanDiary Blog — Personal Finance Tips & App Guides",
-    url: "https://dhandiary.com/blog",
+    url: "https://dhandiary.netlify.app/blog",
     description:
       "Expert tips on personal finance management, expense tracking, and money-saving strategies for Indians.",
     publisher: {
@@ -64,7 +64,7 @@ const Blog = () => {
         "@type": "Organization",
         name: "EllowDigital",
       },
-      url: `https://dhandiary.com/blog/${post.slug}`,
+      url: `https://dhandiary.netlify.app/blog/${post.slug}`,
     })),
   };
 

@@ -57,7 +57,7 @@ const BestFinanceApps = () => {
     headline: "Best Free Finance Apps for Android in 2025 — Top Picks",
     description:
       "Compare the top free personal finance apps for Android in 2025. Review features, privacy, offline support for Indian users.",
-    image: "https://dhandiary.com/img/Screenshot/4s.jpg",
+    image: "https://dhandiary.netlify.app/img/Screenshot/4s.jpg",
     datePublished: "2026-02-18",
     dateModified: "2026-02-18",
     author: { "@type": "Person", name: "Sarwan Yadav" },
@@ -66,11 +66,11 @@ const BestFinanceApps = () => {
       name: "EllowDigital",
       logo: {
         "@type": "ImageObject",
-        url: "https://dhandiary.com/img/logo.png",
+        url: "https://dhandiary.netlify.app/img/logo.png",
       },
     },
     mainEntityOfPage:
-      "https://dhandiary.com/blog/best-free-finance-apps-android-2025",
+      "https://dhandiary.netlify.app/blog/best-free-finance-apps-android-2025",
   };
 
   return (
