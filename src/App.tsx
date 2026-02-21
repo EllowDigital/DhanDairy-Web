@@ -21,6 +21,10 @@ import StatsUsers from "./pages/StatsUsers";
 import StatsTransactions from "./pages/StatsTransactions";
 import StatsFinance from "./pages/StatsFinance";
 import StatsHealth from "./pages/StatsHealth";
+import Blog from "./pages/Blog";
+import TrackDailyExpenses from "./pages/blog/TrackDailyExpenses";
+import BestFinanceApps from "./pages/blog/BestFinanceApps";
+import DhanDiaryVsOthers from "./pages/blog/DhanDiaryVsOthers";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +47,11 @@ const App = () => (
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          {/* Blog Routes */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/how-to-track-daily-expenses-india" element={<TrackDailyExpenses />} />
+          <Route path="/blog/best-free-finance-apps-android-2025" element={<BestFinanceApps />} />
+          <Route path="/blog/dhandiary-vs-other-expense-trackers" element={<DhanDiaryVsOthers />} />
           {/* Stats Routes (Admin Only) */}
           <Route path="/stats" element={<Stats />} />
           <Route path="/stats/users" element={<StatsUsers />} />

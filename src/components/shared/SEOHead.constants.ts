@@ -79,4 +79,12 @@ export const pageSEO = {
       "install DhanDiary APK, Android APK install guide, unknown sources Android, DhanDiary manual installation, sideload APK safely",
     canonical: "/how-to-install-apk",
   },
+  blog: {
+    title: "Blog — Finance Tips & App Guides",
+    description:
+      "Read expert articles on personal finance management, daily expense tracking tips, and app comparisons. Learn how to manage your money better with DhanDiary.",
+    keywords:
+      "personal finance blog, expense tracking tips, money management India, DhanDiary blog, finance app guides, budget tips, saving money India",
+    canonical: "/blog",
+  },
 };

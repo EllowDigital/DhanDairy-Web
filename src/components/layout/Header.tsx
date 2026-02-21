@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Features", path: "/features" },
   { name: "Download", path: "/download" },
   { name: "Install APK", path: "/how-to-install-apk" },
+  { name: "Blog", path: "/blog" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
