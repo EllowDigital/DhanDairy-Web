@@ -25,6 +25,7 @@ import Blog from "./pages/Blog";
 import TrackDailyExpenses from "./pages/blog/TrackDailyExpenses";
 import BestFinanceApps from "./pages/blog/BestFinanceApps";
 import DhanDiaryVsOthers from "./pages/blog/DhanDiaryVsOthers";
+import ReleaseNotes from "./pages/ReleaseNotes";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,7 @@ const App = () => (
             element={<DhanDiaryVsOthers />}
           />
           {/* Stats Routes (Admin Only) */}
+          <Route path="/release-notes" element={<ReleaseNotes />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/stats/users" element={<StatsUsers />} />
           <Route path="/stats/transactions" element={<StatsTransactions />} />

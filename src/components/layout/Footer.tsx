@@ -39,6 +39,7 @@ const Footer = () => {
                 { name: "Download", path: "/download" },
                 { name: "How to Install APK", path: "/how-to-install-apk" },
                 { name: "Roadmap", path: "/roadmap" },
+                { name: "Release Notes", path: "/release-notes" },
                 { name: "Blog", path: "/blog" },
                 { name: "About Us", path: "/about" },
                 { name: "Contact", path: "/contact" },
