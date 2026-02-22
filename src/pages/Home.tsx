@@ -85,15 +85,11 @@ const Home = () => {
     offset: ["start start", "end start"],
   });
 
-  // Parallax transforms for background elements
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, 150]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const scale1 = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
-  const scale2 = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  // Parallax transforms — GPU-only (translate3d) to prevent CLS
+  const y1 = useTransform(scrollYProgress, [0, 1], ["0px", "150px"]);
+  const y2 = useTransform(scrollYProgress, [0, 1], ["0px", "200px"]);
+  const y3 = useTransform(scrollYProgress, [0, 1], ["0px", "100px"]);
   const opacity1 = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 45]);
-  const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
     <Layout>
@@ -107,32 +103,18 @@ const Home = () => {
         <FloatingParticles />
 
         {/* Parallax Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
           <motion.div
-            style={{ y: y1, scale: scale1, rotate: rotate1, opacity: opacity1 }}
+            style={{ y: y1, opacity: opacity1, willChange: "transform, opacity" }}
             className="absolute top-10 sm:top-20 left-5 sm:left-10 w-40 sm:w-72 h-40 sm:h-72 bg-primary/10 rounded-full blur-3xl"
           />
           <motion.div
-            style={{ y: y2, scale: scale2, rotate: rotate2, opacity: opacity1 }}
+            style={{ y: y2, opacity: opacity1, willChange: "transform, opacity" }}
             className="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-52 sm:w-96 h-52 sm:h-96 bg-accent/20 rounded-full blur-3xl"
           />
           <motion.div
-            style={{ y: y3, opacity: opacity1 }}
+            style={{ y: y3, opacity: opacity1, willChange: "transform, opacity" }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-gradient-radial from-primary/5 to-transparent rounded-full"
-          />
-          <motion.div
-            style={{
-              y: useTransform(scrollYProgress, [0, 1], [0, -80]),
-              opacity: opacity1,
-            }}
-            className="absolute top-1/4 right-1/4 w-24 sm:w-32 h-24 sm:h-32 bg-primary/5 rounded-full blur-2xl"
-          />
-          <motion.div
-            style={{
-              y: useTransform(scrollYProgress, [0, 1], [0, 120]),
-              opacity: opacity1,
-            }}
-            className="absolute bottom-1/3 left-1/4 w-32 sm:w-40 h-32 sm:h-40 bg-accent/10 rounded-full blur-2xl"
           />
         </div>
 
