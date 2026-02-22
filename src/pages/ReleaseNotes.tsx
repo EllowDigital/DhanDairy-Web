@@ -38,7 +38,7 @@ const ReleaseNotes = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Release Notes — DhanDiary",
-    url: "https://dhandiary.com/release-notes",
+    url: "https://dhandiary.netlify.app/release-notes",
     description:
       "See what's new in DhanDiary. Release notes, changelogs, and version history for the DhanDiary personal finance app.",
     publisher: {
