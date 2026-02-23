@@ -36,6 +36,36 @@ const blogPosts = [
     category: "Comparison",
     image: "/img/Screenshot/6s.jpg",
   },
+  {
+    slug: "how-to-save-money-india-2025",
+    title: "How to Save Money in India 2025 — 15 Practical Tips That Work",
+    excerpt:
+      "Discover 15 proven money-saving strategies for Indians in 2025. From cutting subscription costs to smart UPI habits, learn actionable tips to grow your savings.",
+    date: "2026-02-22",
+    readTime: "9 min read",
+    category: "Money Saving",
+    image: "/img/Screenshot/3s.jpg",
+  },
+  {
+    slug: "upi-expense-tracking-tips",
+    title: "UPI Expense Tracking Tips — How to Track UPI Payments Effectively",
+    excerpt:
+      "Learn how to track your UPI transactions effectively. Discover tips for managing GPay, PhonePe, and Paytm spending with offline expense tracking apps.",
+    date: "2026-02-21",
+    readTime: "7 min read",
+    category: "Digital Payments",
+    image: "/img/Screenshot/5s.jpg",
+  },
+  {
+    slug: "best-budget-planning-methods-beginners",
+    title: "Best Budget Planning Methods for Beginners — A Simple Guide",
+    excerpt:
+      "New to budgeting? Learn the best budget planning methods for beginners including 50/30/20, envelope system, zero-based budgeting, and how to pick the right one.",
+    date: "2026-02-19",
+    readTime: "8 min read",
+    category: "Budgeting",
+    image: "/img/Screenshot/7s.jpg",
+  },
 ];
 
 const Blog = () => {
