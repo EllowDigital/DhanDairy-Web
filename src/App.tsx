@@ -25,6 +25,9 @@ import Blog from "./pages/Blog";
 import TrackDailyExpenses from "./pages/blog/TrackDailyExpenses";
 import BestFinanceApps from "./pages/blog/BestFinanceApps";
 import DhanDiaryVsOthers from "./pages/blog/DhanDiaryVsOthers";
+import SaveMoneyIndia2025 from "./pages/blog/SaveMoneyIndia2025";
+import UpiExpenseTracking from "./pages/blog/UpiExpenseTracking";
+import BudgetPlanningBeginners from "./pages/blog/BudgetPlanningBeginners";
 import ReleaseNotes from "./pages/ReleaseNotes";
 
 const queryClient = new QueryClient();
@@ -61,6 +64,18 @@ const App = () => (
           <Route
             path="/blog/dhandiary-vs-other-expense-trackers"
             element={<DhanDiaryVsOthers />}
+          />
+          <Route
+            path="/blog/how-to-save-money-india-2025"
+            element={<SaveMoneyIndia2025 />}
+          />
+          <Route
+            path="/blog/upi-expense-tracking-tips"
+            element={<UpiExpenseTracking />}
+          />
+          <Route
+            path="/blog/best-budget-planning-methods-beginners"
+            element={<BudgetPlanningBeginners />}
           />
           {/* Stats Routes (Admin Only) */}
           <Route path="/release-notes" element={<ReleaseNotes />} />
