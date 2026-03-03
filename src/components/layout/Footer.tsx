@@ -13,7 +13,7 @@ const Footer = () => {
               className="inline-flex items-center gap-2.5 mb-4 focus-ring rounded-lg"
             >
               <img
-                src="/img/logo.png"
+                src="/img/logo.webp"
                 alt="DhanDiary"
                 className="w-10 h-10 rounded-xl object-contain shadow-soft"
                 loading="lazy"
