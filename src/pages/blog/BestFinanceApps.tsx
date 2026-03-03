@@ -66,7 +66,7 @@ const BestFinanceApps = () => {
       name: "EllowDigital",
       logo: {
         "@type": "ImageObject",
-        url: "https://dhandiary.netlify.app/img/logo.png",
+        url: "https://dhandiary.netlify.app/img/logo.webp",
       },
     },
     mainEntityOfPage:

@@ -107,7 +107,7 @@ const Header = () => {
               className="flex items-center gap-2.5 focus-ring rounded-lg"
             >
               <img
-                src="/img/logo.png"
+                src="/img/logo.webp"
                 alt="DhanDiary"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl object-contain shadow-soft"
                 loading="eager"
@@ -226,7 +226,7 @@ const Header = () => {
                 <div className="flex items-center justify-between p-4 border-b border-border">
                   <Link to="/" className="flex items-center gap-2.5">
                     <img
-                      src="/img/logo.png"
+                      src="/img/logo.webp"
                       alt="DhanDiary"
                       className="w-9 h-9 rounded-xl object-contain shadow-soft"
                     />
