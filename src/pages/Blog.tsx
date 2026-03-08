@@ -30,7 +30,7 @@ const blogPosts = [
     date: "2026-02-18",
     readTime: "10 min read",
     category: "App Reviews",
-    image: "/img/Screenshot/4s.jpg",
+    image: bestFinanceImg,
   },
   {
     slug: "dhandiary-vs-other-expense-trackers",
