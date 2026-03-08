@@ -50,7 +50,7 @@ const blogPosts = [
     date: "2026-02-22",
     readTime: "9 min read",
     category: "Money Saving",
-    image: "/img/Screenshot/3s.jpg",
+    image: saveMoneyImg,
   },
   {
     slug: "upi-expense-tracking-tips",
