@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, ExternalLink, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
 
 const quickLinks = [
   { name: "Features", path: "/features" },
