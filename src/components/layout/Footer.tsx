@@ -89,14 +89,6 @@ const Footer = () => {
                   sarwanyadav6174@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-muted-foreground text-sm">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <ExternalLink className="w-4 h-4 text-primary" />
-                </div>
-                <a href="https://ellowdigital.space" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  ellowdigital.space
-                </a>
-              </li>
             </ul>
           </div>
         </div>
