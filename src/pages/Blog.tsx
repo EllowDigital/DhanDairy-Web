@@ -70,7 +70,7 @@ const blogPosts = [
     date: "2026-02-19",
     readTime: "8 min read",
     category: "Budgeting",
-    image: "/img/Screenshot/7s.jpg",
+    image: budgetPlanningImg,
   },
 ];
 
