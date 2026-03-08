@@ -175,6 +175,7 @@ const useIsAndroid = () => {
 const DownloadPage = () => {
   const heroRef = useRef<HTMLElement>(null);
   const isAndroid = useIsAndroid();
+  const { toast } = useToast();
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
