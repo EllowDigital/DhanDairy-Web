@@ -4,6 +4,7 @@ import { Mail, ExternalLink, ArrowUpRight } from "lucide-react";
 const quickLinks = [
   { name: "Features", path: "/features" },
   { name: "Download", path: "/download" },
+  { name: "Compare", path: "/compare" },
   { name: "Blog", path: "/blog" },
   { name: "Roadmap", path: "/roadmap" },
   { name: "Release Notes", path: "/release-notes" },
