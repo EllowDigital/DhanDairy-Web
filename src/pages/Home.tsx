@@ -29,6 +29,7 @@ import ScrollReveal, {
   StaggerContainer,
   StaggerItem,
 } from "@/components/home/ScrollReveal";
+import NarrativeSection from "@/components/home/NarrativeSection";
 import TypewriterEffect from "@/components/home/TypewriterEffect";
 import { APP_CONFIG } from "@/lib/appConfig";
 import SEOHead from "@/components/shared/SEOHead";
