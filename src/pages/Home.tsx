@@ -266,39 +266,7 @@ const Home = () => {
       </section>
 
       {/* ============ NARRATIVE / STORYTELLING ============ */}
-      <section className="section-padding bg-section-gradient">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal animation="fadeUp" className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
-            <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Why DhanDiary?</p>
-            <h2 className="heading-2 text-foreground text-balance">
-              Finance apps should be simple, private, and{" "}
-              <span className="text-gradient">actually useful.</span>
-            </h2>
-          </ScrollReveal>
-
-          <div className="max-w-4xl mx-auto space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-12">
-            {narrativeBlocks.map((block, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 0.15}>
-                <div className="relative">
-                  {/* Step indicator */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                      {block.icon}
-                    </div>
-                    <span className="text-primary font-semibold text-sm uppercase tracking-wider">{block.label}</span>
-                  </div>
-                  <h3 className="font-display font-bold text-foreground text-lg sm:text-xl mb-3 leading-snug">
-                    {block.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                    {block.description}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NarrativeSection narrativeBlocks={narrativeBlocks} />
 
       {/* ============ FEATURES ============ */}
       <section className="section-padding bg-background">
