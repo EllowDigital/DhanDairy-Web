@@ -191,15 +191,9 @@ const Compare = () => {
         structuredData={structuredData}
       />
 
-      {/* Extra FAQ structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
-      />
-
       <PageHero
         badge={{ icon: <Star className="w-4 h-4" />, text: "Comparison" }}
-        title="DhanDiary vs Other Expense Trackers"
+        title="DhanDiary vs Other"
         titleGradient="Expense Trackers"
         description="An honest, feature-by-feature comparison of DhanDiary with popular expense trackers in India. See why thousands choose DhanDiary."
       />
