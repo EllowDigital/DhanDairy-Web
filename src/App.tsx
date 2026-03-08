@@ -30,6 +30,7 @@ import UpiExpenseTracking from "./pages/blog/UpiExpenseTracking";
 import BudgetPlanningBeginners from "./pages/blog/BudgetPlanningBeginners";
 import ReleaseNotes from "./pages/ReleaseNotes";
 import HelpSupport from "./pages/HelpSupport";
+import Compare from "./pages/Compare";
 
 const queryClient = new QueryClient();
 
