@@ -40,7 +40,7 @@ const blogPosts = [
     date: "2026-02-15",
     readTime: "7 min read",
     category: "Comparison",
-    image: "/img/Screenshot/6s.jpg",
+    image: vsOthersImg,
   },
   {
     slug: "how-to-save-money-india-2025",
