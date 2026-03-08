@@ -29,6 +29,7 @@ import SaveMoneyIndia2025 from "./pages/blog/SaveMoneyIndia2025";
 import UpiExpenseTracking from "./pages/blog/UpiExpenseTracking";
 import BudgetPlanningBeginners from "./pages/blog/BudgetPlanningBeginners";
 import ReleaseNotes from "./pages/ReleaseNotes";
+import HelpSupport from "./pages/HelpSupport";
 
 const queryClient = new QueryClient();
 
