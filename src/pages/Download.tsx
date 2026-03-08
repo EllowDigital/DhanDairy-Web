@@ -24,6 +24,7 @@ import ScrollReveal, {
 import { APP_CONFIG, isApkDownloadLinkValid } from "@/lib/appConfig";
 import SEOHead from "@/components/shared/SEOHead";
 import { pageSEO } from "@/components/shared/SEOHead.constants";
+import { useToast } from "@/hooks/use-toast";
 
 const apkLinkValid = isApkDownloadLinkValid();
 
