@@ -60,7 +60,7 @@ const blogPosts = [
     date: "2026-02-21",
     readTime: "7 min read",
     category: "Digital Payments",
-    image: "/img/Screenshot/5s.jpg",
+    image: upiTrackingImg,
   },
   {
     slug: "best-budget-planning-methods-beginners",
