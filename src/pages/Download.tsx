@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import {
   ExternalLink,
   Smartphone,
@@ -161,14 +161,30 @@ const faqs = [
   { q: "Is it available on iOS?", a: "Currently, DhanDiary is available only for Android devices. iOS support may come in the future." },
 ];
 
+const PACKAGE_NAME = "com.ellowdigital.dhandiary";
+
+const useIsAndroid = () => {
+  const [isAndroid, setIsAndroid] = useState(false);
+  useEffect(() => {
+    setIsAndroid(/android/i.test(navigator.userAgent));
+  }, []);
+  return isAndroid;
+};
+
 const DownloadPage = () => {
   const heroRef = useRef<HTMLElement>(null);
+  const isAndroid = useIsAndroid();
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
   const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const heroY = useTransform(scrollYProgress, [0, 1], ["0px", "60px"]);
+
+  const handleOpenApp = useCallback(() => {
+    // Use Android intent URL to try launching the app
+    window.location.href = `intent://#Intent;package=${PACKAGE_NAME};scheme=dhandiary;launchFlags=0x10000000;end`;
+  }, []);
 
   return (
     <Layout>
@@ -199,6 +215,23 @@ const DownloadPage = () => {
             <p className="body-large max-w-2xl mx-auto text-balance">
               Get the app on your Android device. Free forever, no ads, no subscriptions.
             </p>
+
+            {/* Open App button — Android only */}
+            {isAndroid && (
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                <button
+                  onClick={handleOpenApp}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-base shadow-glow hover:opacity-90 transition-opacity"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                  Open DhanDiary
+                </button>
+              </motion.div>
+            )}
 
             {/* Quick feature badges */}
             <div className="flex flex-wrap justify-center gap-3 pt-2">
