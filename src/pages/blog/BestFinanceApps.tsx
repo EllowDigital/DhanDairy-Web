@@ -114,7 +114,7 @@ const BestFinanceApps = () => {
           </header>
 
           <img
-            src="/img/Screenshot/4s.jpg"
+            src={bestFinanceImg}
             alt="Best free finance apps comparison for Android"
             className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border"
             loading="eager"

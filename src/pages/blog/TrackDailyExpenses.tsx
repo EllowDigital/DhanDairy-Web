@@ -72,7 +72,7 @@ const TrackDailyExpenses = () => {
 
           {/* Featured Image */}
           <img
-            src="/img/Screenshot/2s.jpg"
+            src={trackExpensesImg}
             alt="DhanDiary app showing daily expense tracking"
             className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border"
             loading="eager"

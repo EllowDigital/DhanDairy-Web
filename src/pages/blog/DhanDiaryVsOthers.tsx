@@ -68,7 +68,7 @@ const DhanDiaryVsOthers = () => {
           </header>
 
           <img
-            src="/img/Screenshot/6s.jpg"
+            src={vsOthersImg}
             alt="DhanDiary comparison with other expense trackers"
             className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border"
             loading="eager"
