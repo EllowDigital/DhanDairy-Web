@@ -451,6 +451,23 @@ const DownloadPage = () => {
 
       <div className="section-divider" />
 
+      {/* Compare CTA */}
+      <section className="section-padding bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <ScrollReveal animation="fadeUp">
+            <div className="p-6 rounded-2xl bg-card border border-border text-center space-y-4">
+              <h3 className="font-display text-xl font-bold text-foreground">Not sure if DhanDiary is right for you?</h3>
+              <p className="text-muted-foreground text-sm max-w-lg mx-auto">See how DhanDiary compares to Walnut, Money Manager, Monefy and other popular expense trackers.</p>
+              <Link to="/compare" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                Compare Expense Trackers <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
       {/* FAQ */}
       <section className="section-padding bg-section-gradient">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">

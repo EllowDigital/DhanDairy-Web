@@ -353,6 +353,28 @@ const Home = () => {
         <FAQ />
       </ScrollReveal>
 
+      {/* ============ COMPARE CTA ============ */}
+      <section className="section-padding bg-section-gradient">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal animation="fadeUp">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <h2 className="heading-2 text-foreground text-balance">
+                See how DhanDiary stacks up
+              </h2>
+              <p className="body-large max-w-xl mx-auto">
+                Compare DhanDiary with Walnut, Money Manager, Monefy and other popular expense trackers in India.
+              </p>
+              <Button asChild variant="outline" size="lg">
+                <Link to="/compare">
+                  Compare Expense Trackers
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ============ FINAL CTA ============ */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 bg-mesh-gradient pointer-events-none" />
