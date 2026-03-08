@@ -4,6 +4,12 @@ import { ArrowRight, Calendar, Clock, BookOpen } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
 import { pageSEO } from "@/components/shared/SEOHead.constants";
+import trackExpensesImg from "@/assets/blog/track-daily-expenses.jpg";
+import bestFinanceImg from "@/assets/blog/best-finance-apps.jpg";
+import vsOthersImg from "@/assets/blog/dhandiary-vs-others.jpg";
+import saveMoneyImg from "@/assets/blog/save-money-india.jpg";
+import upiTrackingImg from "@/assets/blog/upi-expense-tracking.jpg";
+import budgetPlanningImg from "@/assets/blog/budget-planning-beginners.jpg";
 
 const blogPosts = [
   {
