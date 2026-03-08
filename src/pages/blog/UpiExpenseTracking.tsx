@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
+import upiTrackingImg from "@/assets/blog/upi-expense-tracking.jpg";
 
 const UpiExpenseTracking = () => {
   const structuredData = {
