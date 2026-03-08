@@ -52,6 +52,7 @@ const App = () => (
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/help" element={<HelpSupport />} />
           {/* Blog Routes */}
           <Route path="/blog" element={<Blog />} />
           <Route
