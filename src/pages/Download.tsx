@@ -216,6 +216,23 @@ const DownloadPage = () => {
               Get the app on your Android device. Free forever, no ads, no subscriptions.
             </p>
 
+            {/* Open App button — Android only */}
+            {isAndroid && (
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                <button
+                  onClick={handleOpenApp}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-base shadow-glow hover:opacity-90 transition-opacity"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                  Open DhanDiary
+                </button>
+              </motion.div>
+            )}
+
             {/* Quick feature badges */}
             <div className="flex flex-wrap justify-center gap-3 pt-2">
               {quickFeatures.map((feature, index) => (
