@@ -24,6 +24,7 @@ import ScrollReveal, {
 import { APP_CONFIG, isApkDownloadLinkValid } from "@/lib/appConfig";
 import SEOHead from "@/components/shared/SEOHead";
 import { pageSEO } from "@/components/shared/SEOHead.constants";
+import { useToast } from "@/hooks/use-toast";
 
 const apkLinkValid = isApkDownloadLinkValid();
 
@@ -174,6 +175,7 @@ const useIsAndroid = () => {
 const DownloadPage = () => {
   const heroRef = useRef<HTMLElement>(null);
   const isAndroid = useIsAndroid();
+  const { toast } = useToast();
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
@@ -183,7 +185,22 @@ const DownloadPage = () => {
 
   const handleOpenApp = useCallback(() => {
     // Use Android intent URL to try launching the app
-    window.location.href = `intent://#Intent;package=${PACKAGE_NAME};scheme=dhandiary;launchFlags=0x10000000;end`;
+    // If app is not installed, the intent will fail silently — use a timeout to show fallback
+    const fallbackTimeout = setTimeout(() => {
+      toast({
+        title: "DhanDiary not found",
+        description: "It looks like DhanDiary isn't installed yet. Download it from any store below!",
+      });
+    }, 1500);
+
+    // If the app opens, the page will blur — clear the timeout
+    const handleBlur = () => {
+      clearTimeout(fallbackTimeout);
+      window.removeEventListener("blur", handleBlur);
+    };
+    window.addEventListener("blur", handleBlur);
+
+    window.location.href = `intent://#Intent;package=${PACKAGE_NAME};scheme=dhandiary;launchFlags=0x10000000;S.browser_fallback_url=https://dhandiary.netlify.app/download;end`;
   }, []);
 
   return (

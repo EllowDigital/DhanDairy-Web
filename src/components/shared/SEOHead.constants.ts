@@ -2,97 +2,105 @@ export const pageSEO = {
   home: {
     title: undefined,
     description:
-      "DhanDiary is India's best free personal finance app. Track daily income & expenses offline. No ads, no trackers, 100% private. Download free for Android.",
+      "DhanDiary – India's #1 free personal finance app for Android. Track daily income & expenses offline with no ads, no trackers. 100% private & secure money manager. Download free now.",
     keywords:
-      "personal finance app, expense tracker India, income tracker, budget app, money management app, DhanDiary, free finance app, offline expense tracker, best budget app India, daily expense tracker",
+      "DhanDiary, Dhan Diary, dhan diary app, dhandiary app, personal finance app India, expense tracker India, income expense tracker, budget app India, money management app, free finance app Android, offline expense tracker, best budget app India, daily expense tracker, dhan app, finance tracker India, paisa tracker, khata book alternative, money manager India",
     canonical: "/",
   },
   features: {
-    title: "Features",
+    title: "Features – Smart Finance Tracking Tools",
     description:
-      "Explore DhanDiary's powerful features: income & expense tracking, beautiful charts, offline support, secure authentication, data export, and more. All free.",
+      "DhanDiary features: income & expense tracking, beautiful charts, offline support, secure login, PDF/CSV export, category management, cloud backup. All 100% free.",
     keywords:
-      "finance app features, expense tracker features, income tracking app, charts insights, offline first app, secure login, data export PDF CSV, category management",
+      "DhanDiary features, expense tracker features, income tracking app, financial charts insights, offline first finance app, secure login app, data export PDF CSV Excel, category management, cloud backup sync, DhanDiary app features",
     canonical: "/features",
   },
   download: {
-    title: "Download DhanDiary App",
+    title: "Download DhanDiary – Free Android Finance App",
     description:
-      "Download DhanDiary free for Android. Available on Samsung Galaxy Store, Indus App Store, Amazon Appstore, Huawei AppGallery & direct APK. No ads, no cost.",
+      "Download DhanDiary free for Android. Available on Samsung Galaxy Store, Indus App Store, Amazon Appstore, Huawei AppGallery, OPPO & direct APK. No ads, no cost ever.",
     keywords:
-      "download DhanDiary, DhanDiary APK, DhanDiary Samsung Galaxy Store, DhanDiary Amazon Appstore, DhanDiary Huawei AppGallery, DhanDiary Indus App Store, free expense tracker download, Android finance app download",
+      "download DhanDiary, DhanDiary APK download, DhanDiary app download, DhanDiary Samsung Galaxy Store, DhanDiary Amazon Appstore, DhanDiary Huawei AppGallery, DhanDiary Indus App Store, free expense tracker download, Android finance app download, DhanDiary free download, install DhanDiary",
     canonical: "/download",
   },
   about: {
-    title: "About Us",
+    title: "About DhanDiary – By EllowDigital",
     description:
-      "Learn about DhanDiary by EllowDigital. Built with passion for simple, secure personal finance management. Privacy-first, no ads, free forever.",
+      "Learn about DhanDiary by EllowDigital. Built with passion for simple, secure personal finance management in India. Privacy-first, no ads, free forever.",
     keywords:
-      "about DhanDiary, EllowDigital, Sarwan Yadav, finance app developer India, app story, mission values, indie developer",
+      "about DhanDiary, EllowDigital, Sarwan Yadav, DhanDiary developer, finance app developer India, DhanDiary story, DhanDiary mission, indie developer India, DhanDiary team",
     canonical: "/about",
   },
   contact: {
-    title: "Contact & Support",
+    title: "Contact DhanDiary – Get Support & Help",
     description:
-      "Get in touch with the DhanDiary team by EllowDigital. We're here to help with questions, feedback, bug reports or feature requests.",
+      "Contact the DhanDiary team by EllowDigital. We're here to help with questions, feedback, bug reports or feature requests. Response within 24 hours.",
     keywords:
-      "contact DhanDiary, DhanDiary support, feedback, help, customer service, EllowDigital contact, bug report",
+      "contact DhanDiary, DhanDiary support, DhanDiary help, DhanDiary feedback, DhanDiary customer service, EllowDigital contact, DhanDiary bug report, DhanDiary email",
     canonical: "/contact",
   },
   privacy: {
-    title: "Privacy Policy",
+    title: "Privacy Policy – Your Data Stays Private",
     description:
-      "DhanDiary Privacy Policy. Learn how we protect your financial data with our privacy-first, no-ads, no-trackers approach. Your data stays on your device.",
+      "DhanDiary Privacy Policy. Your financial data is stored locally with encryption. No ads, no trackers, no data sharing. 100% privacy-first personal finance app.",
     keywords:
-      "DhanDiary privacy policy, data protection, user privacy, financial data security, offline data storage, no trackers",
+      "DhanDiary privacy policy, DhanDiary data protection, user privacy, financial data security, offline data storage, no trackers, DhanDiary security, privacy first app",
     canonical: "/privacy",
   },
   terms: {
     title: "Terms & Conditions",
     description:
-      "DhanDiary Terms & Conditions by EllowDigital. Read about our service terms, user agreements, and policies for using the DhanDiary app.",
+      "DhanDiary Terms & Conditions by EllowDigital. Read about our service terms, user agreements, and policies for using the DhanDiary personal finance app.",
     keywords:
-      "DhanDiary terms conditions, user agreement, service terms, EllowDigital terms, app usage policy",
+      "DhanDiary terms conditions, DhanDiary user agreement, DhanDiary service terms, EllowDigital terms, DhanDiary app usage policy",
     canonical: "/terms",
   },
   eula: {
-    title: "End User License Agreement",
+    title: "End User License Agreement (EULA)",
     description:
       "DhanDiary EULA by EllowDigital. Software license agreement governing the installation and use of the DhanDiary personal finance app.",
     keywords:
-      "DhanDiary EULA, license agreement, software license, app license, EllowDigital EULA",
+      "DhanDiary EULA, DhanDiary license agreement, DhanDiary software license, DhanDiary app license, EllowDigital EULA",
     canonical: "/eula",
   },
   roadmap: {
-    title: "Product Roadmap",
+    title: "Product Roadmap – What's Coming Next",
     description:
-      "See what's coming next for DhanDiary. Our product roadmap shows released features, in-progress work, and planned future improvements.",
+      "See what's coming next for DhanDiary. Our product roadmap shows released features, in-progress work, and planned future improvements for India's best free finance app.",
     keywords:
-      "DhanDiary roadmap, upcoming features, product updates, development plans, feature requests, app improvements",
+      "DhanDiary roadmap, DhanDiary upcoming features, DhanDiary product updates, DhanDiary development plans, DhanDiary feature requests, DhanDiary improvements",
     canonical: "/roadmap",
   },
   installApk: {
-    title: "How to Install APK on Android",
+    title: "How to Install DhanDiary APK on Android",
     description:
       "Step-by-step guide to install DhanDiary APK on Android. Learn how to safely allow unknown apps, fix blocked install warnings, and complete setup.",
     keywords:
-      "install DhanDiary APK, Android APK install guide, unknown sources Android, DhanDiary manual installation, sideload APK safely",
+      "install DhanDiary APK, DhanDiary Android APK install guide, unknown sources Android, DhanDiary manual installation, sideload DhanDiary APK safely",
     canonical: "/how-to-install-apk",
   },
   help: {
-    title: "Help & Support",
+    title: "Help & Support – DhanDiary",
     description:
-      "Get help with DhanDiary. Browse guides, FAQs, and contact support. Find answers to common questions about expense tracking, privacy, and more.",
+      "Get help with DhanDiary. Browse guides, FAQs, and contact support. Find answers to common questions about expense tracking, privacy, backup & more.",
     keywords:
-      "DhanDiary help, DhanDiary support, FAQ, guides, troubleshooting, contact support, expense tracker help",
+      "DhanDiary help, DhanDiary support, DhanDiary FAQ, DhanDiary guides, DhanDiary troubleshooting, DhanDiary contact support, expense tracker help, DhanDiary how to use",
     canonical: "/help",
   },
   blog: {
-    title: "Blog — Finance Tips & App Guides",
+    title: "Blog – Personal Finance Tips & Guides",
     description:
-      "Read expert articles on personal finance management, daily expense tracking tips, and app comparisons. Learn how to manage your money better with DhanDiary.",
+      "Expert articles on personal finance management, daily expense tracking tips, and app comparisons for India. Learn how to save money and manage finances with DhanDiary.",
     keywords:
-      "personal finance blog, expense tracking tips, money management India, DhanDiary blog, finance app guides, budget tips, saving money India",
+      "DhanDiary blog, personal finance blog India, expense tracking tips, money management India, budget tips India, saving money India 2025, finance app guides, DhanDiary tips",
     canonical: "/blog",
+  },
+  releaseNotes: {
+    title: "Release Notes – What's New in DhanDiary",
+    description:
+      "See all DhanDiary updates, new features, bug fixes and improvements. Stay up to date with the latest version of India's best free finance tracker.",
+    keywords:
+      "DhanDiary release notes, DhanDiary updates, DhanDiary changelog, DhanDiary new features, DhanDiary version history, DhanDiary bug fixes",
+    canonical: "/release-notes",
   },
 };
