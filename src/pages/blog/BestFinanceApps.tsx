@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
+import bestFinanceImg from "@/assets/blog/best-finance-apps.jpg";
 
 const apps = [
   {
