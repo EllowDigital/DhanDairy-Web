@@ -145,40 +145,41 @@ const FeatureIcon = ({ value }: { value: FeatureValue }) => {
   );
 };
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "DhanDiary vs Other Expense Trackers – Feature Comparison",
-  description:
-    "Compare DhanDiary with Walnut, Money Manager, and Monefy. See which expense tracker is best for privacy, offline use, and free features in India.",
-  url: "https://dhandiary.netlify.app/compare",
-  mainEntity: {
-    "@type": "ItemList",
-    name: "Expense Tracker Comparison",
-    itemListElement: competitors.map((c, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: c.name,
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "DhanDiary vs Other Expense Trackers – Feature Comparison",
+    description:
+      "Compare DhanDiary with Walnut, Money Manager, and Monefy. See which expense tracker is best for privacy, offline use, and free features in India.",
+    url: "https://dhandiary.netlify.app/compare",
+    mainEntity: {
+      "@type": "ItemList",
+      name: "Expense Tracker Comparison",
+      itemListElement: competitors.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.name,
+      })),
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://dhandiary.netlify.app/" },
+        { "@type": "ListItem", position: 2, name: "Compare", item: "https://dhandiary.netlify.app/compare" },
+      ],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   },
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://dhandiary.netlify.app/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://dhandiary.netlify.app/compare" },
-    ],
-  },
-};
-
-const faqStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
-};
+];
 
 const Compare = () => {
   return (
