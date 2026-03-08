@@ -199,7 +199,8 @@ const Compare = () => {
 
       <PageHero
         badge={{ icon: <Star className="w-4 h-4" />, text: "Comparison" }}
-        title={<>DhanDiary vs Other <span className="text-gradient">Expense Trackers</span></>}
+        title="DhanDiary vs Other Expense Trackers"
+        titleGradient="Expense Trackers"
         description="An honest, feature-by-feature comparison of DhanDiary with popular expense trackers in India. See why thousands choose DhanDiary."
       />
 
