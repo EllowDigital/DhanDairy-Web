@@ -12,27 +12,18 @@ interface PageHeroProps {
   children?: ReactNode;
 }
 
-const PageHero = ({
-  badge,
-  title,
-  titleGradient,
-  description,
-  children,
-}: PageHeroProps) => {
+const PageHero = ({ badge, title, titleGradient, description, children }: PageHeroProps) => {
   return (
-    <section className="relative bg-mesh-gradient overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-5 sm:right-10 w-40 sm:w-64 h-40 sm:h-64 bg-accent/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-primary/5 rounded-full blur-3xl" />
-      </div>
+    <section className="relative overflow-hidden">
+      {/* Subtle ambient glow */}
+      <div className="absolute inset-0 bg-mesh-gradient pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/[0.04] rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 lg:py-32 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
           className="text-center max-w-3xl mx-auto"
         >
           {badge && (
@@ -40,23 +31,21 @@ const PageHero = ({
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs sm:text-sm font-medium mb-4 sm:mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/[0.08] border border-primary/15 text-primary text-sm font-medium mb-6"
             >
               {badge.icon}
               {badge.text}
             </motion.div>
           )}
 
-          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 text-balance">
+          <h1 className="heading-1 text-foreground mb-6 text-balance">
             {title}
             {titleGradient && (
-              <span className="text-gradient block mt-1 sm:mt-2">
-                {titleGradient}
-              </span>
+              <span className="text-gradient block mt-2">{titleGradient}</span>
             )}
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
+          <p className="body-large max-w-xl mx-auto">
             {description}
           </p>
 
@@ -65,7 +54,7 @@ const PageHero = ({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
-              className="mt-6 sm:mt-8"
+              className="mt-8"
             >
               {children}
             </motion.div>
