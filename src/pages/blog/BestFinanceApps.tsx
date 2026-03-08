@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
+import bestFinanceImg from "@/assets/blog/best-finance-apps.jpg";
 
 const apps = [
   {
@@ -113,9 +114,9 @@ const BestFinanceApps = () => {
           </header>
 
           <img
-            src="/img/Screenshot/4s.jpg"
+            src={bestFinanceImg}
             alt="Best free finance apps comparison for Android"
-            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border"
+            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border aspect-video object-cover"
             loading="eager"
           />
 

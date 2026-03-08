@@ -4,6 +4,12 @@ import { ArrowRight, Calendar, Clock, BookOpen } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
 import { pageSEO } from "@/components/shared/SEOHead.constants";
+import trackExpensesImg from "@/assets/blog/track-daily-expenses.jpg";
+import bestFinanceImg from "@/assets/blog/best-finance-apps.jpg";
+import vsOthersImg from "@/assets/blog/dhandiary-vs-others.jpg";
+import saveMoneyImg from "@/assets/blog/save-money-india.jpg";
+import upiTrackingImg from "@/assets/blog/upi-expense-tracking.jpg";
+import budgetPlanningImg from "@/assets/blog/budget-planning-beginners.jpg";
 
 const blogPosts = [
   {
@@ -14,7 +20,7 @@ const blogPosts = [
     date: "2026-02-20",
     readTime: "8 min read",
     category: "Personal Finance",
-    image: "/img/Screenshot/2s.jpg",
+    image: trackExpensesImg,
   },
   {
     slug: "best-free-finance-apps-android-2025",
@@ -24,7 +30,7 @@ const blogPosts = [
     date: "2026-02-18",
     readTime: "10 min read",
     category: "App Reviews",
-    image: "/img/Screenshot/4s.jpg",
+    image: bestFinanceImg,
   },
   {
     slug: "dhandiary-vs-other-expense-trackers",
@@ -34,7 +40,7 @@ const blogPosts = [
     date: "2026-02-15",
     readTime: "7 min read",
     category: "Comparison",
-    image: "/img/Screenshot/6s.jpg",
+    image: vsOthersImg,
   },
   {
     slug: "how-to-save-money-india-2025",
@@ -44,7 +50,7 @@ const blogPosts = [
     date: "2026-02-22",
     readTime: "9 min read",
     category: "Money Saving",
-    image: "/img/Screenshot/3s.jpg",
+    image: saveMoneyImg,
   },
   {
     slug: "upi-expense-tracking-tips",
@@ -54,7 +60,7 @@ const blogPosts = [
     date: "2026-02-21",
     readTime: "7 min read",
     category: "Digital Payments",
-    image: "/img/Screenshot/5s.jpg",
+    image: upiTrackingImg,
   },
   {
     slug: "best-budget-planning-methods-beginners",
@@ -64,7 +70,7 @@ const blogPosts = [
     date: "2026-02-19",
     readTime: "8 min read",
     category: "Budgeting",
-    image: "/img/Screenshot/7s.jpg",
+    image: budgetPlanningImg,
   },
 ];
 

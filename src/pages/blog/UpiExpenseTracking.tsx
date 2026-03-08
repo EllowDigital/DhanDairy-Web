@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
+import upiTrackingImg from "@/assets/blog/upi-expense-tracking.jpg";
 
 const UpiExpenseTracking = () => {
   const structuredData = {
@@ -64,6 +65,13 @@ const UpiExpenseTracking = () => {
               </span>
             </div>
           </header>
+
+          <img
+            src={upiTrackingImg}
+            alt="UPI expense tracking tips for Indian users"
+            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border aspect-video object-cover"
+            loading="eager"
+          />
 
           <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
             <p>

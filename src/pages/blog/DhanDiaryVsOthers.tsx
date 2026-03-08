@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, Clock, User, Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
+import vsOthersImg from "@/assets/blog/dhandiary-vs-others.jpg";
 
 const DhanDiaryVsOthers = () => {
   const structuredData = {
@@ -67,9 +68,9 @@ const DhanDiaryVsOthers = () => {
           </header>
 
           <img
-            src="/img/Screenshot/6s.jpg"
+            src={vsOthersImg}
             alt="DhanDiary comparison with other expense trackers"
-            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border"
+            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border aspect-video object-cover"
             loading="eager"
           />
 

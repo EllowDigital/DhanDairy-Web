@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, Clock, User, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
+import trackExpensesImg from "@/assets/blog/track-daily-expenses.jpg";
 
 const TrackDailyExpenses = () => {
   const structuredData = {
@@ -71,9 +72,9 @@ const TrackDailyExpenses = () => {
 
           {/* Featured Image */}
           <img
-            src="/img/Screenshot/2s.jpg"
+            src={trackExpensesImg}
             alt="DhanDiary app showing daily expense tracking"
-            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border"
+            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border aspect-video object-cover"
             loading="eager"
           />
 

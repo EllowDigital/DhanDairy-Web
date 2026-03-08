@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
+import saveMoneyImg from "@/assets/blog/save-money-india.jpg";
 
 const SaveMoneyIndia2025 = () => {
   const structuredData = {
@@ -64,6 +65,13 @@ const SaveMoneyIndia2025 = () => {
               </span>
             </div>
           </header>
+
+          <img
+            src={saveMoneyImg}
+            alt="How to save money in India 2025 - tips and strategies"
+            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border aspect-video object-cover"
+            loading="eager"
+          />
 
           <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
             <p>

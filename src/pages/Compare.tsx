@@ -145,40 +145,41 @@ const FeatureIcon = ({ value }: { value: FeatureValue }) => {
   );
 };
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "DhanDiary vs Other Expense Trackers – Feature Comparison",
-  description:
-    "Compare DhanDiary with Walnut, Money Manager, and Monefy. See which expense tracker is best for privacy, offline use, and free features in India.",
-  url: "https://dhandiary.netlify.app/compare",
-  mainEntity: {
-    "@type": "ItemList",
-    name: "Expense Tracker Comparison",
-    itemListElement: competitors.map((c, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: c.name,
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "DhanDiary vs Other Expense Trackers – Feature Comparison",
+    description:
+      "Compare DhanDiary with Walnut, Money Manager, and Monefy. See which expense tracker is best for privacy, offline use, and free features in India.",
+    url: "https://dhandiary.netlify.app/compare",
+    mainEntity: {
+      "@type": "ItemList",
+      name: "Expense Tracker Comparison",
+      itemListElement: competitors.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.name,
+      })),
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://dhandiary.netlify.app/" },
+        { "@type": "ListItem", position: 2, name: "Compare", item: "https://dhandiary.netlify.app/compare" },
+      ],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   },
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://dhandiary.netlify.app/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://dhandiary.netlify.app/compare" },
-    ],
-  },
-};
-
-const faqStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
-};
+];
 
 const Compare = () => {
   return (
@@ -191,15 +192,9 @@ const Compare = () => {
         structuredData={structuredData}
       />
 
-      {/* Extra FAQ structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
-      />
-
       <PageHero
         badge={{ icon: <Star className="w-4 h-4" />, text: "Comparison" }}
-        title="DhanDiary vs Other Expense Trackers"
+        title="DhanDiary vs Other"
         titleGradient="Expense Trackers"
         description="An honest, feature-by-feature comparison of DhanDiary with popular expense trackers in India. See why thousands choose DhanDiary."
       />
