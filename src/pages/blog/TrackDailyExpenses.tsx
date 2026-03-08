@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, Clock, User, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
+import trackExpensesImg from "@/assets/blog/track-daily-expenses.jpg";
 
 const TrackDailyExpenses = () => {
   const structuredData = {
