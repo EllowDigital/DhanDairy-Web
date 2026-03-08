@@ -20,7 +20,7 @@ const blogPosts = [
     date: "2026-02-20",
     readTime: "8 min read",
     category: "Personal Finance",
-    image: "/img/Screenshot/2s.jpg",
+    image: trackExpensesImg,
   },
   {
     slug: "best-free-finance-apps-android-2025",
