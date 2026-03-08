@@ -95,6 +95,14 @@ export const pageSEO = {
       "DhanDiary blog, personal finance blog India, expense tracking tips, money management India, budget tips India, saving money India 2025, finance app guides, DhanDiary tips",
     canonical: "/blog",
   },
+  compare: {
+    title: "DhanDiary vs Other Expense Trackers – Honest Comparison",
+    description:
+      "Compare DhanDiary with Walnut, Money Manager, Monefy & other expense trackers in India. See which free finance app wins on privacy, offline support & features.",
+    keywords:
+      "DhanDiary vs Walnut, DhanDiary vs Money Manager, DhanDiary vs Monefy, best expense tracker India comparison, free finance app comparison, expense tracker comparison India 2025",
+    canonical: "/compare",
+  },
   releaseNotes: {
     title: "Release Notes – What's New in DhanDiary",
     description:
