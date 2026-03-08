@@ -161,14 +161,30 @@ const faqs = [
   { q: "Is it available on iOS?", a: "Currently, DhanDiary is available only for Android devices. iOS support may come in the future." },
 ];
 
+const PACKAGE_NAME = "com.ellowdigital.dhandiary";
+
+const useIsAndroid = () => {
+  const [isAndroid, setIsAndroid] = useState(false);
+  useEffect(() => {
+    setIsAndroid(/android/i.test(navigator.userAgent));
+  }, []);
+  return isAndroid;
+};
+
 const DownloadPage = () => {
   const heroRef = useRef<HTMLElement>(null);
+  const isAndroid = useIsAndroid();
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
   const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const heroY = useTransform(scrollYProgress, [0, 1], ["0px", "60px"]);
+
+  const handleOpenApp = useCallback(() => {
+    // Use Android intent URL to try launching the app
+    window.location.href = `intent://#Intent;package=${PACKAGE_NAME};scheme=dhandiary;launchFlags=0x10000000;end`;
+  }, []);
 
   return (
     <Layout>
