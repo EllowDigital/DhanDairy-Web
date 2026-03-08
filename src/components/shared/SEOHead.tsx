@@ -29,8 +29,8 @@ const SEOHead = ({
 }: SEOHeadProps) => {
   const location = useLocation();
   const fullTitle = title
-    ? `${title} | ${SITE_NAME} — Personal Finance Tracker`
-    : `${SITE_NAME} — Free Personal Finance Tracker | Track Income & Expenses`;
+    ? `${title} | ${SITE_NAME} – Free Finance App`
+    : `${SITE_NAME} – India's #1 Free Personal Finance App | Track Income & Expenses`;
 
   // Always use canonical domain
   const canonicalPath = canonical || location.pathname;
