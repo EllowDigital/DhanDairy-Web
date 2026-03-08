@@ -9,6 +9,7 @@ const quickLinks = [
   { name: "Release Notes", path: "/release-notes" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
+  { name: "Help & Support", path: "/help" },
 ];
 
 const legalLinks = [
