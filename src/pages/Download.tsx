@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import {
   ExternalLink,
   Smartphone,
