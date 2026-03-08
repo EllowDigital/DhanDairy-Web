@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, Clock, User, Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
+import vsOthersImg from "@/assets/blog/dhandiary-vs-others.jpg";
 
 const DhanDiaryVsOthers = () => {
   const structuredData = {
