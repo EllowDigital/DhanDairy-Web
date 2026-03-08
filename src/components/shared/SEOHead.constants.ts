@@ -79,6 +79,14 @@ export const pageSEO = {
       "install DhanDiary APK, Android APK install guide, unknown sources Android, DhanDiary manual installation, sideload APK safely",
     canonical: "/how-to-install-apk",
   },
+  help: {
+    title: "Help & Support",
+    description:
+      "Get help with DhanDiary. Browse guides, FAQs, and contact support. Find answers to common questions about expense tracking, privacy, and more.",
+    keywords:
+      "DhanDiary help, DhanDiary support, FAQ, guides, troubleshooting, contact support, expense tracker help",
+    canonical: "/help",
+  },
   blog: {
     title: "Blog — Finance Tips & App Guides",
     description:

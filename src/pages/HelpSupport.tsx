@@ -132,9 +132,9 @@ const HelpSupport = () => {
       <SEOHead {...pageSEO.help} />
 
       <PageHero
-        badge="Support"
+        badge={{ icon: <HelpCircle className="w-4 h-4" />, text: "Support" }}
         title="How can we help?"
-        subtitle="Find answers, explore guides, and get in touch with our support team."
+        description="Find answers, explore guides, and get in touch with our support team."
       />
 
       {/* ============ SEARCH ============ */}
