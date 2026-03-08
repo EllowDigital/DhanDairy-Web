@@ -66,6 +66,13 @@ const UpiExpenseTracking = () => {
             </div>
           </header>
 
+          <img
+            src={upiTrackingImg}
+            alt="UPI expense tracking tips for Indian users"
+            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border aspect-video object-cover"
+            loading="eager"
+          />
+
           <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
             <p>
               India processes over 10 billion UPI transactions monthly. While UPI has revolutionized payments, it's also made it dangerously easy to lose track of spending. Here's how to take control of your UPI expenses.

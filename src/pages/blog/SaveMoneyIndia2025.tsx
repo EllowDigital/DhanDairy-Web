@@ -66,6 +66,13 @@ const SaveMoneyIndia2025 = () => {
             </div>
           </header>
 
+          <img
+            src={saveMoneyImg}
+            alt="How to save money in India 2025 - tips and strategies"
+            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border aspect-video object-cover"
+            loading="eager"
+          />
+
           <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
             <p>
               Saving money in India has become both easier and harder in 2025. While digital payments make spending frictionless, the same tools can help you track and cut unnecessary expenses. Here are 15 practical, India-specific tips to grow your savings this year.

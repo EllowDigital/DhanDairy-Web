@@ -66,6 +66,13 @@ const BudgetPlanningBeginners = () => {
             </div>
           </header>
 
+          <img
+            src={budgetPlanningImg}
+            alt="Best budget planning methods for beginners"
+            className="w-full rounded-xl sm:rounded-2xl mb-8 sm:mb-10 border border-border aspect-video object-cover"
+            loading="eager"
+          />
+
           <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
             <p>
               Budgeting sounds boring — until you realize it's the single most powerful tool for financial freedom. If you've never budgeted before, this guide will help you find a method that actually sticks.
