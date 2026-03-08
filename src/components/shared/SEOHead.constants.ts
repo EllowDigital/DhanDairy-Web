@@ -2,23 +2,23 @@ export const pageSEO = {
   home: {
     title: undefined,
     description:
-      "DhanDiary – India's #1 free personal finance app for Android. Track daily income & expenses offline with no ads, no trackers. 100% private & secure money manager. Download free now.",
+      "DhanDiary – India's #1 free personal finance app for Android. Track daily income & expenses offline with no ads, no trackers. 100% private & secure money manager. Compare with Walnut, Monefy & more. Download free now.",
     keywords:
-      "DhanDiary, Dhan Diary, dhan diary app, dhandiary app, personal finance app India, expense tracker India, income expense tracker, budget app India, money management app, free finance app Android, offline expense tracker, best budget app India, daily expense tracker, dhan app, finance tracker India, paisa tracker, khata book alternative, money manager India",
+      "DhanDiary, Dhan Diary, dhan diary app, dhandiary app, personal finance app India, expense tracker India, income expense tracker, budget app India, money management app, free finance app Android, offline expense tracker, best budget app India, daily expense tracker, dhan app, finance tracker India, paisa tracker, khata book alternative, money manager India, DhanDiary vs Walnut, best expense tracker India 2025",
     canonical: "/",
   },
   features: {
     title: "Features – Smart Finance Tracking Tools",
     description:
-      "DhanDiary features: income & expense tracking, beautiful charts, offline support, secure login, PDF/CSV export, category management, cloud backup. All 100% free.",
+      "DhanDiary features: income & expense tracking, beautiful charts, offline support, secure login, PDF/CSV export, category management, cloud backup. All 100% free with no ads.",
     keywords:
-      "DhanDiary features, expense tracker features, income tracking app, financial charts insights, offline first finance app, secure login app, data export PDF CSV Excel, category management, cloud backup sync, DhanDiary app features",
+      "DhanDiary features, expense tracker features, income tracking app, financial charts insights, offline first finance app, secure login app, data export PDF CSV Excel, category management, cloud backup sync, DhanDiary app features, UPI expense tracking",
     canonical: "/features",
   },
   download: {
     title: "Download DhanDiary – Free Android Finance App",
     description:
-      "Download DhanDiary free for Android. Available on Samsung Galaxy Store, Indus App Store, Amazon Appstore, Huawei AppGallery, OPPO & direct APK. No ads, no cost ever.",
+      "Download DhanDiary free for Android. Available on Samsung Galaxy Store, Indus App Store, Amazon Appstore, Huawei AppGallery & direct APK. No ads, no cost ever.",
     keywords:
       "download DhanDiary, DhanDiary APK download, DhanDiary app download, DhanDiary Samsung Galaxy Store, DhanDiary Amazon Appstore, DhanDiary Huawei AppGallery, DhanDiary Indus App Store, free expense tracker download, Android finance app download, DhanDiary free download, install DhanDiary",
     canonical: "/download",
@@ -100,7 +100,7 @@ export const pageSEO = {
     description:
       "Compare DhanDiary with Walnut, Money Manager, Monefy & other expense trackers in India. See which free finance app wins on privacy, offline support & features.",
     keywords:
-      "DhanDiary vs Walnut, DhanDiary vs Money Manager, DhanDiary vs Monefy, best expense tracker India comparison, free finance app comparison, expense tracker comparison India 2025",
+      "DhanDiary vs Walnut, DhanDiary vs Money Manager, DhanDiary vs Monefy, best expense tracker India comparison, free finance app comparison, expense tracker comparison India 2025, offline expense tracker, no ads finance app",
     canonical: "/compare",
   },
   releaseNotes: {

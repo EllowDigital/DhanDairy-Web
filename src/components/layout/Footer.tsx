@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { Mail, ExternalLink, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
 
 const quickLinks = [
   { name: "Features", path: "/features" },
   { name: "Download", path: "/download" },
+  { name: "Compare", path: "/compare" },
   { name: "Blog", path: "/blog" },
   { name: "Roadmap", path: "/roadmap" },
   { name: "Release Notes", path: "/release-notes" },
@@ -86,14 +87,6 @@ const Footer = () => {
                 </div>
                 <a href="mailto:sarwanyadav6174@gmail.com" className="hover:text-foreground transition-colors truncate">
                   sarwanyadav6174@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground text-sm">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <ExternalLink className="w-4 h-4 text-primary" />
-                </div>
-                <a href="https://ellowdigital.space" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  ellowdigital.space
                 </a>
               </li>
             </ul>
