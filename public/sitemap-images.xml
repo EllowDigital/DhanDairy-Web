@@ -33,6 +33,26 @@
       <image:title>DhanDiary Export Feature</image:title>
       <image:caption>Export financial data to PDF, CSV, or Excel</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Screenshot/6s.jpg</image:loc>
+      <image:title>DhanDiary Category Management</image:title>
+      <image:caption>Organize expenses and income with custom categories in DhanDiary</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Screenshot/7s.jpg</image:loc>
+      <image:title>DhanDiary Reports and Insights</image:title>
+      <image:caption>Generate detailed reports and financial insights in DhanDiary</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Screenshot/8s.jpg</image:loc>
+      <image:title>DhanDiary Settings and Security</image:title>
+      <image:caption>Customize the app and manage privacy-focused security settings</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dhandiary.netlify.app/img/Screenshot/9s.jpg</image:loc>
+      <image:title>DhanDiary Account Overview</image:title>
+      <image:caption>Manage multiple accounts and see balances in one overview</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://dhandiary.netlify.app/download</loc>
