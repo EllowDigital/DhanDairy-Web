@@ -47,52 +47,142 @@ interface CompFeature {
 }
 
 const comparisonFeatures: CompFeature[] = [
-  { name: "100% Free (No Premium)", dhandiary: true, walnut: false, moneyManager: false, monefy: false },
-  { name: "No Ads", dhandiary: true, walnut: false, moneyManager: false, monefy: false },
-  { name: "Works Fully Offline", dhandiary: true, walnut: false, moneyManager: true, monefy: true },
-  { name: "Privacy First (No Trackers)", dhandiary: true, walnut: false, moneyManager: false, monefy: false },
-  { name: "Local Data Storage", dhandiary: true, walnut: false, moneyManager: true, monefy: true },
-  { name: "Cloud Backup & Sync", dhandiary: true, walnut: true, moneyManager: "partial", monefy: "partial" },
-  { name: "Charts & Analytics", dhandiary: true, walnut: true, moneyManager: true, monefy: "partial" },
-  { name: "Export to PDF/CSV/Excel", dhandiary: true, walnut: "partial", moneyManager: true, monefy: "partial" },
-  { name: "Category Management", dhandiary: true, walnut: true, moneyManager: true, monefy: true },
-  { name: "Dark Mode", dhandiary: true, walnut: false, moneyManager: true, monefy: false },
-  { name: "No Account Required", dhandiary: true, walnut: false, moneyManager: true, monefy: true },
-  { name: "UPI Transaction Support", dhandiary: true, walnut: true, moneyManager: false, monefy: false },
-  { name: "Multi-language (Hindi)", dhandiary: true, walnut: false, moneyManager: false, monefy: false },
-  { name: "Open Source Friendly", dhandiary: true, walnut: false, moneyManager: false, monefy: false },
+  {
+    name: "100% Free (No Premium)",
+    dhandiary: true,
+    walnut: false,
+    moneyManager: false,
+    monefy: false,
+  },
+  {
+    name: "No Ads",
+    dhandiary: true,
+    walnut: false,
+    moneyManager: false,
+    monefy: false,
+  },
+  {
+    name: "Works Fully Offline",
+    dhandiary: true,
+    walnut: false,
+    moneyManager: true,
+    monefy: true,
+  },
+  {
+    name: "Privacy First (No Trackers)",
+    dhandiary: true,
+    walnut: false,
+    moneyManager: false,
+    monefy: false,
+  },
+  {
+    name: "Local Data Storage",
+    dhandiary: true,
+    walnut: false,
+    moneyManager: true,
+    monefy: true,
+  },
+  {
+    name: "Cloud Backup & Sync",
+    dhandiary: true,
+    walnut: true,
+    moneyManager: "partial",
+    monefy: "partial",
+  },
+  {
+    name: "Charts & Analytics",
+    dhandiary: true,
+    walnut: true,
+    moneyManager: true,
+    monefy: "partial",
+  },
+  {
+    name: "Export to PDF/CSV/Excel",
+    dhandiary: true,
+    walnut: "partial",
+    moneyManager: true,
+    monefy: "partial",
+  },
+  {
+    name: "Category Management",
+    dhandiary: true,
+    walnut: true,
+    moneyManager: true,
+    monefy: true,
+  },
+  {
+    name: "Dark Mode",
+    dhandiary: true,
+    walnut: false,
+    moneyManager: true,
+    monefy: false,
+  },
+  {
+    name: "No Account Required",
+    dhandiary: true,
+    walnut: false,
+    moneyManager: true,
+    monefy: true,
+  },
+  {
+    name: "UPI Transaction Support",
+    dhandiary: true,
+    walnut: true,
+    moneyManager: false,
+    monefy: false,
+  },
+  {
+    name: "Multi-language (Hindi)",
+    dhandiary: true,
+    walnut: false,
+    moneyManager: false,
+    monefy: false,
+  },
+  {
+    name: "Open Source Friendly",
+    dhandiary: true,
+    walnut: false,
+    moneyManager: false,
+    monefy: false,
+  },
 ];
 
 const advantages = [
   {
     icon: <Shield className="w-5 h-5" />,
     title: "Zero Data Collection",
-    description: "DhanDiary stores everything locally on your device. No servers snooping on your finances.",
+    description:
+      "DhanDiary stores everything locally on your device. No servers snooping on your finances.",
   },
   {
     icon: <WifiOff className="w-5 h-5" />,
     title: "True Offline First",
-    description: "Unlike Walnut which needs internet, DhanDiary works 100% offline from day one.",
+    description:
+      "Unlike Walnut which needs internet, DhanDiary works 100% offline from day one.",
   },
   {
     icon: <Zap className="w-5 h-5" />,
     title: "No Ads, Ever",
-    description: "While competitors show banner ads and premium popups, DhanDiary remains completely ad-free.",
+    description:
+      "While competitors show banner ads and premium popups, DhanDiary remains completely ad-free.",
   },
   {
     icon: <Lock className="w-5 h-5" />,
     title: "No Premium Paywall",
-    description: "Every feature is free. No 'Pro' tier, no subscriptions, no in-app purchases.",
+    description:
+      "Every feature is free. No 'Pro' tier, no subscriptions, no in-app purchases.",
   },
   {
     icon: <BarChart3 className="w-5 h-5" />,
     title: "Beautiful Insights",
-    description: "Clean charts and financial reports that rival premium apps — included free.",
+    description:
+      "Clean charts and financial reports that rival premium apps — included free.",
   },
   {
     icon: <Download className="w-5 h-5" />,
     title: "Export Everything",
-    description: "PDF, CSV, Excel exports with custom date ranges — no premium upgrade needed.",
+    description:
+      "PDF, CSV, Excel exports with custom date ranges — no premium upgrade needed.",
   },
 ];
 
@@ -165,8 +255,18 @@ const structuredData = [
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://dhandiary.netlify.app/" },
-        { "@type": "ListItem", position: 2, name: "Compare", item: "https://dhandiary.netlify.app/compare" },
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://dhandiary.netlify.app/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Compare",
+          item: "https://dhandiary.netlify.app/compare",
+        },
       ],
     },
   },
@@ -208,13 +308,17 @@ const Compare = () => {
                 {/* Header */}
                 <div className="grid grid-cols-5 gap-1 lg:gap-4 p-4 lg:p-5 bg-primary/[0.04] border-b border-border">
                   <div className="text-left">
-                    <span className="font-semibold text-foreground text-sm">Feature</span>
+                    <span className="font-semibold text-foreground text-sm">
+                      Feature
+                    </span>
                   </div>
                   {competitors.map((c) => (
                     <div key={c.key} className="text-center">
                       <span
                         className={`text-xs sm:text-sm font-medium ${
-                          c.highlight ? "text-primary font-bold" : "text-muted-foreground"
+                          c.highlight
+                            ? "text-primary font-bold"
+                            : "text-muted-foreground"
                         }`}
                       >
                         {c.name}
@@ -235,7 +339,9 @@ const Compare = () => {
                       className="grid grid-cols-5 gap-1 lg:gap-4 p-3 lg:p-4 hover:bg-muted/30 transition-colors"
                     >
                       <div className="text-left flex items-center">
-                        <span className="text-foreground text-xs sm:text-sm">{feature.name}</span>
+                        <span className="text-foreground text-xs sm:text-sm">
+                          {feature.name}
+                        </span>
                       </div>
                       <div className="flex items-center justify-center">
                         <FeatureIcon value={feature.dhandiary} />
@@ -257,12 +363,26 @@ const Compare = () => {
               {/* Legend */}
               <div className="flex flex-wrap items-center justify-center gap-6 mt-6 text-sm text-muted-foreground">
                 {[
-                  { icon: <Check className="w-3 h-3 text-green-500" />, bg: "bg-green-500/15", label: "Full Support" },
-                  { icon: <Minus className="w-3 h-3 text-yellow-500" />, bg: "bg-yellow-500/15", label: "Partial" },
-                  { icon: <X className="w-3 h-3 text-red-500" />, bg: "bg-red-500/15", label: "Not Available" },
+                  {
+                    icon: <Check className="w-3 h-3 text-green-500" />,
+                    bg: "bg-green-500/15",
+                    label: "Full Support",
+                  },
+                  {
+                    icon: <Minus className="w-3 h-3 text-yellow-500" />,
+                    bg: "bg-yellow-500/15",
+                    label: "Partial",
+                  },
+                  {
+                    icon: <X className="w-3 h-3 text-red-500" />,
+                    bg: "bg-red-500/15",
+                    label: "Not Available",
+                  },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <div className={`w-5 h-5 rounded-full ${item.bg} flex items-center justify-center`}>
+                    <div
+                      className={`w-5 h-5 rounded-full ${item.bg} flex items-center justify-center`}
+                    >
                       {item.icon}
                     </div>
                     <span>{item.label}</span>
@@ -279,7 +399,10 @@ const Compare = () => {
       {/* ============ WHY DHANDIARY WINS ============ */}
       <section className="section-padding bg-section-gradient">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection animation="fadeUp" className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+          <AnimatedSection
+            animation="fadeUp"
+            className="text-center max-w-2xl mx-auto mb-12 lg:mb-16"
+          >
             <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">
               Why DhanDiary
             </p>
@@ -316,8 +439,13 @@ const Compare = () => {
       {/* ============ FAQ ============ */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection animation="fadeUp" className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
-            <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">FAQ</p>
+          <AnimatedSection
+            animation="fadeUp"
+            className="text-center max-w-2xl mx-auto mb-12 lg:mb-16"
+          >
+            <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">
+              FAQ
+            </p>
             <h2 className="heading-2 text-foreground text-balance">
               Common questions about switching
             </h2>
@@ -359,11 +487,16 @@ const Compare = () => {
                 Ready to switch to DhanDiary?
               </h2>
               <p className="body-large max-w-xl mx-auto">
-                Join thousands of users who chose privacy, simplicity, and freedom.
-                Download DhanDiary free today.
+                Join thousands of users who chose privacy, simplicity, and
+                freedom. Download DhanDiary free today.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-                <Button asChild variant="hero" size="lg" className="shadow-glow">
+                <Button
+                  asChild
+                  variant="hero"
+                  size="lg"
+                  className="shadow-glow"
+                >
                   <Link to="/download">
                     <Smartphone className="w-4 h-4" />
                     Download Free
@@ -371,9 +504,7 @@ const Compare = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link to="/features">
-                    Explore Features
-                  </Link>
+                  <Link to="/features">Explore Features</Link>
                 </Button>
               </div>
             </div>

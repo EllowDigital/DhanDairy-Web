@@ -6,25 +6,29 @@ const steps = [
     number: "01",
     icon: <Download className="w-6 h-6" />,
     title: "Download",
-    description: "Get DhanDiary free from our website. Quick install, no bloatware.",
+    description:
+      "Get DhanDiary free from our website. Quick install, no bloatware.",
   },
   {
     number: "02",
     icon: <UserPlus className="w-6 h-6" />,
     title: "Sign Up",
-    description: "Create an account with email or Google. Takes under a minute.",
+    description:
+      "Create an account with email or Google. Takes under a minute.",
   },
   {
     number: "03",
     icon: <Wallet className="w-6 h-6" />,
     title: "Track",
-    description: "Log income and expenses with just a few taps. Fast and intuitive.",
+    description:
+      "Log income and expenses with just a few taps. Fast and intuitive.",
   },
   {
     number: "04",
     icon: <PieChart className="w-6 h-6" />,
     title: "Analyze",
-    description: "View beautiful charts and insights to understand your spending.",
+    description:
+      "View beautiful charts and insights to understand your spending.",
   },
 ];
 
@@ -39,7 +43,9 @@ const HowItWorks = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Getting Started</p>
+          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">
+            Getting Started
+          </p>
           <h2 className="heading-2 text-foreground text-balance">
             Up and running in 4 simple steps
           </h2>

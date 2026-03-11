@@ -5,7 +5,11 @@ import { Tag, Calendar, Sparkles, Zap, Bug, ShieldCheck } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEOHead from "@/components/shared/SEOHead";
 import { Badge } from "@/components/ui/badge";
-import { releases, type Release, type ReleaseSection } from "@/data/releaseNotes";
+import {
+  releases,
+  type Release,
+  type ReleaseSection,
+} from "@/data/releaseNotes";
 
 const tagColors: Record<Release["tag"], string> = {
   Latest: "bg-primary text-primary-foreground",
@@ -29,7 +33,10 @@ const ReleaseNotes = () => {
     if (location.hash) {
       const el = document.getElementById(location.hash.slice(1));
       if (el) {
-        setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
+        setTimeout(
+          () => el.scrollIntoView({ behavior: "smooth", block: "start" }),
+          100,
+        );
       }
     }
   }, [location.hash]);
@@ -92,7 +99,9 @@ const ReleaseNotes = () => {
                   <h2 className="font-display font-bold text-xl sm:text-2xl text-foreground">
                     v{release.version}
                   </h2>
-                  <Badge className={tagColors[release.tag]}>{release.tag}</Badge>
+                  <Badge className={tagColors[release.tag]}>
+                    {release.tag}
+                  </Badge>
                 </div>
 
                 <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm mb-4">

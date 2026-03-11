@@ -57,9 +57,18 @@ const About = () => {
       <SEOHead {...pageSEO.about} />
 
       {/* Hero */}
-      <section ref={heroRef} className="relative overflow-hidden py-24 sm:py-32 lg:py-40">
-        <div className="absolute inset-0 bg-mesh-gradient pointer-events-none" aria-hidden="true" />
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/[0.04] rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+      <section
+        ref={heroRef}
+        className="relative overflow-hidden py-24 sm:py-32 lg:py-40"
+      >
+        <div
+          className="absolute inset-0 bg-mesh-gradient pointer-events-none"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/[0.04] rounded-full blur-[120px] pointer-events-none"
+          aria-hidden="true"
+        />
 
         <motion.div
           style={{ opacity: heroOpacity, y: heroY }}
@@ -96,7 +105,11 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    DhanDiary was born from a simple frustration – most finance apps are bloated with features, filled with ads, and often compromise on privacy. We wanted something different: a clean, fast, and secure way to track daily income and expenses without the noise.
+                    DhanDiary was born from a simple frustration – most finance
+                    apps are bloated with features, filled with ads, and often
+                    compromise on privacy. We wanted something different: a
+                    clean, fast, and secure way to track daily income and
+                    expenses without the noise.
                   </p>
                   <p>
                     Built and maintained independently by{" "}
@@ -108,7 +121,8 @@ const About = () => {
                     >
                       EllowDigital
                     </a>
-                    , DhanDiary is crafted with care for people who value simplicity and privacy in their personal finance journey.
+                    , DhanDiary is crafted with care for people who value
+                    simplicity and privacy in their personal finance journey.
                   </p>
                 </div>
               </div>
@@ -129,10 +143,14 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    To provide everyone with a simple, secure, and reliable tool for personal finance management – regardless of their technical expertise or financial background.
+                    To provide everyone with a simple, secure, and reliable tool
+                    for personal finance management – regardless of their
+                    technical expertise or financial background.
                   </p>
                   <p>
-                    We believe that tracking your money should be as natural as checking the time. No learning curve, no subscriptions, no compromises.
+                    We believe that tracking your money should be as natural as
+                    checking the time. No learning curve, no subscriptions, no
+                    compromises.
                   </p>
                 </div>
               </div>
@@ -205,7 +223,9 @@ const About = () => {
                     {member.icon}
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">{member.role}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {member.role}
+                    </p>
                     {member.href ? (
                       <a
                         href={member.href}
@@ -216,7 +236,9 @@ const About = () => {
                         {member.name}
                       </a>
                     ) : (
-                      <p className="font-semibold text-foreground">{member.name}</p>
+                      <p className="font-semibold text-foreground">
+                        {member.name}
+                      </p>
                     )}
                   </div>
                 </motion.div>

@@ -33,7 +33,15 @@ const stats = [
   },
 ];
 
-const AnimatedCounter = ({ value, suffix, inView }: { value: number; suffix: string; inView: boolean }) => {
+const AnimatedCounter = ({
+  value,
+  suffix,
+  inView,
+}: {
+  value: number;
+  suffix: string;
+  inView: boolean;
+}) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -62,7 +70,8 @@ const AnimatedCounter = ({ value, suffix, inView }: { value: number; suffix: str
 
   return (
     <span className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tabular-nums">
-      {formatNumber(count)}{suffix}
+      {formatNumber(count)}
+      {suffix}
     </span>
   );
 };
@@ -72,7 +81,10 @@ const StatsCounter = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="section-padding bg-background relative overflow-hidden">
+    <section
+      ref={ref}
+      className="section-padding bg-background relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-mesh-gradient pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -83,7 +95,9 @@ const StatsCounter = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Traction</p>
+          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">
+            Traction
+          </p>
           <h2 className="heading-2 text-foreground text-balance">
             Trusted by thousands of users
           </h2>
@@ -102,7 +116,11 @@ const StatsCounter = () => {
               <div className="w-12 h-12 lg:w-14 lg:h-14 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4 lg:mb-5">
                 {stat.icon}
               </div>
-              <AnimatedCounter value={stat.value} suffix={stat.suffix} inView={isInView} />
+              <AnimatedCounter
+                value={stat.value}
+                suffix={stat.suffix}
+                inView={isInView}
+              />
               <h3 className="font-display font-semibold text-foreground text-sm lg:text-base mt-2 mb-1">
                 {stat.label}
               </h3>

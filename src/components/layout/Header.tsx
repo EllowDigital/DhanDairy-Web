@@ -61,7 +61,9 @@ const Header = () => {
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isMenuOpen]);
 
   return (
@@ -76,7 +78,10 @@ const Header = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2.5 focus-ring rounded-lg">
+            <Link
+              to="/"
+              className="flex items-center gap-2.5 focus-ring rounded-lg"
+            >
               <img
                 src="/img/logo.webp"
                 alt="DhanDiary"
@@ -105,7 +110,11 @@ const Header = () => {
                     <motion.div
                       layoutId="activeNav"
                       className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.5,
+                      }}
                     />
                   )}
                 </Link>
@@ -117,15 +126,29 @@ const Header = () => {
               <button
                 onClick={toggleTheme}
                 className="p-2.5 rounded-xl hover:bg-muted/80 transition-all duration-300 focus-ring touch-target"
-                aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+                aria-label={
+                  isDark ? "Switch to light mode" : "Switch to dark mode"
+                }
               >
                 <AnimatePresence mode="wait" initial={false}>
                   {isDark ? (
-                    <motion.div key="sun" initial={{ opacity: 0, rotate: -90, scale: 0.5 }} animate={{ opacity: 1, rotate: 0, scale: 1 }} exit={{ opacity: 0, rotate: 90, scale: 0.5 }} transition={{ duration: 0.2 }}>
+                    <motion.div
+                      key="sun"
+                      initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                      animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                      exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       <Sun className="w-5 h-5 text-foreground" />
                     </motion.div>
                   ) : (
-                    <motion.div key="moon" initial={{ opacity: 0, rotate: 90, scale: 0.5 }} animate={{ opacity: 1, rotate: 0, scale: 1 }} exit={{ opacity: 0, rotate: -90, scale: 0.5 }} transition={{ duration: 0.2 }}>
+                    <motion.div
+                      key="moon"
+                      initial={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                      animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                      exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       <Moon className="w-5 h-5 text-foreground" />
                     </motion.div>
                   )}
@@ -133,7 +156,12 @@ const Header = () => {
               </button>
 
               <div className="hidden lg:block">
-                <Button asChild variant="hero" size="default" className="shadow-glow">
+                <Button
+                  asChild
+                  variant="hero"
+                  size="default"
+                  className="shadow-glow"
+                >
                   <Link to="/download">Get the App</Link>
                 </Button>
               </div>
@@ -144,7 +172,11 @@ const Header = () => {
                 aria-label="Toggle menu"
                 aria-expanded={isMenuOpen}
               >
-                {isMenuOpen ? <X className="w-6 h-6 text-foreground" /> : <Menu className="w-6 h-6 text-foreground" />}
+                {isMenuOpen ? (
+                  <X className="w-6 h-6 text-foreground" />
+                ) : (
+                  <Menu className="w-6 h-6 text-foreground" />
+                )}
               </button>
             </div>
           </div>
@@ -173,10 +205,20 @@ const Header = () => {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-5 border-b border-border">
                   <Link to="/" className="flex items-center gap-2.5">
-                    <img src="/img/logo.webp" alt="DhanDiary" className="w-9 h-9 rounded-xl object-contain" />
-                    <span className="font-display font-bold text-lg text-foreground">DhanDiary</span>
+                    <img
+                      src="/img/logo.webp"
+                      alt="DhanDiary"
+                      className="w-9 h-9 rounded-xl object-contain"
+                    />
+                    <span className="font-display font-bold text-lg text-foreground">
+                      DhanDiary
+                    </span>
                   </Link>
-                  <button className="p-2.5 rounded-xl hover:bg-muted transition-colors touch-target" onClick={() => setIsMenuOpen(false)} aria-label="Close menu">
+                  <button
+                    className="p-2.5 rounded-xl hover:bg-muted transition-colors touch-target"
+                    onClick={() => setIsMenuOpen(false)}
+                    aria-label="Close menu"
+                  >
                     <X className="w-6 h-6 text-foreground" />
                   </button>
                 </div>
@@ -184,12 +226,19 @@ const Header = () => {
                 <div className="flex-1 p-5">
                   <div className="flex flex-col gap-1">
                     {navLinks.map((link, index) => (
-                      <motion.div key={link.path} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.05 }}>
+                      <motion.div
+                        key={link.path}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                      >
                         <Link
                           to={link.path}
                           onClick={() => setIsMenuOpen(false)}
                           className={`flex items-center px-4 py-3.5 rounded-xl text-base font-medium transition-all duration-200 touch-target ${
-                            isActive(link.path) ? "text-primary bg-accent" : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                            isActive(link.path)
+                              ? "text-primary bg-accent"
+                              : "text-muted-foreground hover:text-foreground hover:bg-muted"
                           }`}
                         >
                           {link.name}
@@ -198,16 +247,39 @@ const Header = () => {
                     ))}
                   </div>
 
-                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: navLinks.length * 0.05 }} className="mt-4 pt-4 border-t border-border">
-                    <button onClick={toggleTheme} className="flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200 touch-target">
-                      {isDark ? <><Sun className="w-5 h-5" /> Light Mode</> : <><Moon className="w-5 h-5" /> Dark Mode</>}
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: navLinks.length * 0.05 }}
+                    className="mt-4 pt-4 border-t border-border"
+                  >
+                    <button
+                      onClick={toggleTheme}
+                      className="flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200 touch-target"
+                    >
+                      {isDark ? (
+                        <>
+                          <Sun className="w-5 h-5" /> Light Mode
+                        </>
+                      ) : (
+                        <>
+                          <Moon className="w-5 h-5" /> Dark Mode
+                        </>
+                      )}
                     </button>
                   </motion.div>
                 </div>
 
                 <div className="p-5 border-t border-border">
-                  <Button asChild variant="hero" size="lg" className="w-full shadow-glow">
-                    <Link to="/download" onClick={() => setIsMenuOpen(false)}>Get the App</Link>
+                  <Button
+                    asChild
+                    variant="hero"
+                    size="lg"
+                    className="w-full shadow-glow"
+                  >
+                    <Link to="/download" onClick={() => setIsMenuOpen(false)}>
+                      Get the App
+                    </Link>
                   </Button>
                 </div>
               </div>

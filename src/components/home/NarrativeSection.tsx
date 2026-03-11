@@ -24,10 +24,17 @@ const NarrativeSection = ({ narrativeBlocks }: NarrativeSectionProps) => {
   const headingOpacity = useTransform(scrollYProgress, [0, 0.25], [0, 1]);
 
   // Connecting line progress
-  const lineHeight = useTransform(scrollYProgress, [0.15, 0.85], ["0%", "100%"]);
+  const lineHeight = useTransform(
+    scrollYProgress,
+    [0.15, 0.85],
+    ["0%", "100%"],
+  );
 
   return (
-    <section ref={sectionRef} className="section-padding bg-section-gradient relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="section-padding bg-section-gradient relative overflow-hidden"
+    >
       {/* Ambient parallax orbs */}
       <motion.div
         style={{ y: useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]) }}
@@ -46,7 +53,9 @@ const NarrativeSection = ({ narrativeBlocks }: NarrativeSectionProps) => {
           style={{ y: headingY, opacity: headingOpacity }}
           className="text-center max-w-2xl mx-auto mb-16 lg:mb-24"
         >
-          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Why DhanDiary?</p>
+          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">
+            Why DhanDiary?
+          </p>
           <h2 className="heading-2 text-foreground text-balance">
             Finance apps should be simple, private, and{" "}
             <span className="text-gradient">actually useful.</span>
@@ -68,7 +77,13 @@ const NarrativeSection = ({ narrativeBlocks }: NarrativeSectionProps) => {
             {narrativeBlocks.map((block, i) => {
               const isEven = i % 2 === 0;
               return (
-                <NarrativeCard key={i} block={block} index={i} isEven={isEven} scrollYProgress={scrollYProgress} />
+                <NarrativeCard
+                  key={i}
+                  block={block}
+                  index={i}
+                  isEven={isEven}
+                  scrollYProgress={scrollYProgress}
+                />
               );
             })}
           </div>
@@ -103,7 +118,7 @@ const NarrativeCard = ({
   const parallaxY = useTransform(
     scrollYProgress,
     [0, 1],
-    [index * 20, -index * 10]
+    [index * 20, -index * 10],
   );
 
   return (
@@ -131,7 +146,9 @@ const NarrativeCard = ({
         className={`${isEven ? "lg:text-right lg:pr-12" : "lg:col-start-2 lg:pl-12"}`}
       >
         <motion.div style={{ y: parallaxY }}>
-          <div className={`flex items-center gap-3 mb-4 ${isEven ? "lg:justify-end" : ""}`}>
+          <div
+            className={`flex items-center gap-3 mb-4 ${isEven ? "lg:justify-end" : ""}`}
+          >
             <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary border border-primary/10">
               {block.icon}
             </div>
@@ -150,11 +167,16 @@ const NarrativeCard = ({
 
       {/* Decorative card for opposite side — desktop only */}
       <motion.div
-        style={{ opacity: cardOpacity, y: useTransform(cardProgress, [0, 1], [40, 0]) }}
+        style={{
+          opacity: cardOpacity,
+          y: useTransform(cardProgress, [0, 1], [40, 0]),
+        }}
         className={`hidden lg:block ${isEven ? "lg:col-start-2 lg:pl-12" : "lg:col-start-1 lg:row-start-1 lg:pr-12 lg:text-right"}`}
       >
         <div className="p-6 rounded-2xl bg-card border border-border shadow-soft">
-          <div className={`flex items-center gap-3 ${isEven ? "" : "justify-end"}`}>
+          <div
+            className={`flex items-center gap-3 ${isEven ? "" : "justify-end"}`}
+          >
             <div className="w-3 h-3 rounded-full bg-primary/30" />
             <div className="h-2 w-24 rounded-full bg-muted" />
           </div>

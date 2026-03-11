@@ -12,7 +12,13 @@ interface PageHeroProps {
   children?: ReactNode;
 }
 
-const PageHero = ({ badge, title, titleGradient, description, children }: PageHeroProps) => {
+const PageHero = ({
+  badge,
+  title,
+  titleGradient,
+  description,
+  children,
+}: PageHeroProps) => {
   return (
     <section className="relative overflow-hidden">
       {/* Subtle ambient glow */}
@@ -45,9 +51,7 @@ const PageHero = ({ badge, title, titleGradient, description, children }: PageHe
             )}
           </h1>
 
-          <p className="body-large max-w-xl mx-auto">
-            {description}
-          </p>
+          <p className="body-large max-w-xl mx-auto">{description}</p>
 
           {children && (
             <motion.div

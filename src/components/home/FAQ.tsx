@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -7,27 +12,33 @@ import { Button } from "@/components/ui/button";
 const faqs = [
   {
     question: "Is DhanDiary really free?",
-    answer: "Yes! DhanDiary is completely free to download and use. There are no hidden charges, subscriptions, or in-app purchases. We believe everyone deserves access to simple, effective personal finance tools.",
+    answer:
+      "Yes! DhanDiary is completely free to download and use. There are no hidden charges, subscriptions, or in-app purchases. We believe everyone deserves access to simple, effective personal finance tools.",
   },
   {
     question: "Does DhanDiary work offline?",
-    answer: "Absolutely! DhanDiary is built with an offline-first approach. All your data is stored locally on your device, so you can track expenses even without internet. When you're back online, your data syncs automatically.",
+    answer:
+      "Absolutely! DhanDiary is built with an offline-first approach. All your data is stored locally on your device, so you can track expenses even without internet. When you're back online, your data syncs automatically.",
   },
   {
     question: "Is my financial data secure?",
-    answer: "Your privacy is our top priority. DhanDiary stores data locally on your device with encryption. We don't have ads, trackers, or analytics that collect personal information. Your financial data stays yours.",
+    answer:
+      "Your privacy is our top priority. DhanDiary stores data locally on your device with encryption. We don't have ads, trackers, or analytics that collect personal information. Your financial data stays yours.",
   },
   {
     question: "What platforms is DhanDiary available on?",
-    answer: "DhanDiary is currently available for Android devices. You can download it from the Indus App Store, Amazon Appstore, or Huawei AppGallery. iOS and web versions are planned for future releases.",
+    answer:
+      "DhanDiary is currently available for Android devices. You can download it from the Indus App Store, Amazon Appstore, or Huawei AppGallery. iOS and web versions are planned for future releases.",
   },
   {
     question: "Can I backup my data?",
-    answer: "Yes! DhanDiary supports data backup and export features. You can create local backups and restore them whenever needed. Cloud sync is available when you sign in with your account.",
+    answer:
+      "Yes! DhanDiary supports data backup and export features. You can create local backups and restore them whenever needed. Cloud sync is available when you sign in with your account.",
   },
   {
     question: "Do I need to create an account?",
-    answer: "No account is required to use DhanDiary's core features. However, creating an account (with email, Google, or GitHub) enables cloud sync, backup, and access across multiple devices.",
+    answer:
+      "No account is required to use DhanDiary's core features. However, creating an account (with email, Google, or GitHub) enables cloud sync, backup, and access across multiple devices.",
   },
 ];
 
@@ -36,7 +47,9 @@ const FAQ = () => {
     <section className="section-padding bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">FAQ</p>
+          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">
+            FAQ
+          </p>
           <h2 className="heading-2 text-foreground text-balance">
             Frequently asked questions
           </h2>

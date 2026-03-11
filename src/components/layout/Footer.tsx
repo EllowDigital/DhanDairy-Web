@@ -26,12 +26,23 @@ const Footer = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
-            <Link to="/" className="inline-flex items-center gap-2.5 mb-5 focus-ring rounded-lg">
-              <img src="/img/logo.webp" alt="DhanDiary" className="w-10 h-10 rounded-xl object-contain" loading="lazy" />
-              <span className="font-display font-bold text-xl text-foreground">DhanDiary</span>
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2.5 mb-5 focus-ring rounded-lg"
+            >
+              <img
+                src="/img/logo.webp"
+                alt="DhanDiary"
+                className="w-10 h-10 rounded-xl object-contain"
+                loading="lazy"
+              />
+              <span className="font-display font-bold text-xl text-foreground">
+                DhanDiary
+              </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Simple, secure personal finance tracking. No ads, no trackers — just clean money management.
+              Simple, secure personal finance tracking. No ads, no trackers —
+              just clean money management.
             </p>
           </div>
 
@@ -85,7 +96,10 @@ const Footer = () => {
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   <Mail className="w-4 h-4 text-primary" />
                 </div>
-                <a href="mailto:sarwanyadav6174@gmail.com" className="hover:text-foreground transition-colors truncate">
+                <a
+                  href="mailto:sarwanyadav6174@gmail.com"
+                  className="hover:text-foreground transition-colors truncate"
+                >
                   sarwanyadav6174@gmail.com
                 </a>
               </li>
@@ -98,7 +112,12 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <p className="text-muted-foreground text-sm">
               © {new Date().getFullYear()} DhanDiary · Built by{" "}
-              <a href="https://ellowdigital.space" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a
+                href="https://ellowdigital.space"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
                 EllowDigital
               </a>
             </p>

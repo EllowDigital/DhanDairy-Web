@@ -47,7 +47,9 @@ const ComparisonTable = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Comparison</p>
+          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">
+            Comparison
+          </p>
           <h2 className="heading-2 text-foreground text-balance">
             See how DhanDiary stands out
           </h2>
@@ -64,10 +66,14 @@ const ComparisonTable = () => {
             {/* Header */}
             <div className="grid grid-cols-4 gap-2 lg:gap-4 p-4 lg:p-5 bg-primary/[0.04] border-b border-border">
               <div className="text-left">
-                <span className="font-semibold text-foreground text-sm">Feature</span>
+                <span className="font-semibold text-foreground text-sm">
+                  Feature
+                </span>
               </div>
               <div className="text-center">
-                <span className="font-bold text-primary text-sm">DhanDiary</span>
+                <span className="font-bold text-primary text-sm">
+                  DhanDiary
+                </span>
               </div>
               <div className="text-center">
                 <span className="text-muted-foreground text-xs">App A</span>
@@ -89,11 +95,19 @@ const ComparisonTable = () => {
                   className="grid grid-cols-4 gap-2 lg:gap-4 p-4 lg:p-5 hover:bg-muted/30 transition-colors duration-300"
                 >
                   <div className="text-left flex items-center">
-                    <span className="text-foreground text-xs sm:text-sm">{feature.name}</span>
+                    <span className="text-foreground text-xs sm:text-sm">
+                      {feature.name}
+                    </span>
                   </div>
-                  <div className="flex items-center justify-center"><FeatureIcon value={feature.dhandiary} /></div>
-                  <div className="flex items-center justify-center"><FeatureIcon value={feature.appA} /></div>
-                  <div className="flex items-center justify-center"><FeatureIcon value={feature.appB} /></div>
+                  <div className="flex items-center justify-center">
+                    <FeatureIcon value={feature.dhandiary} />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FeatureIcon value={feature.appA} />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FeatureIcon value={feature.appB} />
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -102,12 +116,28 @@ const ComparisonTable = () => {
           {/* Legend */}
           <div className="flex flex-wrap items-center justify-center gap-6 mt-6 text-sm text-muted-foreground">
             {[
-              { icon: <Check className="w-3 h-3 text-green-500" />, bg: "bg-green-500/15", label: "Full Support" },
-              { icon: <Minus className="w-3 h-3 text-yellow-500" />, bg: "bg-yellow-500/15", label: "Partial" },
-              { icon: <X className="w-3 h-3 text-red-500" />, bg: "bg-red-500/15", label: "Not Available" },
+              {
+                icon: <Check className="w-3 h-3 text-green-500" />,
+                bg: "bg-green-500/15",
+                label: "Full Support",
+              },
+              {
+                icon: <Minus className="w-3 h-3 text-yellow-500" />,
+                bg: "bg-yellow-500/15",
+                label: "Partial",
+              },
+              {
+                icon: <X className="w-3 h-3 text-red-500" />,
+                bg: "bg-red-500/15",
+                label: "Not Available",
+              },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2">
-                <div className={`w-5 h-5 rounded-full ${item.bg} flex items-center justify-center`}>{item.icon}</div>
+                <div
+                  className={`w-5 h-5 rounded-full ${item.bg} flex items-center justify-center`}
+                >
+                  {item.icon}
+                </div>
                 <span>{item.label}</span>
               </div>
             ))}

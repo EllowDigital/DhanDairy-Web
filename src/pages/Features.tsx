@@ -111,9 +111,18 @@ const Features = () => {
       <SEOHead {...pageSEO.features} />
 
       {/* Hero */}
-      <section ref={heroRef} className="relative overflow-hidden py-24 sm:py-32 lg:py-40">
-        <div className="absolute inset-0 bg-mesh-gradient pointer-events-none" aria-hidden="true" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/[0.04] rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+      <section
+        ref={heroRef}
+        className="relative overflow-hidden py-24 sm:py-32 lg:py-40"
+      >
+        <div
+          className="absolute inset-0 bg-mesh-gradient pointer-events-none"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/[0.04] rounded-full blur-[120px] pointer-events-none"
+          aria-hidden="true"
+        />
 
         <motion.div
           style={{ opacity: heroOpacity, y: heroY }}
@@ -134,7 +143,8 @@ const Features = () => {
               <span className="text-gradient">Simple Experience</span>
             </h1>
             <p className="body-large max-w-2xl mx-auto text-balance">
-              Everything you need to manage your personal finances, without the complexity. Built for speed, security, and simplicity.
+              Everything you need to manage your personal finances, without the
+              complexity. Built for speed, security, and simplicity.
             </p>
           </motion.div>
         </motion.div>
@@ -187,10 +197,16 @@ const Features = () => {
                 Experience These Features Today
               </h2>
               <p className="body-large max-w-xl mx-auto">
-                Download DhanDiary and start managing your finances the smart way.
+                Download DhanDiary and start managing your finances the smart
+                way.
               </p>
               <div className="pt-2">
-                <Button asChild variant="hero" size="xl" className="shadow-glow">
+                <Button
+                  asChild
+                  variant="hero"
+                  size="xl"
+                  className="shadow-glow"
+                >
                   <Link to="/download">
                     <Sparkles className="w-4 h-4" />
                     Download Now

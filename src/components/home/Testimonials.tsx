@@ -57,7 +57,9 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Testimonials</p>
+          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">
+            Testimonials
+          </p>
           <h2 className="heading-2 text-foreground text-balance">
             Loved by thousands
           </h2>
@@ -81,7 +83,9 @@ const Testimonials = () => {
                     <Star
                       key={i}
                       className={`w-4 h-4 ${
-                        i < testimonial.rating ? "text-yellow-500 fill-yellow-500" : "text-border"
+                        i < testimonial.rating
+                          ? "text-yellow-500 fill-yellow-500"
+                          : "text-border"
                       }`}
                     />
                   ))}
@@ -93,11 +97,17 @@ const Testimonials = () => {
 
                 <div className="flex items-center gap-3 mt-auto">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <span className="text-primary font-semibold text-sm">{testimonial.avatar}</span>
+                    <span className="text-primary font-semibold text-sm">
+                      {testimonial.avatar}
+                    </span>
                   </div>
                   <div className="min-w-0">
-                    <p className="font-semibold text-foreground text-sm truncate">{testimonial.name}</p>
-                    <p className="text-muted-foreground text-xs truncate">{testimonial.role}</p>
+                    <p className="font-semibold text-foreground text-sm truncate">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-muted-foreground text-xs truncate">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -115,16 +125,22 @@ const Testimonials = () => {
         >
           <div className="inline-flex items-center gap-6 px-8 py-5 rounded-2xl bg-card border border-border shadow-soft">
             <div className="flex items-center gap-2">
-              <span className="font-display text-3xl lg:text-4xl font-bold text-foreground">4.8</span>
+              <span className="font-display text-3xl lg:text-4xl font-bold text-foreground">
+                4.8
+              </span>
               <div className="flex items-center gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-yellow-500 fill-yellow-500"
+                  />
                 ))}
               </div>
             </div>
             <div className="w-px h-8 bg-border" />
             <p className="text-muted-foreground text-sm">
-              Based on <span className="text-foreground font-semibold">25</span> reviews
+              Based on <span className="text-foreground font-semibold">25</span>{" "}
+              reviews
             </p>
           </div>
         </motion.div>

@@ -39,22 +39,26 @@ const features = [
   {
     icon: <BarChart3 className="w-6 h-6" />,
     title: "Smart Tracking",
-    description: "Log income & expenses effortlessly. Clean interface, instant insights.",
+    description:
+      "Log income & expenses effortlessly. Clean interface, instant insights.",
   },
   {
     icon: <WifiOff className="w-6 h-6" />,
     title: "Offline First",
-    description: "Full functionality without internet. Auto-syncs when you reconnect.",
+    description:
+      "Full functionality without internet. Auto-syncs when you reconnect.",
   },
   {
     icon: <Shield className="w-6 h-6" />,
     title: "Zero Ads, Zero Tracking",
-    description: "No ads, no trackers, no data selling. Your finances stay private.",
+    description:
+      "No ads, no trackers, no data selling. Your finances stay private.",
   },
   {
     icon: <Lock className="w-6 h-6" />,
     title: "Bank-Grade Security",
-    description: "Encrypted storage with email verification and OAuth authentication.",
+    description:
+      "Encrypted storage with email verification and OAuth authentication.",
   },
 ];
 
@@ -63,19 +67,22 @@ const narrativeBlocks = [
     icon: <Eye className="w-5 h-5" />,
     label: "The Problem",
     title: "Most finance apps are cluttered, ad-heavy, and invasive.",
-    description: "They track your data, bombard you with ads, and make simple tasks complicated. You deserve better.",
+    description:
+      "They track your data, bombard you with ads, and make simple tasks complicated. You deserve better.",
   },
   {
     icon: <Zap className="w-5 h-5" />,
     label: "The Solution",
     title: "DhanDiary strips away everything unnecessary.",
-    description: "Pure, focused expense tracking. No distractions. No compromises. Just you and your money.",
+    description:
+      "Pure, focused expense tracking. No distractions. No compromises. Just you and your money.",
   },
   {
     icon: <Smartphone className="w-5 h-5" />,
     label: "The Result",
     title: "Complete financial clarity in under 30 seconds a day.",
-    description: "Track, analyze, and understand your spending patterns — all from a beautifully simple app.",
+    description:
+      "Track, analyze, and understand your spending patterns — all from a beautifully simple app.",
   },
 ];
 
@@ -100,11 +107,22 @@ const Home = () => {
         className="relative overflow-hidden min-h-[100dvh] flex items-center"
       >
         {/* Subtle ambient gradient */}
-        <div className="absolute inset-0 bg-mesh-gradient pointer-events-none" aria-hidden="true" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/[0.04] rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+        <div
+          className="absolute inset-0 bg-mesh-gradient pointer-events-none"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/[0.04] rounded-full blur-[120px] pointer-events-none"
+          aria-hidden="true"
+        />
 
         <motion.div
-          style={{ opacity: heroOpacity, scale: heroScale, y: heroY, willChange: "transform, opacity" }}
+          style={{
+            opacity: heroOpacity,
+            scale: heroScale,
+            y: heroY,
+            willChange: "transform, opacity",
+          }}
           className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-0 relative w-full"
         >
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -130,7 +148,12 @@ const Home = () => {
                   Your Personal{" "}
                   <span className="text-gradient">
                     <TypewriterEffect
-                      words={["Finance Companion", "Money Manager", "Budget Tracker", "Expense Logger"]}
+                      words={[
+                        "Finance Companion",
+                        "Money Manager",
+                        "Budget Tracker",
+                        "Expense Logger",
+                      ]}
                       typingSpeed={80}
                       deletingSpeed={40}
                       pauseDuration={2500}
@@ -139,17 +162,27 @@ const Home = () => {
                 </h1>
 
                 <p className="body-large max-w-xl mx-auto lg:mx-0 text-balance">
-                  Track income and expenses effortlessly. Fast, secure, offline-first, and designed for simplicity.
+                  Track income and expenses effortlessly. Fast, secure,
+                  offline-first, and designed for simplicity.
                 </p>
               </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.4, 0.25, 1] }}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.15,
+                  ease: [0.25, 0.4, 0.25, 1],
+                }}
                 className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               >
-                <Button asChild variant="hero" size="lg" className="shadow-glow">
+                <Button
+                  asChild
+                  variant="hero"
+                  size="lg"
+                  className="shadow-glow"
+                >
                   <Link to="/download">
                     <Sparkles className="w-4 h-4" />
                     Download Free
@@ -169,16 +202,32 @@ const Home = () => {
                 className="flex items-center gap-8 pt-4 justify-center lg:justify-start"
               >
                 {[
-                  { icon: <Download className="w-4 h-4" />, value: "1K+", label: "Downloads" },
-                  { icon: <Star className="w-4 h-4" />, value: "4.8", label: "Rating" },
-                  { icon: <Users className="w-4 h-4" />, value: "5K+", label: "Users" },
+                  {
+                    icon: <Download className="w-4 h-4" />,
+                    value: "1K+",
+                    label: "Downloads",
+                  },
+                  {
+                    icon: <Star className="w-4 h-4" />,
+                    value: "4.8",
+                    label: "Rating",
+                  },
+                  {
+                    icon: <Users className="w-4 h-4" />,
+                    value: "5K+",
+                    label: "Users",
+                  },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
                     <div className="flex items-center justify-center gap-1.5 text-primary mb-0.5">
                       {stat.icon}
-                      <span className="font-display font-bold text-xl text-foreground">{stat.value}</span>
+                      <span className="font-display font-bold text-xl text-foreground">
+                        {stat.value}
+                      </span>
                     </div>
-                    <span className="text-muted-foreground text-xs">{stat.label}</span>
+                    <span className="text-muted-foreground text-xs">
+                      {stat.label}
+                    </span>
                   </div>
                 ))}
               </motion.div>
@@ -188,12 +237,19 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
+              transition={{
+                duration: 0.9,
+                delay: 0.2,
+                ease: [0.25, 0.4, 0.25, 1],
+              }}
               className="flex justify-center lg:justify-end order-1 lg:order-2"
             >
               <div className="relative">
                 {/* Glow */}
-                <div className="absolute inset-0 bg-primary/10 blur-[80px] rounded-full scale-110" aria-hidden="true" />
+                <div
+                  className="absolute inset-0 bg-primary/10 blur-[80px] rounded-full scale-110"
+                  aria-hidden="true"
+                />
 
                 <div className="relative animate-float">
                   {/* Phone frame */}
@@ -224,8 +280,12 @@ const Home = () => {
                         <BarChart3 className="w-4 h-4 text-green-500" />
                       </div>
                       <div>
-                        <p className="text-[10px] text-muted-foreground">Income</p>
-                        <p className="font-semibold text-green-500 text-sm">+₹25,000</p>
+                        <p className="text-[10px] text-muted-foreground">
+                          Income
+                        </p>
+                        <p className="font-semibold text-green-500 text-sm">
+                          +₹25,000
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -241,8 +301,12 @@ const Home = () => {
                         <Shield className="w-4 h-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-[10px] text-muted-foreground">Savings</p>
-                        <p className="font-semibold text-primary text-sm">₹12,500</p>
+                        <p className="text-[10px] text-muted-foreground">
+                          Savings
+                        </p>
+                        <p className="font-semibold text-primary text-sm">
+                          ₹12,500
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -259,8 +323,13 @@ const Home = () => {
           transition={{ delay: 1.5 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2"
         >
-          <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
-          <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+          <span className="text-xs text-muted-foreground tracking-widest uppercase">
+            Scroll
+          </span>
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
             <ChevronDown className="w-5 h-5 text-muted-foreground" />
           </motion.div>
         </motion.div>
@@ -272,8 +341,13 @@ const Home = () => {
       {/* ============ FEATURES ============ */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal animation="fadeUp" className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
-            <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Features</p>
+          <ScrollReveal
+            animation="fadeUp"
+            className="text-center max-w-2xl mx-auto mb-12 lg:mb-16"
+          >
+            <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">
+              Features
+            </p>
             <h2 className="heading-2 text-foreground text-balance">
               Everything you need. Nothing you don't.
             </h2>
@@ -297,7 +371,11 @@ const Home = () => {
             ))}
           </StaggerContainer>
 
-          <ScrollReveal animation="fadeUp" delay={0.4} className="text-center mt-12">
+          <ScrollReveal
+            animation="fadeUp"
+            delay={0.4}
+            className="text-center mt-12"
+          >
             <Button asChild variant="outline" size="lg">
               <Link to="/features">
                 View All Features
@@ -362,7 +440,8 @@ const Home = () => {
                 See how DhanDiary stacks up
               </h2>
               <p className="body-large max-w-xl mx-auto">
-                Compare DhanDiary with Walnut, Money Manager, Monefy and other popular expense trackers in India.
+                Compare DhanDiary with Walnut, Money Manager, Monefy and other
+                popular expense trackers in India.
               </p>
               <Button asChild variant="outline" size="lg">
                 <Link to="/compare">
@@ -389,7 +468,12 @@ const Home = () => {
                 Download DhanDiary today. Free, secure, and private — forever.
               </p>
               <div className="pt-2">
-                <Button asChild variant="hero" size="lg" className="shadow-glow">
+                <Button
+                  asChild
+                  variant="hero"
+                  size="lg"
+                  className="shadow-glow"
+                >
                   <Link to="/download">
                     <Sparkles className="w-4 h-4" />
                     Get DhanDiary Now

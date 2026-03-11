@@ -28,18 +28,26 @@ export const releases: Release[] = [
         label: "Improvements",
         emoji: "⚡",
         changes: [
-          { text: "Smoother biometric authentication flow on supported devices" },
+          {
+            text: "Smoother biometric authentication flow on supported devices",
+          },
           { text: "Faster app launch time with optimized splash screen" },
           { text: "Improved session persistence — stay logged in longer" },
-          { text: "Better offline data sync when reconnecting to the internet" },
+          {
+            text: "Better offline data sync when reconnecting to the internet",
+          },
         ],
       },
       {
         label: "Bug Fixes",
         emoji: "🐞",
         changes: [
-          { text: "Fixed occasional crash when resuming the app from background" },
-          { text: "Resolved update flow getting stuck on certain Android versions" },
+          {
+            text: "Fixed occasional crash when resuming the app from background",
+          },
+          {
+            text: "Resolved update flow getting stuck on certain Android versions",
+          },
           { text: "Fixed date picker not respecting device locale settings" },
         ],
       },
@@ -63,9 +71,15 @@ export const releases: Release[] = [
         label: "New Features",
         emoji: "✨",
         changes: [
-          { text: "Encrypted cloud backup — securely sync your data across devices" },
-          { text: "Redesigned analytics dashboard with monthly trends and category breakdown" },
-          { text: "New quick-add widget for instant transaction logging from home screen" },
+          {
+            text: "Encrypted cloud backup — securely sync your data across devices",
+          },
+          {
+            text: "Redesigned analytics dashboard with monthly trends and category breakdown",
+          },
+          {
+            text: "New quick-add widget for instant transaction logging from home screen",
+          },
         ],
       },
       {
@@ -74,15 +88,21 @@ export const releases: Release[] = [
         changes: [
           { text: "Refreshed UI with improved typography and color contrast" },
           { text: "Faster chart rendering for large transaction histories" },
-          { text: "Enhanced offline-first architecture — full functionality without internet" },
+          {
+            text: "Enhanced offline-first architecture — full functionality without internet",
+          },
         ],
       },
       {
         label: "Bug Fixes",
         emoji: "🐞",
         changes: [
-          { text: "Fixed category totals not updating after editing a transaction" },
-          { text: "Resolved CSV export including duplicate entries in some cases" },
+          {
+            text: "Fixed category totals not updating after editing a transaction",
+          },
+          {
+            text: "Resolved CSV export including duplicate entries in some cases",
+          },
         ],
       },
     ],
