@@ -7,8 +7,9 @@ The web companion and download/promotion site for **DhanDiary**, the personal-fi
 - Public product and app information
 - Download links and platform availability settings
 - Responsive pages and shared UI components
+- Netlify Functions for server-side API endpoints, including statistics
 - Search/social metadata and analytics integrations configured by the site
-- A Vite-based frontend suitable for static hosting
+- A Vite-based frontend paired with Netlify Functions
 
 The mobile app source is maintained separately in [EllowDigital/DhanDiary](https://github.com/EllowDigital/DhanDiary).
 
@@ -50,11 +51,12 @@ Review `.env.example` and `.env.local.template` for the configuration expected b
 - Only public URLs and public client configuration belong in the frontend environment.
 - Do not add private API keys, database passwords, admin keys, or server credentials to a `VITE_*` variable.
 - If a backend or administrative endpoint is configured, enforce authorization on the server; hiding a button in the UI is not access control.
+- **Known security blocker:** the legacy stats client reads `VITE_ADMIN_API_KEY`, which cannot safely protect admin endpoints because Vite exposes `VITE_*` values to visitors. See [security issue #1](https://github.com/EllowDigital/DhanDairy-Web/issues/1). Do not configure or depend on a frontend-shipped admin key; use server-validated user/session authentication before enabling privileged statistics.
 - Do not use real financial records for screenshots or test fixtures.
 
 ## Deployment
 
-The project includes Netlify configuration. Confirm the configured site, build command, output directory, canonical domain, download URLs, analytics consent/disclosure, and environment variables before deploying.
+The project includes Netlify configuration and serverless functions. Confirm the configured site, frontend build/output, function deployment, canonical domain, download URLs, analytics consent/disclosure, and environment variables before deploying.
 
 ## Privacy and security
 
